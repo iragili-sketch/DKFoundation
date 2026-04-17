@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DKF — Impact: Investments</title>
+  <meta name="description" content="Giving that keeps working. DKF's strategic Health-Tech investments fuel sustained philanthropy.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+  <div class="page-transition"></div>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo" data-en="DKF" data-he="DKF">DKF</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link" data-en="Home" data-he="בית">Home</a>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link nav-dropdown-trigger">
+          <span data-en="About" data-he="אודות">About</span>
+          <span class="arrow">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="about-fund.html" class="nav-dropdown-item" data-en="The Fund" data-he="הקרן">The Fund</a>
+          <a href="about-founders.html" class="nav-dropdown-item" data-en="The Founders" data-he="המייסדות">The Founders</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link nav-dropdown-trigger active">
+          <span data-en="What We Do" data-he="מה אנחנו עושים">What We Do</span>
+          <span class="arrow">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="impact-donations.html" class="nav-dropdown-item" data-en="Impact — Donations" data-he="אימפקט — תרומות">Impact — Donations</a>
+          <a href="impact-investments.html" class="nav-dropdown-item" data-en="Impact — Investments" data-he="אימפקט — השקעות">Impact — Investments</a>
+        </div>
+      </div>
+      <a href="news.html" class="nav-link" data-en="News" data-he="חדשות">News</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-he="צור קשר">Contact</a>
+      <div class="lang-toggle">
+        <span class="active-lang">EN</span><span>|</span><span>עב</span>
+      </div>
+    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html" class="menu-card">
+      <div class="menu-card-title" data-en="Home" data-he="בית">Home</div>
+      <div class="menu-card-desc" data-en="Fund overview & impact" data-he="סקירת הקרן והשפעה">Fund overview & impact</div>
+    </a>
+    <a href="about-fund.html" class="menu-card">
+      <div class="menu-card-title" data-en="The Fund" data-he="הקרן">The Fund</div>
+      <div class="menu-card-desc" data-en="Story, approach & values" data-he="סיפור, גישה וערכים">Story, approach & values</div>
+    </a>
+    <a href="about-founders.html" class="menu-card">
+      <div class="menu-card-title" data-en="The Founders" data-he="המייסדות">The Founders</div>
+      <div class="menu-card-desc" data-en="Three women, one conviction" data-he="שלוש נשים, שכנוע אחד">Three women, one conviction</div>
+    </a>
+    <a href="impact-donations.html" class="menu-card">
+      <div class="menu-card-title" data-en="Donations" data-he="תרומות">Donations</div>
+      <div class="menu-card-desc" data-en="Where the giving goes" data-he="לאן הנתינה הולכת">Where the giving goes</div>
+    </a>
+    <a href="impact-investments.html" class="menu-card active">
+      <div class="menu-card-title" data-en="Investments" data-he="השקעות">Investments</div>
+      <div class="menu-card-desc" data-en="Giving that keeps working" data-he="נתינה שממשיכה לעבוד">Giving that keeps working</div>
+    </a>
+    <a href="news.html" class="menu-card">
+      <div class="menu-card-title" data-en="News" data-he="חדשות">News</div>
+      <div class="menu-card-desc" data-en="Latest updates" data-he="עדכונים אחרונים">Latest updates</div>
+    </a>
+    <a href="contact.html" class="menu-card">
+      <div class="menu-card-title" data-en="Contact" data-he="צור קשר">Contact</div>
+      <div class="menu-card-desc" data-en="Let's talk" data-he="בואו נדבר">Let's talk</div>
+    </a>
+    <div class="lang-toggle">
+      <span class="active-lang">EN</span>
+      <span>|</span>
+      <span>עב</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ SECTION A: HERO ═══════════ -->
+  <section class="hero bg-primary">
+    <div class="container">
+      <h1>
+        <div class="line"><span data-en="Giving that" data-he="נתינה">Giving that</span></div>
+        <div class="line"><span class="text-accent" data-en="keeps working." data-he="שממשיכה לעבוד.">keeps working.</span></div>
+      </h1>
+      <p class="hero-subtitle" data-en="Strategic investments in Health-Tech that fuel sustained philanthropy." data-he="השקעות אסטרטגיות ב-Health-Tech שמזינות פילנטרופיה מתמשכת.">
+        Strategic investments in Health-Tech that fuel sustained philanthropy.
+      </p>
+    </div>
+    <div class="scroll-indicator">
+      <span data-en="Scroll" data-he="גלול">Scroll</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION B: HOW IT WORKS (3-step loop) ═══════════ -->
+  <section class="section-lg bg-secondary">
+    <div class="container" style="text-align: center;">
+      <p class="text-label reveal" data-en="How it works" data-he="איך זה עובד">How it works</p>
+      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);" data-en="A cycle that sustains itself" data-he="מעגל שמזין את עצמו">A cycle that sustains itself</h2>
+
+      <div class="process-steps cards-stagger">
+        <!-- Step 1 -->
+        <div class="process-step reveal">
+          <div class="process-number" data-en="01" data-he="01">01</div>
+          <div class="process-line"></div>
+          <h3 data-en="Capital is allocated" data-he="הון מוקצה">Capital is allocated</h3>
+          <p class="text-muted" data-en="Private capital from the fund is directed into two channels: direct giving and strategic Health-Tech investments." data-he="הון פרטי מהקרן מופנה לשני ערוצים: נתינה ישירה והשקעות אסטרטגיות ב-Health-Tech.">
+            Private capital from the fund is directed into two channels: direct giving and strategic Health-Tech investments.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step reveal">
+          <div class="process-number" data-en="02" data-he="02">02</div>
+          <div class="process-line"></div>
+          <h3 data-en="Investments generate returns" data-he="ההשקעות מייצרות תשואה">Investments generate returns</h3>
+          <p class="text-muted" data-en="As LP in established Health-Tech VC funds, DKF's investments grow — creating returns that go back into the system." data-he="כ-LP בקרנות הון סיכון מבוססות ב-Health-Tech, ההשקעות של DKF צומחות — ומייצרות תשואה שחוזרת למערכת.">
+            As LP in established Health-Tech VC funds, DKF's investments grow — creating returns that go back into the system.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step reveal">
+          <div class="process-number" data-en="03" data-he="03">03</div>
+          <div class="process-line"></div>
+          <h3 data-en="Returns fuel more giving" data-he="התשואה מזינה עוד נתינה">Returns fuel more giving</h3>
+          <p class="text-muted" data-en="Investment returns are recycled back into philanthropy — more grants, more projects, more impact. The cycle repeats." data-he="תשואות ההשקעה מוחזרות לפילנטרופיה — עוד מענקים, עוד פרויקטים, עוד השפעה. המעגל חוזר על עצמו.">
+            Investment returns are recycled back into philanthropy — more grants, more projects, more impact. The cycle repeats.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION C: WHERE WE INVEST ═══════════ -->
+  <section class="section bg-primary">
+    <div class="container">
+      <p class="text-label reveal" data-en="Where we invest" data-he="היכן אנחנו משקיעות">Where we invest</p>
+      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);" data-en="Three sectors we believe in" data-he="שלושה מגזרים שאנחנו מאמינות בהם">Three sectors we believe in</h2>
+
+      <div class="grid-3 cards-stagger">
+        <div class="card card-accent-top">
+          <h3 style="margin-bottom: var(--sp-md);" data-en="Digital Health" data-he="בריאות דיגיטלית">Digital Health</h3>
+          <p data-en="Platforms and solutions that make healthcare smarter, more accessible, and more personalized — from telemedicine to AI diagnostics." data-he="פלטפורמות ופתרונות שהופכים את הבריאות לחכמה יותר, נגישה יותר ומותאמת אישית יותר — מטלרפואה ועד אבחון AI.">
+            Platforms and solutions that make healthcare smarter, more accessible, and more personalized — from telemedicine to AI diagnostics.
+          </p>
+        </div>
+        <div class="card card-accent-top">
+          <h3 style="margin-bottom: var(--sp-md);" data-en="Medical Devices" data-he="מכשור רפואי">Medical Devices</h3>
+          <p data-en="Innovative devices that improve patient outcomes — from minimally invasive surgery tools to monitoring wearables." data-he="מכשירים חדשניים שמשפרים תוצאות מטופלים — מכלי ניתוח מזעריים ועד מכשירי ניטור לבישים.">
+            Innovative devices that improve patient outcomes — from minimally invasive surgery tools to monitoring wearables.
+          </p>
+        </div>
+        <div class="card card-accent-top">
+          <h3 style="margin-bottom: var(--sp-md);" data-en="Health Infrastructure" data-he="תשתיות בריאות">Health Infrastructure</h3>
+          <p data-en="The backbone of care: hospital management systems, supply chain optimization, and health data platforms." data-he="עמוד השדרה של הטיפול: מערכות ניהול בתי חולים, אופטימיזציה של שרשרת אספקה ופלטפורמות מידע בריאותי.">
+            The backbone of care: hospital management systems, supply chain optimization, and health data platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION D: WHY THESE CHOICES ═══════════ -->
+  <section class="section bg-secondary">
+    <div class="container" style="max-width: 800px; text-align: center;">
+      <h2 class="reveal" data-en="Why these choices" data-he="למה דווקא אלה">Why these choices</h2>
+      <p class="text-body-lg reveal" style="margin-top: var(--sp-xl);" data-en="We don't chase trends. We invest in Health-Tech sectors with proven trajectories and clear alignment with our mission. Every fund we partner with as LP must demonstrate not only strong financial fundamentals, but a real commitment to improving healthcare outcomes. Our returns don't just sustain DKF — they validate a model where doing good and doing well are the same thing." data-he="אנחנו לא רודפות אחרי טרנדים. אנחנו משקיעות במגזרי Health-Tech עם מסלולים מוכחים והתאמה ברורה למשימה שלנו. כל קרן שאנחנו משתתפות בה כ-LP חייבת להפגין לא רק יסודות פיננסיים חזקים, אלא מחויבות אמיתית לשיפור תוצאות בריאותיות. התשואות שלנו לא רק מקיימות את DKF — הן מאמתות מודל שבו לעשות טוב ולהצליח זה אותו דבר.">
+        We don't chase trends. We invest in Health-Tech sectors with proven trajectories and clear alignment with our mission. Every fund we partner with as LP must demonstrate not only strong financial fundamentals, but a real commitment to improving healthcare outcomes. Our returns don't just sustain DKF — they validate a model where doing good and doing well are the same thing.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION E: CTA ═══════════ -->
+  <section class="section bg-primary" style="text-align: center;">
+    <div class="container">
+      <h2 class="reveal" data-en="Run a Health-Tech fund?" data-he="מנהלים קרן Health-Tech?">Run a Health-Tech fund?</h2>
+      <p class="text-body-lg text-muted reveal" style="max-width: 550px; margin: var(--sp-lg) auto var(--sp-xl);" data-en="Let's explore how we can work together." data-he="בואו נחקור איך נוכל לעבוד יחד.">
+        Let's explore how we can work together.
+      </p>
+      <a href="contact.html?type=partner" class="btn btn-primary reveal" data-en="Let's explore →" data-he="בואו נחקור →">Let's explore →</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">DKF</span>
+      <span class="footer-copy" data-en="© 2026 DKF Fund. All rights reserved." data-he="© 2026 DKF Fund. כל הזכויות שמורות.">© 2026 DKF Fund. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>

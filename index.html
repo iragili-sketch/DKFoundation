@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DKF — Healthcare Impact Fund</title>
+  <meta name="description" content="DKF is a philanthropic fund channeling capital into healthcare, community, and medical technology.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition"></div>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo" data-en="DKF" data-he="DKF">DKF</a>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active" data-en="Home" data-he="בית">Home</a>
+
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link nav-dropdown-trigger">
+          <span data-en="About" data-he="אודות">About</span>
+          <span class="arrow">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="about-fund.html" class="nav-dropdown-item" data-en="The Fund" data-he="הקרן">The Fund</a>
+          <a href="about-founders.html" class="nav-dropdown-item" data-en="The Founders" data-he="המייסדות">The Founders</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link nav-dropdown-trigger">
+          <span data-en="What We Do" data-he="מה אנחנו עושים">What We Do</span>
+          <span class="arrow">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="impact-donations.html" class="nav-dropdown-item" data-en="Impact — Donations" data-he="אימפקט — תרומות">Impact — Donations</a>
+          <a href="impact-investments.html" class="nav-dropdown-item" data-en="Impact — Investments" data-he="אימפקט — השקעות">Impact — Investments</a>
+        </div>
+      </div>
+
+      <a href="news.html" class="nav-link" data-en="News" data-he="חדשות">News</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-he="צור קשר">Contact</a>
+
+      <div class="lang-toggle">
+        <span class="active-lang">EN</span>
+        <span>|</span>
+        <span>עב</span>
+      </div>
+    </div>
+
+    <!-- Mobile -->
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html" class="menu-card active">
+      <div class="menu-card-title" data-en="Home" data-he="בית">Home</div>
+      <div class="menu-card-desc" data-en="Fund overview & impact" data-he="סקירת הקרן והשפעה">Fund overview & impact</div>
+    </a>
+    <a href="about-fund.html" class="menu-card">
+      <div class="menu-card-title" data-en="The Fund" data-he="הקרן">The Fund</div>
+      <div class="menu-card-desc" data-en="Story, approach & values" data-he="סיפור, גישה וערכים">Story, approach & values</div>
+    </a>
+    <a href="about-founders.html" class="menu-card">
+      <div class="menu-card-title" data-en="The Founders" data-he="המייסדות">The Founders</div>
+      <div class="menu-card-desc" data-en="Three women, one conviction" data-he="שלוש נשים, שכנוע אחד">Three women, one conviction</div>
+    </a>
+    <a href="impact-donations.html" class="menu-card">
+      <div class="menu-card-title" data-en="Donations" data-he="תרומות">Donations</div>
+      <div class="menu-card-desc" data-en="Where the giving goes" data-he="לאן הנתינה הולכת">Where the giving goes</div>
+    </a>
+    <a href="impact-investments.html" class="menu-card">
+      <div class="menu-card-title" data-en="Investments" data-he="השקעות">Investments</div>
+      <div class="menu-card-desc" data-en="Giving that keeps working" data-he="נתינה שממשיכה לעבוד">Giving that keeps working</div>
+    </a>
+    <a href="news.html" class="menu-card">
+      <div class="menu-card-title" data-en="News" data-he="חדשות">News</div>
+      <div class="menu-card-desc" data-en="Latest updates" data-he="עדכונים אחרונים">Latest updates</div>
+    </a>
+    <a href="contact.html" class="menu-card">
+      <div class="menu-card-title" data-en="Contact" data-he="צור קשר">Contact</div>
+      <div class="menu-card-desc" data-en="Let's talk" data-he="בואו נדבר">Let's talk</div>
+    </a>
+    <div class="lang-toggle">
+      <span class="active-lang">EN</span>
+      <span>|</span>
+      <span>עב</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ SECTION 1: HERO ═══════════ -->
+  <section class="hero bg-primary">
+    <div class="container">
+      <h1>
+        <div class="line"><span data-en="Giving." data-he="נותנות.">Giving.</span></div>
+        <div class="line"><span data-en="Investing." data-he="משקיעות.">Investing.</span></div>
+        <div class="line"><span class="text-accent" data-en="Reshaping healthcare." data-he="משנות בריאות.">Reshaping healthcare.</span></div>
+      </h1>
+      <p class="hero-subtitle" data-en="A philanthropic fund channeling capital where it matters most — health, community, and medical technology." data-he="קרן פילנטרופית שמפנה הון לשם שחשוב — בריאות, קהילה וטכנולוגיה רפואית.">
+        A philanthropic fund channeling capital where it matters most — health, community, and medical technology.
+      </p>
+    </div>
+    <div class="scroll-indicator">
+      <span data-en="Scroll" data-he="גלול">Scroll</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 2: WHAT WE ARE ═══════════ -->
+  <section class="section-lg bg-primary">
+    <div class="container">
+      <p class="text-display reveal" style="max-width: 900px;" data-en="A philanthropic fund that channels capital where it matters most — health, community, and medical technology." data-he="קרן פילנטרופית שמפנה הון לשם שחשוב — בריאות, קהילה וטכנולוגיה רפואית.">
+        A philanthropic fund that channels capital where it matters most — health, community, and medical technology.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 3: WHAT WE DO ═══════════ -->
+  <section class="section bg-secondary">
+    <div class="container">
+      <p class="text-label reveal" data-en="What we do" data-he="מה אנחנו עושים">What we do</p>
+      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);" data-en="Three pillars of impact" data-he="שלושה נתיבי השפעה">Three pillars of impact</h2>
+
+      <div class="grid-3 cards-stagger">
+        <!-- Card 1: Giving -->
+        <a href="impact-donations.html" class="card card-accent-top">
+          <p class="text-label" data-en="01" data-he="01">01</p>
+          <h3 style="margin-top: var(--sp-md);" data-en="Giving" data-he="נתינה">Giving</h3>
+          <p data-en="Direct philanthropy to health and community. Hospitals, clinics, soldier welfare, and medical education." data-he="פילנטרופיה ישירה לבריאות ולקהילה. בתי חולים, מרפאות, רווחת חיילים וחינוך רפואי.">
+            Direct philanthropy to health and community. Hospitals, clinics, soldier welfare, and medical education.
+          </p>
+          <span class="card-arrow" data-en="Learn more →" data-he="למידע נוסף →">Learn more →</span>
+        </a>
+
+        <!-- Card 2: Investing -->
+        <a href="impact-investments.html" class="card card-accent-top">
+          <p class="text-label" data-en="02" data-he="02">02</p>
+          <h3 style="margin-top: var(--sp-md);" data-en="Investing" data-he="השקעה">Investing</h3>
+          <p data-en="Health-Tech funds as strategic LP. Returns cycle back to fuel more giving." data-he="קרנות Health-Tech כשותפות אסטרטגיות. התשואות חוזרות ומניעות עוד נתינה.">
+            Health-Tech funds as strategic LP. Returns cycle back to fuel more giving.
+          </p>
+          <span class="card-arrow" data-en="Learn more →" data-he="למידע נוסף →">Learn more →</span>
+        </a>
+
+        <!-- Card 3: Building -->
+        <a href="impact-donations.html#real-estate" class="card card-accent-top">
+          <p class="text-label" data-en="03" data-he="03">03</p>
+          <h3 style="margin-top: var(--sp-md);" data-en="Building" data-he="בנייה">Building</h3>
+          <p data-en="Healthcare real estate and clinical spaces. Rehab centers, clinics, and care facilities." data-he="נדל&quot;ן רפואי ומרחבים קליניים. מרכזי שיקום, מרפאות ומתקני טיפול.">
+            Healthcare real estate and clinical spaces. Rehab centers, clinics, and care facilities.
+          </p>
+          <span class="card-arrow" data-en="Learn more →" data-he="למידע נוסף →">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 4: IMPACT NUMBERS ═══════════ -->
+  <section class="section bg-primary">
+    <div class="container">
+      <p class="text-label reveal" data-en="Impact in numbers" data-he="אימפקט במספרים">Impact in numbers</p>
+      <div class="divider reveal"></div>
+
+      <div class="stats-grid" style="margin-top: var(--sp-3xl);">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="12" data-prefix="₪" data-suffix="M+">0</div>
+          <p class="label" data-en="Donated & invested" data-he="תרומות והשקעות">Donated & invested</p>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="4" data-suffix="">0</div>
+          <p class="label" data-en="Funds backed" data-he="קרנות נתמכות">Funds backed</p>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="1200" data-suffix="+">0</div>
+          <p class="label" data-en="Patients reached" data-he="מטופלים שנגענו בהם">Patients reached</p>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="3" data-suffix="">0</div>
+          <p class="label" data-en="Communities supported" data-he="קהילות נתמכות">Communities supported</p>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="850" data-suffix=" m²">0</div>
+          <p class="label" data-en="Clinical space built" data-he="שטח רפואי שנבנה">Clinical space built</p>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="15" data-suffix="+">0</div>
+          <p class="label" data-en="Healthcare professionals funded" data-he="אנשי מקצוע שמומנו">Healthcare professionals funded</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 5: FOUNDERS ═══════════ -->
+  <section class="section bg-secondary">
+    <div class="container">
+      <p class="text-label reveal" data-en="Behind the fund" data-he="מי מאחורי הקרן">Behind the fund</p>
+      <div class="divider reveal"></div>
+
+      <!-- Primary Founder -->
+      <div class="founder-primary reveal" style="margin-top: var(--sp-3xl);">
+        <div class="photo">
+          <!-- Placeholder -->
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface),var(--secondary));display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.75rem;">Photo</div>
+        </div>
+        <h3 class="founder-name" data-en="[Name]" data-he="[שם]">[Name]</h3>
+        <p class="founder-role" data-en="Founder & Visionary" data-he="מייסדת">Founder & Visionary</p>
+      </div>
+
+      <!-- Team -->
+      <div class="grid-2" style="max-width: 600px; margin: 0 auto;">
+        <div class="founder-card reveal">
+          <div class="photo">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface),var(--secondary));display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.75rem;">Photo</div>
+          </div>
+          <h3 class="founder-name" data-en="[Name]" data-he="[שם]">[Name]</h3>
+          <p class="founder-role" data-en="Head of Innovation & Ventures" data-he="מנהלת חדשנות והשקעות">Head of Innovation & Ventures</p>
+        </div>
+        <div class="founder-card reveal">
+          <div class="photo">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface),var(--secondary));display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.75rem;">Photo</div>
+          </div>
+          <h3 class="founder-name" data-en="[Name]" data-he="[שם]">[Name]</h3>
+          <p class="founder-role" data-en="Head of Philanthropy & Social Impact" data-he="מנהלת פילנטרופיה והשפעה חברתית">Head of Philanthropy & Social Impact</p>
+        </div>
+      </div>
+
+      <!-- Quote -->
+      <blockquote class="quote" data-en="&ldquo;We didn't start a fund. We made a decision about what capital should do.&rdquo;" data-he="&ldquo;לא הקמנו קרן. קיבלנו החלטה על מה שהון צריך לעשות.&rdquo;">
+        &ldquo;We didn't start a fund. We made a decision about what capital should do.&rdquo;
+      </blockquote>
+
+      <div style="text-align: center;">
+        <a href="about-founders.html" class="btn btn-outline" data-en="Meet the team →" data-he="הכירו את הצוות →">Meet the team →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 6: CONTACT / CTA ═══════════ -->
+  <section class="section bg-primary">
+    <div class="container" style="text-align: center;">
+      <h2 class="reveal" data-en="Let's talk" data-he="בואו נדבר">Let's talk</h2>
+      <p class="text-body-lg text-muted reveal" style="max-width: 600px; margin: var(--sp-lg) auto 0;" data-en="Whether you share our vision, seek support, or simply want to learn more — we're listening." data-he="בין אם אתם שותפים לחזון, מחפשים תמיכה, או פשוט רוצים לדעת יותר — אנחנו כאן.">
+        Whether you share our vision, seek support, or simply want to learn more — we're listening.
+      </p>
+
+      <div class="cta-paths cards-stagger">
+        <a href="contact.html?type=partner" class="cta-path">
+          <h3 data-en="Partner with us" data-he="שותפות">Partner with us</h3>
+          <p class="text-muted" data-en="Join our mission" data-he="הצטרפו למשימה שלנו">Join our mission</p>
+          <div class="arrow">→</div>
+        </a>
+        <a href="contact.html?type=support" class="cta-path">
+          <h3 data-en="Apply for support" data-he="בקשת תמיכה">Apply for support</h3>
+          <p class="text-muted" data-en="Healthcare funding" data-he="מימון בריאות">Healthcare funding</p>
+          <div class="arrow">→</div>
+        </a>
+        <a href="contact.html?type=learn" class="cta-path">
+          <h3 data-en="Learn more" data-he="למידע נוסף">Learn more</h3>
+          <p class="text-muted" data-en="Get in touch" data-he="צרו קשר">Get in touch</p>
+          <div class="arrow">→</div>
+        </a>
+      </div>
+
+      <div class="contact-email reveal" style="margin-top: var(--sp-3xl);">
+        <a href="mailto:info@dkf-fund.com">info@dkf-fund.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">DKF</span>
+      <span class="footer-copy" data-en="© 2026 DKF Fund. All rights reserved." data-he="© 2026 DKF Fund. כל הזכויות שמורות.">© 2026 DKF Fund. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>

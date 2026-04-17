@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DKF — News & Updates</title>
+  <meta name="description" content="Latest news and updates from DKF — philanthropy, investments, health-tech, and community impact.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <style>
+    /* News-specific styles */
+    .news-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-xl);
+      align-items: center;
+    }
+    .news-featured-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--secondary);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .news-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: var(--fs-caption);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+      margin-bottom: var(--sp-md);
+    }
+    .news-date {
+      font-size: var(--fs-caption);
+      color: var(--text-muted);
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-xl);
+    }
+    .news-card {
+      background: var(--primary);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .news-card-img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .news-card-body {
+      padding: var(--sp-lg);
+    }
+    .news-filters {
+      display: flex;
+      gap: var(--sp-md);
+      flex-wrap: wrap;
+      margin-bottom: var(--sp-xl);
+    }
+    .news-filter {
+      padding: 6px 16px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: var(--fs-caption);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+      font-family: var(--font-body);
+    }
+    .news-filter:hover, .news-filter.active {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .load-more {
+      display: block;
+      margin: var(--sp-3xl) auto 0;
+      padding: 12px 40px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: var(--text);
+      font-size: var(--fs-body);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: var(--font-body);
+    }
+    .load-more:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    @media (max-width: 1024px) {
+      .news-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .news-featured { grid-template-columns: 1fr; }
+      .news-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+  <div class="page-transition"></div>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo" data-en="DKF" data-he="DKF">DKF</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link" data-en="Home" data-he="בית">Home</a>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link nav-dropdown-trigger">
+          <span data-en="About" data-he="אודות">About</span>
+          <span class="arrow">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="about-fund.html" class="nav-dropdown-item" data-en="The Fund" data-he="הקרן">The Fund</a>
+          <a href="about-founders.html" class="nav-dropdown-item" data-en="The Founders" data-he="המייסדות">The Founders</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link nav-dropdown-trigger">
+          <span data-en="What We Do" data-he="מה אנחנו עושים">What We Do</span>
+          <span class="arrow">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="impact-donations.html" class="nav-dropdown-item" data-en="Impact — Donations" data-he="אימפקט — תרומות">Impact — Donations</a>
+          <a href="impact-investments.html" class="nav-dropdown-item" data-en="Impact — Investments" data-he="אימפקט — השקעות">Impact — Investments</a>
+        </div>
+      </div>
+      <a href="news.html" class="nav-link active" data-en="News" data-he="חדשות">News</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-he="צור קשר">Contact</a>
+      <div class="lang-toggle">
+        <span class="active-lang">EN</span><span>|</span><span>עב</span>
+      </div>
+    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html" class="menu-card">
+      <div class="menu-card-title" data-en="Home" data-he="בית">Home</div>
+      <div class="menu-card-desc" data-en="Fund overview & impact" data-he="סקירת הקרן והשפעה">Fund overview & impact</div>
+    </a>
+    <a href="about-fund.html" class="menu-card">
+      <div class="menu-card-title" data-en="The Fund" data-he="הקרן">The Fund</div>
+      <div class="menu-card-desc" data-en="Story, approach & values" data-he="סיפור, גישה וערכים">Story, approach & values</div>
+    </a>
+    <a href="about-founders.html" class="menu-card">
+      <div class="menu-card-title" data-en="The Founders" data-he="המייסדות">The Founders</div>
+      <div class="menu-card-desc" data-en="Three women, one conviction" data-he="שלוש נשים, שכנוע אחד">Three women, one conviction</div>
+    </a>
+    <a href="impact-donations.html" class="menu-card">
+      <div class="menu-card-title" data-en="Donations" data-he="תרומות">Donations</div>
+      <div class="menu-card-desc" data-en="Where the giving goes" data-he="לאן הנתינה הולכת">Where the giving goes</div>
+    </a>
+    <a href="impact-investments.html" class="menu-card">
+      <div class="menu-card-title" data-en="Investments" data-he="השקעות">Investments</div>
+      <div class="menu-card-desc" data-en="Giving that keeps working" data-he="נתינה שממשיכה לעבוד">Giving that keeps working</div>
+    </a>
+    <a href="news.html" class="menu-card active">
+      <div class="menu-card-title" data-en="News" data-he="חדשות">News</div>
+      <div class="menu-card-desc" data-en="Latest updates" data-he="עדכונים אחרונים">Latest updates</div>
+    </a>
+    <a href="contact.html" class="menu-card">
+      <div class="menu-card-title" data-en="Contact" data-he="צור קשר">Contact</div>
+      <div class="menu-card-desc" data-en="Let's talk" data-he="בואו נדבר">Let's talk</div>
+    </a>
+    <div class="lang-toggle">
+      <span class="active-lang">EN</span>
+      <span>|</span>
+      <span>עב</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ SECTION A: HERO ═══════════ -->
+  <section class="hero bg-primary" style="min-height: 60vh;">
+    <div class="container">
+      <h1>
+        <div class="line"><span data-en="What's" data-he="מה">What's</span></div>
+        <div class="line"><span class="text-accent" data-en="moving." data-he="מתרחש.">moving.</span></div>
+      </h1>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION B: FEATURED ARTICLE ═══════════ -->
+  <section class="section bg-primary" style="padding-top: 0;">
+    <div class="container">
+      <div class="news-featured reveal">
+        <div class="news-featured-img">
+          <span class="text-muted" style="font-size: var(--fs-caption);" data-en="Featured image" data-he="תמונה ראשית">Featured image</span>
+        </div>
+        <div>
+          <span class="news-tag" data-en="Philanthropy" data-he="פילנטרופיה">Philanthropy</span>
+          <h2 style="margin-bottom: var(--sp-md);" data-en="DKF completes its first community clinic renovation in southern Israel" data-he="DKF השלימה את שיפוץ המרפאה הקהילתית הראשון שלה בדרום הארץ">DKF completes its first community clinic renovation in southern Israel</h2>
+          <p class="text-body-lg text-muted" data-en="A 2,000 sqm facility serving 3,000+ families now operates with modern equipment, expanded services, and a new sense of dignity." data-he="מתקן של 2,000 מ&quot;ר המשרת מעל 3,000 משפחות פועל כעת עם ציוד מודרני, שירותים מורחבים ותחושת כבוד חדשה.">
+            A 2,000 sqm facility serving 3,000+ families now operates with modern equipment, expanded services, and a new sense of dignity.
+          </p>
+          <p class="news-date" data-en="March 2026" data-he="מרץ 2026">March 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION C: NEWS GRID ═══════════ -->
+  <section class="section bg-secondary">
+    <div class="container">
+      <!-- Filters -->
+      <div class="news-filters reveal">
+        <button class="news-filter active" data-en="All" data-he="הכל">All</button>
+        <button class="news-filter" data-en="Philanthropy" data-he="פילנטרופיה">Philanthropy</button>
+        <button class="news-filter" data-en="Investments" data-he="השקעות">Investments</button>
+        <button class="news-filter" data-en="Community" data-he="קהילה">Community</button>
+        <button class="news-filter" data-en="Health-Tech" data-he="Health-Tech">Health-Tech</button>
+      </div>
+
+      <div class="news-grid cards-stagger">
+        <!-- Article 1 -->
+        <a href="#" class="news-card">
+          <div class="news-card-img">
+            <span class="text-muted" style="font-size: var(--fs-caption);">Photo</span>
+          </div>
+          <div class="news-card-body">
+            <span class="news-tag" data-en="Health-Tech" data-he="Health-Tech">Health-Tech</span>
+            <h3 style="margin-bottom: var(--sp-sm);" data-en="DKF joins as LP in leading digital health fund" data-he="DKF מצטרפת כ-LP בקרן בריאות דיגיטלית מובילה">DKF joins as LP in leading digital health fund</h3>
+            <p class="text-muted" style="font-size: var(--fs-caption);" data-en="February 2026" data-he="פברואר 2026">February 2026</p>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="#" class="news-card">
+          <div class="news-card-img">
+            <span class="text-muted" style="font-size: var(--fs-caption);">Photo</span>
+          </div>
+          <div class="news-card-body">
+            <span class="news-tag" data-en="Community" data-he="קהילה">Community</span>
+            <h3 style="margin-bottom: var(--sp-sm);" data-en="Supporting soldier welfare: DKF's partnership with care organizations" data-he="תמיכה ברווחת חיילים: שותפות DKF עם ארגוני טיפול">Supporting soldier welfare: DKF's partnership with care organizations</h3>
+            <p class="text-muted" style="font-size: var(--fs-caption);" data-en="January 2026" data-he="ינואר 2026">January 2026</p>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="#" class="news-card">
+          <div class="news-card-img">
+            <span class="text-muted" style="font-size: var(--fs-caption);">Photo</span>
+          </div>
+          <div class="news-card-body">
+            <span class="news-tag" data-en="Philanthropy" data-he="פילנטרופיה">Philanthropy</span>
+            <h3 style="margin-bottom: var(--sp-sm);" data-en="Medical scholarships program launches for 2026" data-he="תוכנית מלגות רפואיות מושקת ל-2026">Medical scholarships program launches for 2026</h3>
+            <p class="text-muted" style="font-size: var(--fs-caption);" data-en="December 2025" data-he="דצמבר 2025">December 2025</p>
+          </div>
+        </a>
+
+        <!-- Article 4 -->
+        <a href="#" class="news-card">
+          <div class="news-card-img">
+            <span class="text-muted" style="font-size: var(--fs-caption);">Photo</span>
+          </div>
+          <div class="news-card-body">
+            <span class="news-tag" data-en="Investments" data-he="השקעות">Investments</span>
+            <h3 style="margin-bottom: var(--sp-sm);" data-en="Q4 review: Health-Tech portfolio performance update" data-he="סקירת Q4: עדכון ביצועי תיק Health-Tech">Q4 review: Health-Tech portfolio performance update</h3>
+            <p class="text-muted" style="font-size: var(--fs-caption);" data-en="November 2025" data-he="נובמבר 2025">November 2025</p>
+          </div>
+        </a>
+
+        <!-- Article 5 -->
+        <a href="#" class="news-card">
+          <div class="news-card-img">
+            <span class="text-muted" style="font-size: var(--fs-caption);">Photo</span>
+          </div>
+          <div class="news-card-body">
+            <span class="news-tag" data-en="Community" data-he="קהילה">Community</span>
+            <h3 style="margin-bottom: var(--sp-sm);" data-en="DKF Fund officially launches" data-he="קרן DKF מושקת רשמית">DKF Fund officially launches</h3>
+            <p class="text-muted" style="font-size: var(--fs-caption);" data-en="October 2025" data-he="אוקטובר 2025">October 2025</p>
+          </div>
+        </a>
+
+        <!-- Article 6 -->
+        <a href="#" class="news-card">
+          <div class="news-card-img">
+            <span class="text-muted" style="font-size: var(--fs-caption);">Photo</span>
+          </div>
+          <div class="news-card-body">
+            <span class="news-tag" data-en="Health-Tech" data-he="Health-Tech">Health-Tech</span>
+            <h3 style="margin-bottom: var(--sp-sm);" data-en="Why philanthropy needs an investment engine" data-he="למה פילנטרופיה צריכה מנוע השקעות">Why philanthropy needs an investment engine</h3>
+            <p class="text-muted" style="font-size: var(--fs-caption);" data-en="September 2025" data-he="ספטמבר 2025">September 2025</p>
+          </div>
+        </a>
+      </div>
+
+      <button class="load-more" data-en="Load more" data-he="טען עוד">Load more</button>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">DKF</span>
+      <span class="footer-copy" data-en="© 2026 DKF Fund. All rights reserved." data-he="© 2026 DKF Fund. כל הזכויות שמורות.">© 2026 DKF Fund. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>
