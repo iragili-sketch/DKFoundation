@@ -231,39 +231,4 @@
       </form>
 
       <!-- ═══════════ SECTION D: CONTACT INFO ═══════════ -->
-      <div class="contact-info reveal">
-        <p class="text-muted" style="margin-bottom: var(--sp-sm);" data-en="Or reach us directly" data-he="או פנו אלינו ישירות">Or reach us directly</p>
-        <a href="mailto:info@dkf-fund.com">info@dkf-fund.com</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ FOOTER ═══════════ -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-logo">DKF</span>
-      <span class="footer-copy" data-en="© 2026 DKF Fund. All rights reserved." data-he="© 2026 DKF Fund. כל הזכויות שמורות.">© 2026 DKF Fund. All rights reserved.</span>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
-
-  <!-- Auto-select type from URL param -->
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const type = params.get('type');
-    if (type) {
-      const select = document.getElementById('contact-type');
-      if (select) {
-        const mapping = { partner: 'partner', support: 'applicant', learn: 'other' };
-        const val = mapping[type] || type;
-        for (let opt of select.options) {
-          if (opt.value === val) { opt.selected = true; break; }
-        }
-      }
-    }
-  </script>
-
-</body>
-</html>
+      <di
