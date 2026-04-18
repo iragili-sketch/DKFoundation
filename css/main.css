@@ -76,7 +76,7 @@ body {
   cursor: none;
 }
 
-a, button, .card, .cta-path, .btn, .nav-link, .lang-toggle, .hamburger, .menu-card, input, textarea, select, [role="button"] {
+* {
   cursor: none \!important;
 }
 
