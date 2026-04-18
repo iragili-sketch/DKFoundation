@@ -37,7 +37,7 @@ function initCursor() {
   followCursor();
 
   // Hover effects
-  const hoverEls = document.querySelectorAll('a, button, .card, .cta-path, .btn, .nav-link, .lang-toggle');
+  const hoverEls = document.querySelectorAll('a, button, .card, .cta-path, .btn, .nav-link, .lang-toggle, .hamburger, .menu-card, .nav-dropdown-trigger');
   hoverEls.forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));

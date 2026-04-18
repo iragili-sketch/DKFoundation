@@ -316,7 +316,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-radius: 100px;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
-  cursor: pointer;
+  cursor: none \!important;
   transition: border-color var(--duration-fast);
 }
 
@@ -333,7 +333,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   display: flex;
   flex-direction: column;
   gap: 6px;
-  cursor: pointer;
+  cursor: none \!important;
   z-index: 1001;
 }
 
@@ -757,7 +757,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-radius: 12px;
   text-align: center;
   transition: border-color var(--duration-fast), transform var(--duration-fast);
-  cursor: pointer;
+  cursor: none \!important;
 }
 
 .cta-path:hover {
