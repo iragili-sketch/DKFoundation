@@ -104,6 +104,8 @@ ul, ol { list-style: none; }
   height: 12px;
   background: var(--accent);
   border-radius: 50%;
+  z-index: 99999;
+  pointer-events: none;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
@@ -116,6 +118,8 @@ ul, ol { list-style: none; }
   height: 40px;
   border: 1px solid var(--accent);
   border-radius: 50%;
+  z-index: 99998;
+  pointer-events: none;
   pointer-events: none;
   z-index: 9998;
   transition: transform 0.4s var(--ease-out), width 0.3s, height 0.3s;
