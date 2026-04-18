@@ -106,8 +106,6 @@ ul, ol { list-style: none; }
   border-radius: 50%;
   z-index: 99999;
   pointer-events: none;
-  pointer-events: none;
-  z-index: 9999;
   mix-blend-mode: difference;
   transition: transform 0.15s var(--ease-out);
 }
