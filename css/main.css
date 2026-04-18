@@ -76,8 +76,12 @@ body {
   cursor: none;
 }
 
-* {
-  cursor: none \!important;
+*, *::before, *::after,
+a, a:hover, a:focus, a:active,
+button, button:hover,
+[role="button"], input, select, textarea,
+.card, .cta-path, .btn, .hamburger, .menu-card {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"/>'), none \!important;
 }
 
 /* RTL Support */
