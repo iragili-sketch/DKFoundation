@@ -931,7 +931,68 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* Footer responsive */
+/* ── Responsive: Tablet (768px) ─────────────────── */
 @media (max-width: 768px) {
+  /* Container */
+  .container {
+    padding: 0 var(--sp-lg);
+  }
+
+  /* Nav */
+  .nav {
+    padding: 0 var(--sp-lg);
+  }
+
+  /* Sections */
+  .section { padding: var(--sp-3xl) 0; }
+  .section-sm { padding: var(--sp-2xl) 0; }
+  .section-lg { padding: var(--sp-4xl) 0; }
+
+  /* Hero */
+  .hero {
+    min-height: 85vh;
+  }
+  h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /* Grids collapse */
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-xl);
+  }
+
+  /* CTA paths */
+  .cta-paths {
+    grid-template-columns: 1fr;
+    gap: var(--sp-md);
+  }
+
+  /* Cards */
+  .card {
+    padding: var(--sp-xl);
+  }
+
+  /* Founder */
+  .founder-primary .photo {
+    width: 200px;
+    height: 250px;
+  }
+
+  /* Mobile menu - wider on tablet */
+  .mobile-menu {
+    width: 50vw;
+    min-width: 280px;
+  }
+
+  /* Footer */
   .footer-top {
     grid-template-columns: 1fr 1fr;
     gap: var(--sp-2xl);
@@ -947,11 +1008,96 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   .footer-legal {
     justify-content: center;
   }
+
+  /* Buttons */
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+  }
+
+  /* Quote */
+  .quote {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    padding: var(--sp-xl) 0;
+  }
+
+  /* Text display */
+  .text-display {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+  }
 }
 
+/* ── Responsive: Mobile (480px) ────────────────── */
 @media (max-width: 480px) {
+  /* Container tighter */
+  .container {
+    padding: 0 var(--sp-md);
+  }
+  .nav {
+    padding: 0 var(--sp-md);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+  }
+  h1 { font-size: clamp(2rem, 12vw, 3rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+
+  /* Sections */
+  .section { padding: var(--sp-2xl) 0; }
+  .section-lg { padding: var(--sp-3xl) 0; }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-lg);
+  }
+
+  /* Grid-4 collapses fully */
+  .grid-4 { grid-template-columns: 1fr; }
+
+  /* Mobile menu - full width */
+  .mobile-menu {
+    width: 100vw;
+    min-width: unset;
+    border-left: none;
+    padding: var(--sp-xl) var(--sp-md);
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--sp-3xl) 0 var(--sp-lg);
+  }
   .footer-top {
     grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+  }
+  .footer-logo {
+    font-size: 1.25rem;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* CTA path cards */
+  .cta-path {
+    padding: var(--sp-lg);
+  }
+
+  /* Founder photo */
+  .founder-primary .photo {
+    width: 160px;
+    height: 200px;
+  }
+
+  /* Buttons full width on small screens */
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }
 
