@@ -76,6 +76,10 @@ body {
   cursor: none;
 }
 
+a, button, .card, .cta-path, .btn, .nav-link, .lang-toggle, .hamburger, .menu-card, input, textarea, select, [role="button"] {
+  cursor: none \!important;
+}
+
 /* RTL Support */
 [dir="rtl"] body {
   font-family: var(--font-he);
