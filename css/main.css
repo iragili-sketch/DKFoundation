@@ -834,15 +834,18 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 .partner-logo {
-  height: 45px;
+  height: 50px;
   width: auto;
-  opacity: 0.5;
-  transition: opacity var(--duration-fast) var(--ease-out);
+  opacity: 0.7;
+  filter: grayscale(100%) brightness(2) contrast(0.8);
+  transition: all var(--duration-fast) var(--ease-out);
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .partner-logo:hover {
-  opacity: 0.9;
+  opacity: 1;
+  filter: grayscale(100%) brightness(2.2) contrast(0.9);
 }
 
 @keyframes marquee {
@@ -902,15 +905,18 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 .partner-logo {
-  height: 45px;
+  height: 50px;
   width: auto;
-  opacity: 0.5;
-  transition: opacity var(--duration-fast) var(--ease-out);
+  opacity: 0.7;
+  filter: grayscale(100%) brightness(2) contrast(0.8);
+  transition: all var(--duration-fast) var(--ease-out);
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .partner-logo:hover {
-  opacity: 0.9;
+  opacity: 1;
+  filter: grayscale(100%) brightness(2.2) contrast(0.9);
 }
 
 @keyframes marquee {
