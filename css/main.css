@@ -834,9 +834,9 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 .partner-logo {
-  height: 50px;
-  width: auto;
-  opacity: 0.7;
+  height: 55px;
+  width: 140px;
+  opacity: 0.6;
   filter: grayscale(100%) brightness(2) contrast(0.8);
   transition: all var(--duration-fast) var(--ease-out);
   flex-shrink: 0;
@@ -858,7 +858,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     gap: var(--sp-3xl);
   }
   .partner-logo {
-    height: 35px;
+    height: 40px;
+    width: 100px;
   }
   .partners-marquee::before,
   .partners-marquee::after {
@@ -905,9 +906,9 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 .partner-logo {
-  height: 50px;
-  width: auto;
-  opacity: 0.7;
+  height: 55px;
+  width: 140px;
+  opacity: 0.6;
   filter: grayscale(100%) brightness(2) contrast(0.8);
   transition: all var(--duration-fast) var(--ease-out);
   flex-shrink: 0;
@@ -929,7 +930,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     gap: var(--sp-3xl);
   }
   .partner-logo {
-    height: 35px;
+    height: 40px;
+    width: 100px;
   }
   .partners-marquee::before,
   .partners-marquee::after {
