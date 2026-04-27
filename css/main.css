@@ -796,7 +796,141 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-color: var(--accent);
 }
 
+
+/* ── Partners Marquee ──────────────────────────── */
+.partners-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-marquee::before,
+.partners-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.partners-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--primary), transparent);
+}
+
+.partners-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--primary), transparent);
+}
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4xl);
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.partner-logo {
+  height: 45px;
+  width: auto;
+  opacity: 0.5;
+  transition: opacity var(--duration-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.partner-logo:hover {
+  opacity: 0.9;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@media (max-width: 768px) {
+  .partners-track {
+    gap: var(--sp-3xl);
+  }
+  .partner-logo {
+    height: 35px;
+  }
+  .partners-marquee::before,
+  .partners-marquee::after {
+    width: 60px;
+  }
+}
+
 /* ── Footer ────────────────────────────────────── */
+
+/* ── Partners Marquee ──────────────────────────── */
+.partners-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-marquee::before,
+.partners-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.partners-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--primary), transparent);
+}
+
+.partners-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--primary), transparent);
+}
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4xl);
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.partner-logo {
+  height: 45px;
+  width: auto;
+  opacity: 0.5;
+  transition: opacity var(--duration-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.partner-logo:hover {
+  opacity: 0.9;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@media (max-width: 768px) {
+  .partners-track {
+    gap: var(--sp-3xl);
+  }
+  .partner-logo {
+    height: 35px;
+  }
+  .partners-marquee::before,
+  .partners-marquee::after {
+    width: 60px;
+  }
+}
+
 /* ── Footer ─────────────────────────────────────── */
 .footer {
   padding: var(--sp-4xl) 0 var(--sp-xl);
