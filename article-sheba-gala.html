@@ -3,55 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DKF — Why Healthcare Investment Is a Community Decision</title>
-  <meta name="description" content="Capital can serve people before profit — here's how DKF is proving it through strategic healthcare investments.">
+  <title>DKF — Swiss Friends of Sheba Gala</title>
+  <meta name="description" content="DKF at the Swiss Friends of Sheba Gala — 20 Years of Healing & Hope.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/main.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
   <style>
-    .article-hero {
-      padding: var(--sp-3xl) 0 var(--sp-xl);
-    }
+    .article-hero { padding: var(--sp-3xl) 0 var(--sp-xl); }
     .article-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: var(--fs-caption);
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-bottom: var(--sp-xl);
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: var(--fs-caption); color: var(--text-muted);
+      text-decoration: none; margin-bottom: var(--sp-xl);
       transition: color 0.3s ease;
     }
-    .article-back:hover {
-      color: var(--accent);
-    }
+    .article-back:hover { color: var(--accent); }
     .article-tag {
-      display: inline-block;
-      padding: 4px 12px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-size: var(--fs-caption);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      border-radius: 2px;
-      margin-bottom: var(--sp-md);
+      display: inline-block; padding: 4px 12px;
+      border: 1px solid var(--accent); color: var(--accent);
+      font-size: var(--fs-caption); text-transform: uppercase;
+      letter-spacing: 0.1em; border-radius: 2px; margin-bottom: var(--sp-md);
     }
-    .article-title {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      margin-bottom: var(--sp-md);
-    }
-    .article-meta {
-      font-size: var(--fs-caption);
-      color: var(--text-muted);
-      margin-bottom: var(--sp-2xl);
-    }
+    .article-title { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: var(--sp-md); }
+    .article-meta { font-size: var(--fs-caption); color: var(--text-muted); margin-bottom: var(--sp-2xl); }
+
     /* ── Carousel ── */
     .carousel {
       position: relative; width: 100%; aspect-ratio: 16/9;
@@ -61,9 +41,11 @@
       display: flex; height: 100%;
       transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
-    .carousel-slide { min-width: 100%; height: 100%; }
-    .carousel-slide img, .carousel-slide video {
-      width: 100%; height: 100%; object-fit: cover;
+    .carousel-slide {
+      min-width: 100%; height: 100%;
+    }
+    .carousel-slide img {
+      width: 100%; height: 100%; object-fit: cover; object-position: top;
     }
     .carousel-btn {
       position: absolute; top: 50%; transform: translateY(-50%);
@@ -92,46 +74,22 @@
       border-radius: 2px; font-size: var(--fs-caption);
       color: rgba(255,255,255,0.8); z-index: 2;
     }
-    .article-content {
-      max-width: 720px;
-      margin: 0 auto;
-    }
+
+    .article-content { max-width: 720px; margin: 0 auto; }
     .article-content p {
-      font-size: var(--fs-body-lg);
-      line-height: 1.8;
-      color: var(--text-muted);
-      margin-bottom: var(--sp-xl);
+      font-size: var(--fs-body-lg); line-height: 1.8;
+      color: var(--text-muted); margin-bottom: var(--sp-xl);
     }
     .article-content p:first-of-type {
-      font-size: 1.25rem;
-      color: var(--text);
-      line-height: 1.7;
-    }
-    .article-gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--sp-lg);
-      margin: var(--sp-2xl) 0;
-    }
-    .article-gallery img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border-radius: 4px;
+      font-size: 1.25rem; color: var(--text); line-height: 1.7;
     }
     .article-cta {
-      text-align: center;
-      padding: var(--sp-3xl) 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      margin-top: var(--sp-2xl);
+      text-align: center; padding: var(--sp-3xl) 0;
+      border-top: 1px solid rgba(255,255,255,0.08); margin-top: var(--sp-2xl);
     }
-    .article-cta h3 {
-      margin-bottom: var(--sp-md);
-    }
+    .article-cta h3 { margin-bottom: var(--sp-md); }
     @media (max-width: 768px) {
-      .article-gallery {
-        grid-template-columns: 1fr;
-      }
+      .carousel-btn { width: 36px; height: 36px; font-size: 1rem; }
     }
   </style>
 </head>
@@ -205,9 +163,7 @@
       <div class="menu-card-desc" data-en="Let's talk" data-he="בואו נדבר">Let's talk</div>
     </a>
     <div class="lang-toggle">
-      <span class="active-lang">EN</span>
-      <span>|</span>
-      <span>עב</span>
+      <span class="active-lang">EN</span><span>|</span><span>עב</span>
     </div>
   </div>
 
@@ -216,15 +172,25 @@
     <div class="container">
       <a href="news.html" class="article-back" data-en="← Back to News" data-he="← חזרה לחדשות">← Back to News</a>
 
-      <span class="article-tag" data-en="Investments" data-he="השקעות">Investments</span>
-      <h1 class="article-title" data-en="Why Healthcare Investment Is a Community Decision" data-he="למה השקעה בבריאות היא החלטה קהילתית">Why Healthcare Investment Is a Community Decision</h1>
+      <span class="article-tag" data-en="Philanthropy" data-he="פילנטרופיה">Philanthropy</span>
+      <h1 class="article-title" data-en="DKF at the Swiss Friends of Sheba Gala — 20 Years of Healing & Hope" data-he="DKF בגאלה של ידידי שיבא בשוויץ — 20 שנה של ריפוי ותקווה">DKF at the Swiss Friends of Sheba Gala — 20 Years of Healing & Hope</h1>
       <p class="article-meta" data-en="April 2026" data-he="אפריל 2026">April 2026</p>
 
+      <!-- ── Image Carousel ── -->
       <div class="carousel" id="articleCarousel">
         <div class="carousel-track">
           <div class="carousel-slide">
-            <video src="assets/img/news-healthcare-investment.mp4" autoplay muted loop playsinline></video>
+            <img src="assets/img/news-sheba-gala.jpg" alt="Sheba Gala 2026">
           </div>
+          <!-- Add more slides here as images become available -->
+          <!--
+          <div class="carousel-slide">
+            <img src="assets/img/news-sheba-gala-2.jpg" alt="Sheba Gala 2026">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/img/news-sheba-gala-3.jpg" alt="Sheba Gala 2026">
+          </div>
+          -->
         </div>
         <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
         <button class="carousel-btn next" aria-label="Next">&#8250;</button>
@@ -233,15 +199,13 @@
       </div>
 
       <div class="article-content">
-        <p data-en="When we invest in medical ventures, we're not chasing returns — we're building the infrastructure of care." data-he="כשאנחנו משקיעות במיזמים רפואיים, אנחנו לא רודפות אחרי תשואות — אנחנו בונות תשתית של טיפול.">When we invest in medical ventures, we're not chasing returns — we're building the infrastructure of care.</p>
+        <p data-en="The David Kipnis Foundation joined 170 distinguished guests at the Carlton Hotel St. Moritz for the 20th anniversary Healing & Hope Gala, hosted by the Swiss Friends of Sheba Medical Center." data-he="קרן דוד קיפניס הצטרפה ל-170 אורחים נכבדים במלון קרלטון סן מוריץ לגאלה ה-20 של ריפוי ותקווה, בחסות ידידי שיבא בשוויץ.">The David Kipnis Foundation joined 170 distinguished guests at the Carlton Hotel St. Moritz for the 20th anniversary Healing & Hope Gala, hosted by the Swiss Friends of Sheba Medical Center.</p>
 
-        <p data-en="Every Health-Tech fund we back, every clinical space we help create, is a statement: that capital can serve people before profit. At DKF, we believe the strongest investment thesis is one rooted in community — because healthier communities build stronger economies, and stronger economies fund better healthcare. It's a cycle we're proud to fuel." data-he="כל קרן Health-Tech שאנחנו תומכות בה, כל מרחב קליני שאנחנו עוזרות ליצור, הוא הצהרה: שהון יכול לשרת אנשים לפני רווח. ב-DKF אנחנו מאמינות שתזת ההשקעה החזקה ביותר היא כזו שמושרשת בקהילה — כי קהילות בריאות בונות כלכלות חזקות, וכלכלות חזקות ממנות בריאות טובה יותר. זה מעגל שאנחנו גאות להניע.">Every Health-Tech fund we back, every clinical space we help create, is a statement: that capital can serve people before profit. At DKF, we believe the strongest investment thesis is one rooted in community — because healthier communities build stronger economies, and stronger economies fund better healthcare. It's a cycle we're proud to fuel.</p>
+        <p data-en="The evening celebrated two decades of support for Sheba — the Middle East's largest medical center — with a cumulative €16.5 million raised over 20 years." data-he="הערב חגג שני עשורים של תמיכה בשיבא — המרכז הרפואי הגדול ביותר במזרח התיכון — עם סך מצטבר של 16.5 מיליון יורו שגויסו לאורך 20 שנה.">The evening celebrated two decades of support for Sheba — the Middle East's largest medical center — with a cumulative €16.5 million raised over 20 years.</p>
 
-        <p data-en="The traditional model of healthcare investment treats patients as consumers and clinics as revenue centers. We reject that premise. Our approach starts with a question: what does the community need? From there, we work backward — identifying the ventures, technologies, and infrastructure that will deliver the greatest collective benefit." data-he="המודל המסורתי של השקעות בבריאות מתייחס למטופלים כצרכנים ולמרפאות כמרכזי הכנסה. אנחנו דוחות את ההנחה הזו. הגישה שלנו מתחילה בשאלה: מה הקהילה צריכה? משם, אנחנו עובדות אחורה — מזהות את המיזמים, הטכנולוגיות והתשתיות שיביאו את התועלת הקולקטיבית הגדולה ביותר.">The traditional model of healthcare investment treats patients as consumers and clinics as revenue centers. We reject that premise. Our approach starts with a question: what does the community need? From there, we work backward — identifying the ventures, technologies, and infrastructure that will deliver the greatest collective benefit.</p>
+        <p data-en="DKF founders Alin Kipnis, Ira Fradkin, and Karine Bar Or attended the event, reinforcing DKF's commitment to advancing healthcare through strategic philanthropy." data-he="מייסדות DKF אלין קיפניס, אירה פרדקין וקרין בר אור השתתפו באירוע, ובכך חיזקו את המחויבות של DKF לקידום הבריאות דרך פילנטרופיה אסטרטגית.">DKF founders Alin Kipnis, Ira Fradkin, and Karine Bar Or attended the event, reinforcing DKF's commitment to advancing healthcare through strategic philanthropy.</p>
 
-        <p data-en="This isn't philanthropy dressed as investment. It's investment informed by philanthropy. We hold our portfolio companies to rigorous financial standards — but we also hold them to community standards. Access, equity, and measurable patient outcomes are non-negotiable metrics alongside growth and margins." data-he="זו לא פילנטרופיה שמתחפשת להשקעה. זו השקעה שמודרכת על ידי פילנטרופיה. אנחנו דורשות מחברות הפורטפוליו שלנו סטנדרטים פיננסיים מחמירים — אבל גם סטנדרטים קהילתיים. נגישות, שוויון ותוצאות מדידות למטופלים הם מדדים שאינם ניתנים למשא ומתן, לצד צמיחה ומרווחים.">This isn't philanthropy dressed as investment. It's investment informed by philanthropy. We hold our portfolio companies to rigorous financial standards — but we also hold them to community standards. Access, equity, and measurable patient outcomes are non-negotiable metrics alongside growth and margins.</p>
-
-        <p data-en="When capital flows toward community health, everyone benefits. That's not idealism — it's our investment thesis." data-he="כשהון זורם לעבר בריאות הקהילה, כולם מרוויחים. זה לא אידיאליזם — זו תזת ההשקעה שלנו.">When capital flows toward community health, everyone benefits. That's not idealism — it's our investment thesis.</p>
+        <p data-en="The gala was dedicated to the Ellen Ringier Rehabilitation Wing at Sheba's Children's Hospital, a cause closely aligned with DKF's mission of building clinical spaces and supporting medical innovation." data-he="הגאלה הוקדשה לאגף השיקום על שם אלן רינגייר בבית החולים לילדים של שיבא — מטרה שמתחברת ישירות למשימה של DKF לבניית מרחבים קליניים ותמיכה בחדשנות רפואית.">The gala was dedicated to the Ellen Ringier Rehabilitation Wing at Sheba's Children's Hospital, a cause closely aligned with DKF's mission of building clinical spaces and supporting medical innovation.</p>
       </div>
 
       <div class="article-cta">
@@ -294,11 +258,12 @@
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
 
-
   <script>
+    // ── Carousel Logic ──
     (function() {
       const carousel = document.getElementById('articleCarousel');
       if (\!carousel) return;
+
       const track = carousel.querySelector('.carousel-track');
       const slides = carousel.querySelectorAll('.carousel-slide');
       const prevBtn = carousel.querySelector('.prev');
@@ -306,9 +271,13 @@
       const dotsContainer = carousel.querySelector('.carousel-dots');
       const currentEl = document.getElementById('carouselCurrent');
       const totalEl = document.getElementById('carouselTotal');
+
       let current = 0;
       const total = slides.length;
+
       totalEl.textContent = total;
+
+      // Hide nav if only 1 image
       if (total <= 1) {
         prevBtn.style.display = 'none';
         nextBtn.style.display = 'none';
@@ -316,31 +285,40 @@
         carousel.querySelector('.carousel-counter').style.display = 'none';
         return;
       }
+
+      // Create dots
       slides.forEach(function(_, i) {
         var dot = document.createElement('button');
         dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
         dot.addEventListener('click', function() { goTo(i); });
         dotsContainer.appendChild(dot);
       });
+
       function goTo(index) {
         current = index;
         if (current < 0) current = total - 1;
         if (current >= total) current = 0;
         track.style.transform = 'translateX(-' + (current * 100) + '%)';
         currentEl.textContent = current + 1;
-        dotsContainer.querySelectorAll('.carousel-dot').forEach(function(d, i) {
+        var dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach(function(d, i) {
           d.className = 'carousel-dot' + (i === current ? ' active' : '');
         });
       }
+
       prevBtn.addEventListener('click', function() { goTo(current - 1); });
       nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+      // Swipe support
       var startX = 0;
       carousel.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; });
       carousel.addEventListener('touchend', function(e) {
         var diff = startX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+        if (Math.abs(diff) > 50) { goTo(current + (diff > 0 ? 1 : -1)); }
       });
     })();
   </script>
+
 </body>
 </html>
