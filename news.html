@@ -22,6 +22,14 @@
       grid-template-columns: 1fr 1fr;
       gap: var(--sp-xl);
       align-items: center;
+      transition: transform 0.3s ease;
+    }
+    a.news-featured:hover {
+      transform: translateY(-4px);
+    }
+    a.news-featured:hover h2 {
+      color: var(--accent);
+      transition: color 0.3s ease;
     }
     .news-featured-img {
       width: 100%;
@@ -209,22 +217,21 @@
     </div>
   </section>
 
-  <!-- ═══════════ SECTION B: FEATURED ARTICLE ═══════════ -->
+  <\!-- ═══════════ SECTION B: FEATURED ARTICLE ═══════════ -->
   <section class="section bg-primary" style="padding-top: 0;">
     <div class="container">
-      <div class="news-featured reveal">
+      <a href="article-healthcare-investment.html" class="news-featured reveal" style="text-decoration:none;color:inherit;">
         <div class="news-featured-img" style="overflow:hidden;">
           <video src="assets/img/news-healthcare-investment.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video>
         </div>
         <div>
           <span class="news-tag" data-en="Investments" data-he="השקעות">Investments</span>
           <h2 style="margin-bottom: var(--sp-md);" data-en="Why Healthcare Investment Is a Community Decision" data-he="למה השקעה בבריאות היא החלטה קהילתית">Why Healthcare Investment Is a Community Decision</h2>
-          <p class="text-body-lg text-muted" data-en="When we invest in medical ventures, we're not chasing returns — we're building the infrastructure of care. Every Health-Tech fund we back, every clinical space we help create, is a statement: that capital can serve people before profit. At DKF, we believe the strongest investment thesis is one rooted in community — because healthier communities build stronger economies, and stronger economies fund better healthcare. It's a cycle we're proud to fuel." data-he="כשאנחנו משקיעות במיזמים רפואיים, אנחנו לא רודפות אחרי תשואות — אנחנו בונות תשתית של טיפול. כל קרן Health-Tech שאנחנו תומכות בה, כל מרחב קליני שאנחנו עוזרות ליצור, הוא הצהרה: שהון יכול לשרת אנשים לפני רווח. ב-DKF אנחנו מאמינות שתזת ההשקעה החזקה ביותר היא כזו שמושרשת בקהילה — כי קהילות בריאות בונות כלכלות חזקות, וכלכלות חזקות ממנות בריאות טובה יותר. זה מעגל שאנחנו גאות להניע.">
-            When we invest in medical ventures, we're not chasing returns — we're building the infrastructure of care. Every Health-Tech fund we back, every clinical space we help create, is a statement: that capital can serve people before profit. At DKF, we believe the strongest investment thesis is one rooted in community — because healthier communities build stronger economies, and stronger economies fund better healthcare. It's a cycle we're proud to fuel.
-          </p>
-          <p class="news-date" data-en="April 2026" data-he="אפריל 2026">April 2026</p>
+          <p class="text-body-lg text-muted" data-en="Capital can serve people before profit — here's how we're proving it." data-he="הון יכול לשרת אנשים לפני רווח — כך אנחנו מוכיחות את זה.">Capital can serve people before profit — here's how we're proving it.</p>
+          <span class="news-date" data-en="April 2026" data-he="אפריל 2026">April 2026</span>
+          <span style="display:inline-block;margin-left:var(--sp-md);color:var(--accent);font-size:var(--fs-body);" data-en="Read article →" data-he="קראו את הכתבה →">Read article →</span>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 

@@ -1,0 +1,262 @@
+<\!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DKF — Why Healthcare Investment Is a Community Decision</title>
+  <meta name="description" content="Capital can serve people before profit — here's how DKF is proving it through strategic healthcare investments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <style>
+    .article-hero {
+      padding: var(--sp-3xl) 0 var(--sp-xl);
+    }
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--fs-caption);
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: var(--sp-xl);
+      transition: color 0.3s ease;
+    }
+    .article-back:hover {
+      color: var(--accent);
+    }
+    .article-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: var(--fs-caption);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+      margin-bottom: var(--sp-md);
+    }
+    .article-title {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: var(--sp-md);
+    }
+    .article-meta {
+      font-size: var(--fs-caption);
+      color: var(--text-muted);
+      margin-bottom: var(--sp-2xl);
+    }
+    .article-video {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: var(--sp-2xl);
+    }
+    .article-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .article-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-content p {
+      font-size: var(--fs-body-lg);
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: var(--sp-xl);
+    }
+    .article-content p:first-of-type {
+      font-size: 1.25rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .article-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-lg);
+      margin: var(--sp-2xl) 0;
+    }
+    .article-gallery img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .article-cta {
+      text-align: center;
+      padding: var(--sp-3xl) 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: var(--sp-2xl);
+    }
+    .article-cta h3 {
+      margin-bottom: var(--sp-md);
+    }
+    @media (max-width: 768px) {
+      .article-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+  <div class="page-transition"></div>
+
+  <\!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo" data-en="DKF" data-he="DKF">DKF</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link" data-en="Home" data-he="בית">Home</a>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link nav-dropdown-trigger">
+          <span data-en="About" data-he="אודות">About</span>
+          <span class="arrow">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="about-fund.html" class="nav-dropdown-item" data-en="The Fund" data-he="הקרן">The Fund</a>
+          <a href="about-founders.html" class="nav-dropdown-item" data-en="The Founders" data-he="המייסדות">The Founders</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link nav-dropdown-trigger">
+          <span data-en="What We Do" data-he="מה אנחנו עושים">What We Do</span>
+          <span class="arrow">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="impact-donations.html" class="nav-dropdown-item" data-en="Impact — Donations" data-he="אימפקט — תרומות">Impact — Donations</a>
+          <a href="impact-investments.html" class="nav-dropdown-item" data-en="Impact — Investments" data-he="אימפקט — השקעות">Impact — Investments</a>
+        </div>
+      </div>
+      <a href="news.html" class="nav-link active" data-en="News" data-he="חדשות">News</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-he="צור קשר">Contact</a>
+      <div class="lang-toggle">
+        <span class="active-lang">EN</span><span>|</span><span>עב</span>
+      </div>
+    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html" class="menu-card">
+      <div class="menu-card-title" data-en="Home" data-he="בית">Home</div>
+      <div class="menu-card-desc" data-en="Fund overview & impact" data-he="סקירת הקרן והשפעה">Fund overview & impact</div>
+    </a>
+    <a href="about-fund.html" class="menu-card">
+      <div class="menu-card-title" data-en="The Fund" data-he="הקרן">The Fund</div>
+      <div class="menu-card-desc" data-en="Story, approach & values" data-he="סיפור, גישה וערכים">Story, approach & values</div>
+    </a>
+    <a href="about-founders.html" class="menu-card">
+      <div class="menu-card-title" data-en="The Founders" data-he="המייסדות">The Founders</div>
+      <div class="menu-card-desc" data-en="Three women, one conviction" data-he="שלוש נשים, שכנוע אחד">Three women, one conviction</div>
+    </a>
+    <a href="impact-donations.html" class="menu-card">
+      <div class="menu-card-title" data-en="Donations" data-he="תרומות">Donations</div>
+      <div class="menu-card-desc" data-en="Where the giving goes" data-he="לאן הנתינה הולכת">Where the giving goes</div>
+    </a>
+    <a href="impact-investments.html" class="menu-card">
+      <div class="menu-card-title" data-en="Investments" data-he="השקעות">Investments</div>
+      <div class="menu-card-desc" data-en="Giving that keeps working" data-he="נתינה שממשיכה לעבוד">Giving that keeps working</div>
+    </a>
+    <a href="news.html" class="menu-card active">
+      <div class="menu-card-title" data-en="News" data-he="חדשות">News</div>
+      <div class="menu-card-desc" data-en="Latest updates" data-he="עדכונים אחרונים">Latest updates</div>
+    </a>
+    <a href="contact.html" class="menu-card">
+      <div class="menu-card-title" data-en="Contact" data-he="צור קשר">Contact</div>
+      <div class="menu-card-desc" data-en="Let's talk" data-he="בואו נדבר">Let's talk</div>
+    </a>
+    <div class="lang-toggle">
+      <span class="active-lang">EN</span>
+      <span>|</span>
+      <span>עב</span>
+    </div>
+  </div>
+
+  <\!-- ═══════════ ARTICLE ═══════════ -->
+  <section class="section bg-primary article-hero">
+    <div class="container">
+      <a href="news.html" class="article-back" data-en="← Back to News" data-he="← חזרה לחדשות">← Back to News</a>
+
+      <span class="article-tag" data-en="Investments" data-he="השקעות">Investments</span>
+      <h1 class="article-title" data-en="Why Healthcare Investment Is a Community Decision" data-he="למה השקעה בבריאות היא החלטה קהילתית">Why Healthcare Investment Is a Community Decision</h1>
+      <p class="article-meta" data-en="April 2026" data-he="אפריל 2026">April 2026</p>
+
+      <div class="article-video">
+        <video src="assets/img/news-healthcare-investment.mp4" autoplay muted loop playsinline></video>
+      </div>
+
+      <div class="article-content">
+        <p data-en="When we invest in medical ventures, we're not chasing returns — we're building the infrastructure of care." data-he="כשאנחנו משקיעות במיזמים רפואיים, אנחנו לא רודפות אחרי תשואות — אנחנו בונות תשתית של טיפול.">When we invest in medical ventures, we're not chasing returns — we're building the infrastructure of care.</p>
+
+        <p data-en="Every Health-Tech fund we back, every clinical space we help create, is a statement: that capital can serve people before profit. At DKF, we believe the strongest investment thesis is one rooted in community — because healthier communities build stronger economies, and stronger economies fund better healthcare. It's a cycle we're proud to fuel." data-he="כל קרן Health-Tech שאנחנו תומכות בה, כל מרחב קליני שאנחנו עוזרות ליצור, הוא הצהרה: שהון יכול לשרת אנשים לפני רווח. ב-DKF אנחנו מאמינות שתזת ההשקעה החזקה ביותר היא כזו שמושרשת בקהילה — כי קהילות בריאות בונות כלכלות חזקות, וכלכלות חזקות ממנות בריאות טובה יותר. זה מעגל שאנחנו גאות להניע.">Every Health-Tech fund we back, every clinical space we help create, is a statement: that capital can serve people before profit. At DKF, we believe the strongest investment thesis is one rooted in community — because healthier communities build stronger economies, and stronger economies fund better healthcare. It's a cycle we're proud to fuel.</p>
+
+        <p data-en="The traditional model of healthcare investment treats patients as consumers and clinics as revenue centers. We reject that premise. Our approach starts with a question: what does the community need? From there, we work backward — identifying the ventures, technologies, and infrastructure that will deliver the greatest collective benefit." data-he="המודל המסורתי של השקעות בבריאות מתייחס למטופלים כצרכנים ולמרפאות כמרכזי הכנסה. אנחנו דוחות את ההנחה הזו. הגישה שלנו מתחילה בשאלה: מה הקהילה צריכה? משם, אנחנו עובדות אחורה — מזהות את המיזמים, הטכנולוגיות והתשתיות שיביאו את התועלת הקולקטיבית הגדולה ביותר.">The traditional model of healthcare investment treats patients as consumers and clinics as revenue centers. We reject that premise. Our approach starts with a question: what does the community need? From there, we work backward — identifying the ventures, technologies, and infrastructure that will deliver the greatest collective benefit.</p>
+
+        <p data-en="This isn't philanthropy dressed as investment. It's investment informed by philanthropy. We hold our portfolio companies to rigorous financial standards — but we also hold them to community standards. Access, equity, and measurable patient outcomes are non-negotiable metrics alongside growth and margins." data-he="זו לא פילנטרופיה שמתחפשת להשקעה. זו השקעה שמודרכת על ידי פילנטרופיה. אנחנו דורשות מחברות הפורטפוליו שלנו סטנדרטים פיננסיים מחמירים — אבל גם סטנדרטים קהילתיים. נגישות, שוויון ותוצאות מדידות למטופלים הם מדדים שאינם ניתנים למשא ומתן, לצד צמיחה ומרווחים.">This isn't philanthropy dressed as investment. It's investment informed by philanthropy. We hold our portfolio companies to rigorous financial standards — but we also hold them to community standards. Access, equity, and measurable patient outcomes are non-negotiable metrics alongside growth and margins.</p>
+
+        <p data-en="When capital flows toward community health, everyone benefits. That's not idealism — it's our investment thesis." data-he="כשהון זורם לעבר בריאות הקהילה, כולם מרוויחים. זה לא אידיאליזם — זו תזת ההשקעה שלנו.">When capital flows toward community health, everyone benefits. That's not idealism — it's our investment thesis.</p>
+      </div>
+
+      <div class="article-cta">
+        <h3 data-en="Interested in partnering with DKF?" data-he="מעוניינים בשותפות עם DKF?">Interested in partnering with DKF?</h3>
+        <a href="contact.html" class="btn btn-outline" data-en="Get in touch" data-he="צרו קשר">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <\!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">DKF</span>
+          <p class="footer-tagline" data-en="A philanthropic fund channeling capital into healthcare, community, and medical technology." data-he="קרן פילנטרופית שמפנה הון לבריאות, קהילה וטכנולוגיה רפואית.">A philanthropic fund channeling capital into healthcare, community, and medical technology.</p>
+          <a href="mailto:info@dkf-fund.com" class="footer-email">info@dkf-fund.com</a>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">Li</a>
+            <a href="#" aria-label="Instagram">Ig</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="About" data-he="אודות">About</h4>
+          <a href="about-fund.html" data-en="The Fund" data-he="הקרן">The Fund</a>
+          <a href="about-founders.html" data-en="The Founders" data-he="המייסדות">The Founders</a>
+          <a href="news.html" data-en="News" data-he="חדשות">News</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Impact" data-he="השפעה">Impact</h4>
+          <a href="impact-donations.html" data-en="Donations" data-he="תרומות">Donations</a>
+          <a href="impact-investments.html" data-en="Investments" data-he="השקעות">Investments</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Connect" data-he="צרו קשר">Connect</h4>
+          <a href="contact.html" data-en="Contact us" data-he="דברו איתנו">Contact us</a>
+          <a href="contact.html?type=partner" data-en="Partner with us" data-he="שותפות">Partner with us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy" data-en="&copy; 2026 David Kipnis Foundation. All rights reserved." data-he="&copy; 2026 קרן דוד קיפניס. כל הזכויות שמורות.">&copy; 2026 David Kipnis Foundation. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#" data-en="Privacy Policy" data-he="מדיניות פרטיות">Privacy Policy</a>
+          <a href="#" data-en="Terms" data-he="תנאי שימוש">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>
