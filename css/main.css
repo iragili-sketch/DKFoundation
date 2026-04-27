@@ -314,7 +314,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-radius: 100px;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
-  cursor: none \!important;
+  cursor: none !important;
   transition: border-color var(--duration-fast);
 }
 
@@ -331,7 +331,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   display: flex;
   flex-direction: column;
   gap: 6px;
-  cursor: none \!important;
+  cursor: none !important;
   z-index: 1001;
 }
 
@@ -785,7 +785,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-radius: 12px;
   text-align: center;
   transition: border-color var(--duration-fast), transform var(--duration-fast);
-  cursor: none \!important;
+  cursor: none !important;
 }
 
 .cta-path:hover {
@@ -883,19 +883,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   100% { transform: translateX(-33.333%); }
 }
 
-@media (max-width: 768px) {
-  .partners-track {
-    gap: var(--sp-3xl);
-  }
-  .partner-logo {
-    height: 40px;
-    width: 100px;
-  }
-  .partners-marquee::before,
-  .partners-marquee::after {
-    width: 60px;
-  }
-}
+
 
 /* ── Footer ────────────────────────────────────── */
 
@@ -955,19 +943,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   100% { transform: translateX(-33.333%); }
 }
 
-@media (max-width: 768px) {
-  .partners-track {
-    gap: var(--sp-3xl);
-  }
-  .partner-logo {
-    height: 40px;
-    width: 100px;
-  }
-  .partners-marquee::before,
-  .partners-marquee::after {
-    width: 60px;
-  }
-}
 
 /* ── Footer ─────────────────────────────────────── */
 .footer {
@@ -1104,174 +1079,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 /* Footer responsive */
 /* ── Responsive: Tablet (768px) ─────────────────── */
-@media (max-width: 768px) {
-  /* Container */
-  .container {
-    padding: 0 var(--sp-lg);
-  }
-
-  /* Nav */
-  .nav {
-    padding: 0 var(--sp-lg);
-  }
-
-  /* Sections */
-  .section { padding: var(--sp-3xl) 0; }
-  .section-sm { padding: var(--sp-2xl) 0; }
-  .section-lg { padding: var(--sp-4xl) 0; }
-
-  /* Hero */
-  .hero {
-    min-height: 85vh;
-  }
-  h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
-  .hero-subtitle {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-
-  /* Grids collapse */
-  .grid-2 { grid-template-columns: 1fr; }
-  .grid-3 { grid-template-columns: 1fr; }
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
-
-  /* Stats */
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--sp-xl);
-  }
-
-  /* CTA paths */
-  .cta-paths {
-    grid-template-columns: 1fr;
-    gap: var(--sp-md);
-  }
-
-  /* Cards */
-  .card {
-    padding: var(--sp-xl);
-  }
-
-  /* Founder */
-  .founder-primary .photo {
-    width: 200px;
-    height: 250px;
-  }
-
-  /* Mobile menu - wider on tablet */
-  .mobile-menu {
-    width: 50vw;
-    min-width: 280px;
-  }
-
-  /* Footer */
-  .footer-top {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--sp-2xl);
-  }
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: var(--sp-md);
-    text-align: center;
-  }
-  .footer-legal {
-    justify-content: center;
-  }
-
-  /* Buttons */
-  .btn {
-    padding: 12px 24px;
-    font-size: 0.8rem;
-  }
-
-  /* Quote */
-  .quote {
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
-    padding: var(--sp-xl) 0;
-  }
-
-  /* Text display */
-  .text-display {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
-  }
-}
 
 /* ── Responsive: Mobile (480px) ────────────────── */
-@media (max-width: 480px) {
-  /* Container tighter */
-  .container {
-    padding: 0 var(--sp-md);
-  }
-  .nav {
-    padding: 0 var(--sp-md);
-  }
-
-  /* Hero */
-  .hero {
-    min-height: 80vh;
-  }
-  h1 { font-size: clamp(2rem, 12vw, 3rem); }
-  h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
-
-  /* Sections */
-  .section { padding: var(--sp-2xl) 0; }
-  .section-lg { padding: var(--sp-3xl) 0; }
-
-  /* Stats */
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--sp-lg);
-  }
-
-  /* Grid-4 collapses fully */
-  .grid-4 { grid-template-columns: 1fr; }
-
-  /* Mobile menu - full width */
-  .mobile-menu {
-    width: 100vw;
-    min-width: unset;
-    border-left: none;
-    padding: var(--sp-xl) var(--sp-md);
-  }
-
-  /* Footer */
-  .footer {
-    padding: var(--sp-3xl) 0 var(--sp-lg);
-  }
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: var(--sp-xl);
-  }
-  .footer-logo {
-    font-size: 1.25rem;
-  }
-
-  /* Scroll indicator */
-  .scroll-indicator {
-    display: none;
-  }
-
-  /* CTA path cards */
-  .cta-path {
-    padding: var(--sp-lg);
-  }
-
-  /* Founder photo */
-  .founder-primary .photo {
-    width: 160px;
-    height: 200px;
-  }
-
-  /* Buttons full width on small screens */
-  .btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-}
 
 /* ── Reveal Animations (GSAP-ready) ────────────── */
 .reveal {
@@ -1321,61 +1130,121 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
    ══════════════════════════════════════════════════ */
 
 /* ── Tablet (max 1024px) ── */
+
+/* ── Tablet-portrait / large phone (max 768px) ── */
+
+/* ── Small phone (max 480px) ── */
+
+/* ── Touch device helpers ── */
+
+
+/* ══════════════════════════════════════════════════
+   MOBILE FIX PASS 2 — Based on screenshot feedback
+   ══════════════════════════════════════════════════ */
+
+
+
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE — SINGLE CLEAN PASS
+   Mobile-first override approach
+   ══════════════════════════════════════════════════ */
+
+/* ── Tablet (max 1024px) ── */
 @media (max-width: 1024px) {
-  /* Founder feature grid */
   .founder-feature {
     grid-template-columns: 1fr 1fr;
     gap: var(--sp-2xl);
   }
 }
 
-/* ── Tablet-portrait / large phone (max 768px) ── */
+/* ── Tablet-portrait & phones (max 768px) ── */
 @media (max-width: 768px) {
 
-  /* Founder feature → stack vertically */
+  /* — Layout — */
+  .container { padding: 0 var(--sp-lg); }
+  .nav { padding: 0 var(--sp-lg); }
+  .section { padding: var(--sp-3xl) 0; }
+  .section-sm { padding: var(--sp-2xl) 0; }
+  .section-lg { padding: var(--sp-4xl) 0; }
+
+  /* — Hero — */
+  .hero { min-height: 85vh; }
+  h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero-subtitle { font-size: 1rem; max-width: 100%; }
+  .hero-bg video, .hero-bg img { object-position: center center; }
+
+  /* — Grids collapse — */
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  /* — Stats: ALL 3 on one row, compact — */
+  .stats-grid {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--sp-sm);
+  }
+  .stat-item {
+    flex: 1;
+    text-align: center;
+  }
+  .stat-number {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+  .stat-item .label {
+    font-size: 0.65rem;
+    line-height: 1.3;
+  }
+
+  /* — CTA paths stack — */
+  .cta-paths { grid-template-columns: 1fr; gap: var(--sp-md); }
+
+  /* — Cards — */
+  .card { padding: var(--sp-xl); }
+
+  /* — Founder Feature: stack, image BIG — */
   .founder-feature {
     grid-template-columns: 1fr;
     gap: var(--sp-xl);
     text-align: center;
   }
-  .founder-feature-img {
-    justify-content: center;
-  }
+  .founder-feature-img { justify-content: center; }
   .founder-feature-img .img-frame,
   .founder-feature-img > div {
-    max-width: 320px \!important;
-    margin: 0 auto;
+    width: 80vw !important;
+    max-width: 80vw !important;
   }
-  .founder-feature-text {
-    max-width: 100%;
-  }
-  .founder-feature-text .quote {
-    text-align: center;
+  .founder-feature-text { max-width: 100%; }
+
+  /* — Team member circles: SMALLER than founder — */
+  .card div[style*="200px"][style*="border-radius"] {
+    width: 130px !important;
+    height: 130px !important;
   }
 
-  /* Team member cards — stack */
-  .grid-2.cards-stagger {
-    gap: var(--sp-xl) \!important;
+  /* — Homepage founder section — */
+  .founder-primary .photo {
+    width: 200px;
+    height: 250px;
   }
 
-  /* Team member photo circles */
-  .card div[style*="200px"] {
-    width: 160px \!important;
-    height: 160px \!important;
+  /* — Values row (Rigor · Purpose · Elevation · Confidence) — */
+  /* Turn the flex row into a clean 2×2 grid, hide dot separators */
+  div[style*="display: flex"][style*="flex-wrap"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--sp-lg) !important;
+    justify-items: center;
+  }
+  div[style*="display: flex"][style*="flex-wrap"] > .text-accent {
+    display: none !important;
   }
 
-  /* News featured → stack */
-  .news-featured {
-    grid-template-columns: 1fr \!important;
-    gap: var(--sp-lg);
-  }
-
-  /* News grid → 1 column */
-  .news-grid {
-    grid-template-columns: 1fr \!important;
-  }
-
-  /* News filters → scroll horizontally */
+  /* — News — */
+  .news-featured { grid-template-columns: 1fr; gap: var(--sp-lg); }
+  .news-grid { grid-template-columns: 1fr; }
   .news-filters {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -1384,317 +1253,155 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     scrollbar-width: none;
   }
   .news-filters::-webkit-scrollbar { display: none; }
-  .news-filter {
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+  .news-filter { white-space: nowrap; flex-shrink: 0; }
 
-  /* Article pages */
-  .article-title {
-    font-size: clamp(1.5rem, 6vw, 2.5rem) \!important;
-  }
-  .article-content p {
-    font-size: 1rem \!important;
-  }
-  .article-content p:first-of-type {
-    font-size: 1.1rem \!important;
-  }
-  .article-gallery {
-    grid-template-columns: 1fr \!important;
-  }
+  /* — Article pages — */
+  .article-title { font-size: clamp(1.5rem, 6vw, 2.5rem) !important; }
+  .article-content p { font-size: 1rem !important; }
+  .article-content p:first-of-type { font-size: 1.1rem !important; }
+  .article-gallery { grid-template-columns: 1fr; }
+  .carousel-btn { width: 36px; height: 36px; font-size: 1rem; }
 
-  /* Carousel buttons smaller on mobile */
-  .carousel-btn {
-    width: 36px \!important;
-    height: 36px \!important;
-    font-size: 1rem \!important;
-  }
+  /* — Partners marquee — */
+  .partners-track { gap: var(--sp-2xl); }
+  .partner-logo { width: 100px; height: 40px; }
+  .partners-marquee::before,
+  .partners-marquee::after { width: 60px; }
 
-  /* CTA paths → stack */
-  .cta-paths {
-    grid-template-columns: 1fr \!important;
-  }
+  /* — Mobile menu — */
+  .mobile-menu { width: 50vw; min-width: 280px; }
 
-  /* Contact form — full width */
-  .contact-form {
-    max-width: 100%;
+  /* — Footer: clean 2-col with centered brand — */
+  .footer { padding: var(--sp-2xl) 0 var(--sp-lg); }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-xl);
   }
-
-  /* Stats grid */
-  .stats-grid {
-    grid-template-columns: 1fr 1fr \!important;
+  .footer-brand {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: var(--sp-lg);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
   }
-
-  /* Partners marquee — smaller logos */
-  .partners-marquee img {
-    width: 100px \!important;
-    height: 40px \!important;
+  .footer-brand .footer-tagline {
+    max-width: 280px;
+    margin: 0 auto var(--sp-md);
+    font-size: 0.75rem;
   }
-
-  /* Values grid (grid-4) → 2 columns */
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr) \!important;
-    gap: var(--sp-xl) \!important;
+  .footer-brand .footer-email {
+    display: block;
+    margin-bottom: var(--sp-md);
+    font-size: 0.8rem;
   }
-
-  /* Hero bg image/video */
-  .hero-bg video,
-  .hero-bg img {
-    object-position: center center;
+  .footer-brand .footer-social {
+    justify-content: center;
   }
+  .footer-col { text-align: center; }
+  .footer-col h4 { font-size: 0.7rem; margin-bottom: var(--sp-sm); }
+  .footer-col a { font-size: 0.85rem; }
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--sp-sm);
+    text-align: center;
+    padding-top: var(--sp-lg);
+  }
+  .footer-legal { justify-content: center; }
 
-  /* Buttons in flex — stack on mobile */
-  div[style*="display:flex"][style*="gap"] {
+  /* — Buttons — */
+  .btn { padding: 12px 24px; font-size: 0.8rem; }
+
+  /* — Quote — */
+  .quote { font-size: clamp(1.25rem, 3vw, 1.5rem); padding: var(--sp-xl) 0; }
+
+  /* — Text display — */
+  .text-display { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+  /* — Inline flex buttons (CTA sections) stack — */
+  div[style*="display:flex"][style*="gap:var"] {
     flex-direction: column;
     align-items: center;
   }
-
-  /* Quote font size */
-  .quote, blockquote.quote {
-    font-size: clamp(1rem, 3vw, 1.25rem) \!important;
-  }
 }
 
-/* ── Small phone (max 480px) ── */
+/* ── Small phones (max 480px) ── */
 @media (max-width: 480px) {
+  .container { padding: 0 var(--sp-md); }
+  .nav { padding: 0 var(--sp-md); }
 
-  /* Stats grid — single column on tiny screens */
-  .stats-grid {
-    grid-template-columns: 1fr \!important;
-    gap: var(--sp-lg) \!important;
+  .hero { min-height: 80vh; }
+  h1 { font-size: clamp(2rem, 12vw, 3rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+
+  .section { padding: var(--sp-2xl) 0; }
+  .section-lg { padding: var(--sp-3xl) 0; }
+
+  /* Stats — still 1 row but tighter */
+  .stat-number { font-size: clamp(1.4rem, 6vw, 2rem); }
+  .stat-item .label { font-size: 0.6rem; }
+
+  /* Grid-4 single column */
+  .grid-4 { grid-template-columns: 1fr; }
+
+  /* Mobile menu full width */
+  .mobile-menu {
+    width: 100vw;
+    min-width: unset;
+    border-left: none;
+    padding: var(--sp-xl) var(--sp-md);
   }
 
-  /* Values grid → single column */
-  .grid-4 {
-    grid-template-columns: 1fr \!important;
-  }
+  /* Footer single column */
+  .footer-top { grid-template-columns: 1fr; gap: var(--sp-lg); }
+  .footer-logo { font-size: 1.25rem; }
 
-  /* Cards — less padding */
-  .card {
-    padding: var(--sp-lg) \!important;
-  }
-  .card.card-accent-top {
-    padding: var(--sp-lg) \!important;
-  }
+  /* Scroll indicator hide */
+  .scroll-indicator { display: none; }
 
-  /* Team member photos even smaller */
-  .card div[style*="200px"] {
-    width: 130px \!important;
-    height: 130px \!important;
-  }
+  /* CTA path cards */
+  .cta-path { padding: var(--sp-lg); }
 
-  /* Founder feature image */
+  /* Founder photo */
+  .founder-primary .photo { width: 160px; height: 200px; }
+
+  /* Founder feature image still big */
   .founder-feature-img .img-frame,
   .founder-feature-img > div {
-    max-width: 260px \!important;
+    width: 75vw !important;
+    max-width: 75vw !important;
   }
 
-  /* Partners marquee — even smaller */
-  .partners-marquee img {
-    width: 80px \!important;
-    height: 32px \!important;
-  }
-  .partners-marquee {
-    gap: var(--sp-lg) \!important;
+  /* Team member circles smaller */
+  .card div[style*="200px"][style*="border-radius"] {
+    width: 110px !important;
+    height: 110px !important;
   }
 
-  /* Contact info items */
-  .contact-info {
-    padding-top: var(--sp-lg);
-  }
+  /* Buttons full width */
+  .btn { width: 100%; text-align: center; justify-content: center; }
 
-  /* Article back link */
-  .article-back {
-    font-size: 0.75rem;
-  }
+  /* Cards less padding */
+  .card { padding: var(--sp-lg); }
 
-  /* Carousel counter/dots */
-  .carousel-counter {
-    font-size: 0.7rem;
-    padding: 2px 8px;
-  }
+  /* Partners even smaller */
+  .partner-logo { width: 80px; height: 32px; }
 }
 
-/* ── Touch device helpers ── */
+/* ── Touch devices — hide custom cursor, better tap targets ── */
 @media (hover: none) and (pointer: coarse) {
-  /* Hide custom cursor on touch devices */
-  .cursor, .cursor-follower {
-    display: none \!important;
-  }
+  .cursor, .cursor-follower { display: none !important; }
+  * { cursor: auto !important; }
 
-  /* Restore normal cursor behavior */
-  * {
-    cursor: auto \!important;
-  }
-
-  /* Increase tap target sizes */
-  .nav-link,
-  .nav-dropdown-trigger,
-  .hamburger,
-  .btn,
-  .news-filter,
-  .footer-col a,
-  .footer-legal a {
+  /* Min 44px tap targets */
+  .nav-link, .nav-dropdown-trigger, .hamburger,
+  .btn, .news-filter, .footer-col a, .footer-legal a {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
   }
 
-  /* Remove hover effects that cause sticky states on touch */
-  .news-card:hover {
-    transform: none;
-    box-shadow: none;
-  }
-  a.news-featured:hover {
-    transform: none;
-  }
-  a.news-featured:hover h2 {
-    color: inherit;
-  }
-  .card:hover {
-    transform: none;
-  }
-}
-
-
-/* ══════════════════════════════════════════════════
-   MOBILE FIX PASS 2 — Based on screenshot feedback
-   ══════════════════════════════════════════════════ */
-
-@media (max-width: 768px) {
-
-  /* 1. STATS — single row, all 3 items inline */
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr) \!important;
-    gap: var(--sp-md) \!important;
-    text-align: center;
-  }
-  .stat-number {
-    font-size: clamp(1.5rem, 6vw, 2.5rem) \!important;
-  }
-  .stat-item .label {
-    font-size: 0.65rem \!important;
-  }
-
-  /* 2. FOUNDERS — Alin bigger, team members smaller */
-  .founder-feature-img .img-frame,
-  .founder-feature-img > div {
-    max-width: 75vw \!important;
-    width: 75vw \!important;
-  }
-  /* Team member circles — smaller than founder */
-  .grid-2.cards-stagger .card div[style*="200px"] {
-    width: 140px \!important;
-    height: 140px \!important;
-  }
-
-  /* 3. VALUES — Rigor/Purpose/Elevation/Confidence in 2 clean rows */
-  div[style*="display: flex"][style*="flex-wrap: wrap"] {
-    display: grid \!important;
-    grid-template-columns: 1fr 1fr \!important;
-    gap: var(--sp-md) \!important;
-    justify-items: center;
-  }
-  /* Hide the dot separators on mobile */
-  div[style*="display: flex"][style*="flex-wrap: wrap"] .text-accent {
-    display: none \!important;
-  }
-
-  /* 4. FOOTER — compact 2-column layout */
-  .footer {
-    padding: var(--sp-2xl) 0 var(--sp-lg) \!important;
-  }
-  .footer-top {
-    grid-template-columns: 1fr 1fr \!important;
-    gap: var(--sp-lg) \!important;
-  }
-  .footer-brand {
-    grid-column: 1 / -1 \!important;
-    text-align: center;
-    padding-bottom: var(--sp-lg);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    margin-bottom: var(--sp-sm);
-  }
-  .footer-brand .footer-logo {
-    display: block;
-    margin-bottom: var(--sp-sm);
-  }
-  .footer-brand .footer-tagline {
-    font-size: 0.75rem \!important;
-    max-width: 300px;
-    margin: 0 auto var(--sp-md);
-  }
-  .footer-brand .footer-email {
-    display: block;
-    margin-bottom: var(--sp-md);
-  }
-  .footer-brand .footer-social {
-    justify-content: center;
-  }
-  .footer-col {
-    text-align: center;
-  }
-  .footer-col h4 {
-    margin-bottom: var(--sp-sm);
-    font-size: 0.7rem;
-  }
-  .footer-col a {
-    font-size: 0.8rem;
-    padding: 4px 0;
-  }
-  .footer-bottom {
-    flex-direction: column \!important;
-    gap: var(--sp-sm) \!important;
-    text-align: center \!important;
-    padding-top: var(--sp-lg) \!important;
-    margin-top: var(--sp-md);
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .footer-legal {
-    justify-content: center \!important;
-  }
-
-  /* Partners marquee — ensure visible */
-  .partners-marquee {
-    padding: 0 var(--sp-md);
-  }
-  .partners-marquee img {
-    width: 90px \!important;
-    height: 36px \!important;
-    margin: 0 var(--sp-lg);
-  }
-}
-
-@media (max-width: 480px) {
-  /* Stats still 3 columns but tighter */
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr) \!important;
-    gap: var(--sp-sm) \!important;
-  }
-  .stat-number {
-    font-size: clamp(1.25rem, 5vw, 2rem) \!important;
-  }
-  .stat-item .label {
-    font-size: 0.6rem \!important;
-  }
-
-  /* Footer — stack to single column */
-  .footer-top {
-    grid-template-columns: 1fr \!important;
-  }
-  .footer-col {
-    padding: var(--sp-sm) 0;
-  }
-
-  /* Values — still 2 columns */
-  div[style*="display: flex"][style*="flex-wrap: wrap"] {
-    grid-template-columns: 1fr 1fr \!important;
-  }
-
-  /* Founder image */
-  .founder-feature-img .img-frame,
-  .founder-feature-img > div {
-    max-width: 70vw \!important;
-    width: 70vw \!important;
-  }
+  /* Remove hover sticky states */
+  .news-card:hover { transform: none; box-shadow: none; }
+  a.news-featured:hover { transform: none; }
+  a.news-featured:hover h2 { color: inherit; }
+  .card:hover { transform: none; }
 }

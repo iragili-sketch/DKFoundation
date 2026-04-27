@@ -24,7 +24,7 @@ function hideSystemCursor() {
   ctx.fillRect(0, 0, 1, 1);
   const cursorUrl = canvas.toDataURL();
   const style = document.createElement('style');
-  style.textContent = '*, *::before, *::after, a, a:hover, a:active, a:focus, button, [role="button"] { cursor: url(' + cursorUrl + ') 0 0, none \!important; }';
+  style.textContent = '*, *::before, *::after, a, a:hover, a:active, a:focus, button, [role="button"] { cursor: url(' + cursorUrl + ') 0 0, none !important; }';
   document.head.appendChild(style);
 }
 
