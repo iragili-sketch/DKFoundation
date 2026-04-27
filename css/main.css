@@ -1308,6 +1308,250 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .founder-feature-text {
   max-width: 560px;
 }
+
+/* ── Accent Frame ── */
 .accent-frame {
   border: 2px solid var(--accent);
-  p
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ══════════════════════════════════════════════════
+   COMPREHENSIVE MOBILE RESPONSIVENESS
+   ══════════════════════════════════════════════════ */
+
+/* ── Tablet (max 1024px) ── */
+@media (max-width: 1024px) {
+  /* Founder feature grid */
+  .founder-feature {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-2xl);
+  }
+}
+
+/* ── Tablet-portrait / large phone (max 768px) ── */
+@media (max-width: 768px) {
+
+  /* Founder feature → stack vertically */
+  .founder-feature {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+    text-align: center;
+  }
+  .founder-feature-img {
+    justify-content: center;
+  }
+  .founder-feature-img .img-frame,
+  .founder-feature-img > div {
+    max-width: 320px \!important;
+    margin: 0 auto;
+  }
+  .founder-feature-text {
+    max-width: 100%;
+  }
+  .founder-feature-text .quote {
+    text-align: center;
+  }
+
+  /* Team member cards — stack */
+  .grid-2.cards-stagger {
+    gap: var(--sp-xl) \!important;
+  }
+
+  /* Team member photo circles */
+  .card div[style*="200px"] {
+    width: 160px \!important;
+    height: 160px \!important;
+  }
+
+  /* News featured → stack */
+  .news-featured {
+    grid-template-columns: 1fr \!important;
+    gap: var(--sp-lg);
+  }
+
+  /* News grid → 1 column */
+  .news-grid {
+    grid-template-columns: 1fr \!important;
+  }
+
+  /* News filters → scroll horizontally */
+  .news-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--sp-sm);
+    scrollbar-width: none;
+  }
+  .news-filters::-webkit-scrollbar { display: none; }
+  .news-filter {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Article pages */
+  .article-title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem) \!important;
+  }
+  .article-content p {
+    font-size: 1rem \!important;
+  }
+  .article-content p:first-of-type {
+    font-size: 1.1rem \!important;
+  }
+  .article-gallery {
+    grid-template-columns: 1fr \!important;
+  }
+
+  /* Carousel buttons smaller on mobile */
+  .carousel-btn {
+    width: 36px \!important;
+    height: 36px \!important;
+    font-size: 1rem \!important;
+  }
+
+  /* CTA paths → stack */
+  .cta-paths {
+    grid-template-columns: 1fr \!important;
+  }
+
+  /* Contact form — full width */
+  .contact-form {
+    max-width: 100%;
+  }
+
+  /* Stats grid */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr \!important;
+  }
+
+  /* Partners marquee — smaller logos */
+  .partners-marquee img {
+    width: 100px \!important;
+    height: 40px \!important;
+  }
+
+  /* Values grid (grid-4) → 2 columns */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) \!important;
+    gap: var(--sp-xl) \!important;
+  }
+
+  /* Hero bg image/video */
+  .hero-bg video,
+  .hero-bg img {
+    object-position: center center;
+  }
+
+  /* Buttons in flex — stack on mobile */
+  div[style*="display:flex"][style*="gap"] {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Quote font size */
+  .quote, blockquote.quote {
+    font-size: clamp(1rem, 3vw, 1.25rem) \!important;
+  }
+}
+
+/* ── Small phone (max 480px) ── */
+@media (max-width: 480px) {
+
+  /* Stats grid — single column on tiny screens */
+  .stats-grid {
+    grid-template-columns: 1fr \!important;
+    gap: var(--sp-lg) \!important;
+  }
+
+  /* Values grid → single column */
+  .grid-4 {
+    grid-template-columns: 1fr \!important;
+  }
+
+  /* Cards — less padding */
+  .card {
+    padding: var(--sp-lg) \!important;
+  }
+  .card.card-accent-top {
+    padding: var(--sp-lg) \!important;
+  }
+
+  /* Team member photos even smaller */
+  .card div[style*="200px"] {
+    width: 130px \!important;
+    height: 130px \!important;
+  }
+
+  /* Founder feature image */
+  .founder-feature-img .img-frame,
+  .founder-feature-img > div {
+    max-width: 260px \!important;
+  }
+
+  /* Partners marquee — even smaller */
+  .partners-marquee img {
+    width: 80px \!important;
+    height: 32px \!important;
+  }
+  .partners-marquee {
+    gap: var(--sp-lg) \!important;
+  }
+
+  /* Contact info items */
+  .contact-info {
+    padding-top: var(--sp-lg);
+  }
+
+  /* Article back link */
+  .article-back {
+    font-size: 0.75rem;
+  }
+
+  /* Carousel counter/dots */
+  .carousel-counter {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+}
+
+/* ── Touch device helpers ── */
+@media (hover: none) and (pointer: coarse) {
+  /* Hide custom cursor on touch devices */
+  .cursor, .cursor-follower {
+    display: none \!important;
+  }
+
+  /* Restore normal cursor behavior */
+  * {
+    cursor: auto \!important;
+  }
+
+  /* Increase tap target sizes */
+  .nav-link,
+  .nav-dropdown-trigger,
+  .hamburger,
+  .btn,
+  .news-filter,
+  .footer-col a,
+  .footer-legal a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Remove hover effects that cause sticky states on touch */
+  .news-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  a.news-featured:hover {
+    transform: none;
+  }
+  a.news-featured:hover h2 {
+    color: inherit;
+  }
+  .card:hover {
+    transform: none;
+  }
+}

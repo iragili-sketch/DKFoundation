@@ -4,7 +4,10 @@
    ═══════════════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initCursor();
+  // Only init custom cursor on non-touch devices
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    initCursor();
+  }
   initNav();
   initDropdowns();
   initLanguageToggle();
