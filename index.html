@@ -110,8 +110,22 @@
   </div>
 
   <!-- ═══════════ SECTION 1: HERO ═══════════ -->
-  <section class="hero bg-primary">
-    <div class="container">
+  <!-- Toggle: change data-hero-mode to "video" or "image" -->
+  <section class="hero bg-primary" id="heroSection" data-hero-mode="video">
+
+    <!-- VIDEO Background -->
+    <div class="hero-bg hero-bg-video">
+      <video src="assets/img/hero-video.mp4" autoplay muted loop playsinline></video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- IMAGE Background -->
+    <div class="hero-bg hero-bg-image">
+      <img src="assets/img/hero-home.jpg" alt="DKF Healthcare Impact">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container" style="position:relative;z-index:2;">
       <h1>
         <div class="line"><span data-en="Giving." data-he="נותנות.">Giving.</span></div>
         <div class="line"><span data-en="Investing." data-he="משקיעות.">Investing.</span></div>
@@ -121,7 +135,7 @@
         A philanthropic fund channeling capital where it matters most — health, community, and medical technology.
       </p>
     </div>
-    <div class="scroll-indicator">
+    <div class="scroll-indicator" style="position:relative;z-index:2;">
       <span data-en="Scroll" data-he="גלול">Scroll</span>
       <div class="line"></div>
     </div>

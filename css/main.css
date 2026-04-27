@@ -502,7 +502,37 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   justify-content: center;
   padding-top: var(--nav-height);
   position: relative;
+  overflow: hidden;
 }
+
+/* Hero Backgrounds */
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+}
+.hero-bg video,
+.hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.4) 50%,
+    rgba(0,0,0,0.7) 100%
+  );
+}
+
+/* Toggle visibility based on data-hero-mode */
+[data-hero-mode="video"] .hero-bg-image { display: none; }
+[data-hero-mode="video"] .hero-bg-video { display: block; }
+[data-hero-mode="image"] .hero-bg-video { display: none; }
+[data-hero-mode="image"] .hero-bg-image { display: block; }
 
 .hero h1 .line {
   display: block;
