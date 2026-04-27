@@ -1555,3 +1555,146 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     transform: none;
   }
 }
+
+
+/* ══════════════════════════════════════════════════
+   MOBILE FIX PASS 2 — Based on screenshot feedback
+   ══════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* 1. STATS — single row, all 3 items inline */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr) \!important;
+    gap: var(--sp-md) \!important;
+    text-align: center;
+  }
+  .stat-number {
+    font-size: clamp(1.5rem, 6vw, 2.5rem) \!important;
+  }
+  .stat-item .label {
+    font-size: 0.65rem \!important;
+  }
+
+  /* 2. FOUNDERS — Alin bigger, team members smaller */
+  .founder-feature-img .img-frame,
+  .founder-feature-img > div {
+    max-width: 75vw \!important;
+    width: 75vw \!important;
+  }
+  /* Team member circles — smaller than founder */
+  .grid-2.cards-stagger .card div[style*="200px"] {
+    width: 140px \!important;
+    height: 140px \!important;
+  }
+
+  /* 3. VALUES — Rigor/Purpose/Elevation/Confidence in 2 clean rows */
+  div[style*="display: flex"][style*="flex-wrap: wrap"] {
+    display: grid \!important;
+    grid-template-columns: 1fr 1fr \!important;
+    gap: var(--sp-md) \!important;
+    justify-items: center;
+  }
+  /* Hide the dot separators on mobile */
+  div[style*="display: flex"][style*="flex-wrap: wrap"] .text-accent {
+    display: none \!important;
+  }
+
+  /* 4. FOOTER — compact 2-column layout */
+  .footer {
+    padding: var(--sp-2xl) 0 var(--sp-lg) \!important;
+  }
+  .footer-top {
+    grid-template-columns: 1fr 1fr \!important;
+    gap: var(--sp-lg) \!important;
+  }
+  .footer-brand {
+    grid-column: 1 / -1 \!important;
+    text-align: center;
+    padding-bottom: var(--sp-lg);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: var(--sp-sm);
+  }
+  .footer-brand .footer-logo {
+    display: block;
+    margin-bottom: var(--sp-sm);
+  }
+  .footer-brand .footer-tagline {
+    font-size: 0.75rem \!important;
+    max-width: 300px;
+    margin: 0 auto var(--sp-md);
+  }
+  .footer-brand .footer-email {
+    display: block;
+    margin-bottom: var(--sp-md);
+  }
+  .footer-brand .footer-social {
+    justify-content: center;
+  }
+  .footer-col {
+    text-align: center;
+  }
+  .footer-col h4 {
+    margin-bottom: var(--sp-sm);
+    font-size: 0.7rem;
+  }
+  .footer-col a {
+    font-size: 0.8rem;
+    padding: 4px 0;
+  }
+  .footer-bottom {
+    flex-direction: column \!important;
+    gap: var(--sp-sm) \!important;
+    text-align: center \!important;
+    padding-top: var(--sp-lg) \!important;
+    margin-top: var(--sp-md);
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-legal {
+    justify-content: center \!important;
+  }
+
+  /* Partners marquee — ensure visible */
+  .partners-marquee {
+    padding: 0 var(--sp-md);
+  }
+  .partners-marquee img {
+    width: 90px \!important;
+    height: 36px \!important;
+    margin: 0 var(--sp-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Stats still 3 columns but tighter */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr) \!important;
+    gap: var(--sp-sm) \!important;
+  }
+  .stat-number {
+    font-size: clamp(1.25rem, 5vw, 2rem) \!important;
+  }
+  .stat-item .label {
+    font-size: 0.6rem \!important;
+  }
+
+  /* Footer — stack to single column */
+  .footer-top {
+    grid-template-columns: 1fr \!important;
+  }
+  .footer-col {
+    padding: var(--sp-sm) 0;
+  }
+
+  /* Values — still 2 columns */
+  div[style*="display: flex"][style*="flex-wrap: wrap"] {
+    grid-template-columns: 1fr 1fr \!important;
+  }
+
+  /* Founder image */
+  .founder-feature-img .img-frame,
+  .founder-feature-img > div {
+    max-width: 70vw \!important;
+    width: 70vw \!important;
+  }
+}
