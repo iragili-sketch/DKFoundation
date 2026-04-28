@@ -194,3 +194,23 @@ function initMobileMenu() {
     link.addEventListener('click', closeMenu);
   });
 }
+
+// ═══════════ HERO PARALLAX ═══════════
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  const heroBg = document.querySelector('.hero-bg');
+  if (\!heroBg) return;
+
+  gsap.to(heroBg, {
+    yPercent: 25,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  });
+});
