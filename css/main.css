@@ -1201,14 +1201,15 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   align-items: center;
 }
 .founder-circle-card .text-label {
-  margin-top: var(--sp-md);
-  min-height: 2.4em;
+  margin-top: var(--sp-xl);
+  min-height: 3em;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  text-align: center;
 }
 .founder-circle-card h3 {
-  margin-top: var(--sp-sm);
+  margin-top: var(--sp-md);
   margin-bottom: var(--sp-sm);
 }
 
