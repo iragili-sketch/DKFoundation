@@ -1642,12 +1642,31 @@ a:focus, button:focus {
   color: #aaa !important;
 }
 
-/* ══════════ Accessibility Toggle Button ══════════ */
-.a11y-toggle {
+
+
+
+
+
+/* ══════════ Accessibility Widget ══════════ */
+/* Hide UserWay default button - we use our own */
+.uwy { display: none !important; }
+
+.a11y-wrapper {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 9998;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.a11y-wrapper.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+}
+.a11y-toggle {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -1658,41 +1677,19 @@ a:focus, button:focus {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s, opacity 0.3s;
+  padding: 0;
+  transition: transform 0.3s;
   box-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 .a11y-toggle:hover {
   transform: scale(1.1);
 }
-.a11y-toggle.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.8);
-}
-
-/* ══════════ A11y Wrapper with Close ══════════ */
-.a11y-wrapper {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9998;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  transition: opacity 0.3s, transform 0.3s;
-}
-.a11y-wrapper.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.8);
-}
 .a11y-close {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  background: #222;
-  border: 1px solid #B8896A;
+  background: #000;
+  border: 1.5px solid #B8896A;
   color: #B8896A;
   display: flex;
   align-items: center;
@@ -1700,6 +1697,7 @@ a:focus, button:focus {
   cursor: pointer;
   padding: 0;
   transition: transform 0.2s;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 .a11y-close:hover {
   transform: scale(1.15);
