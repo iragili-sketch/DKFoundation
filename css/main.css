@@ -1214,10 +1214,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto var(--sp-lg);
-  border: 2px solid rgba(255,255,255,0.15);
-}
-
-.founder-circle.accent-frame {
   border: 2px solid var(--accent);
 }
 
