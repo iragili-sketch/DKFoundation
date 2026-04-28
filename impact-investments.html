@@ -262,9 +262,14 @@
     </div>
   </div>
   <!-- Accessibility Widget -->
-  <button class="a11y-toggle" id="a11yToggle" aria-label="Open accessibility menu" title="Accessibility">
+  <div class="a11y-wrapper" id="a11yWrapper">
+    <button class="a11y-close" id="a11yClose" aria-label="Close accessibility button" title="Close">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l8 8M9 1l-8 8"/></svg>
+    </button>
+    <button class="a11y-toggle" id="a11yToggle" aria-label="Open accessibility menu" title="Accessibility">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4.5" r="2.5"/><path d="M12 7.5v5m0 0l-3.5 5.5m3.5-5.5l3.5 5.5M6 10.5h12"/></svg>
   </button>
+  </div>
   <script src="https://cdn.userway.org/widget.js" data-account="free" data-position="bottom-right" data-color="#B8896A" data-size="small" data-icon="accessibility" defer></script>
 </body>
 </html>

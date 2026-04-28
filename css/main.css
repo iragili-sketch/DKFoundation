@@ -1669,3 +1669,38 @@ a:focus, button:focus {
   pointer-events: none;
   transform: scale(0.8);
 }
+
+/* ══════════ A11y Wrapper with Close ══════════ */
+.a11y-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.a11y-wrapper.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+}
+.a11y-close {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #222;
+  border: 1px solid #B8896A;
+  color: #B8896A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+.a11y-close:hover {
+  transform: scale(1.15);
+}
