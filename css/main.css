@@ -563,8 +563,9 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .scroll-indicator {
   position: absolute;
-  bottom: var(--sp-2xl);
+  bottom: var(--sp-lg);
   left: 50%;
+  z-index: 3;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
