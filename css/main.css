@@ -699,12 +699,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .founder-primary .photo {
   width: 200px;
-  height: 250px;
+  height: 200px;
   background: var(--surface);
-  border-radius: 8px;
+  border-radius: 50%;
   margin: 0 auto var(--sp-lg);
   overflow: hidden;
   position: relative;
+  border: 2px solid rgba(255,255,255,0.15);
 }
 
 .founder-primary .photo.accent-frame {
@@ -729,11 +730,12 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .founder-card .photo {
   width: 200px;
-  height: 250px;
+  height: 200px;
   background: var(--surface);
-  border-radius: 8px;
+  border-radius: 50%;
   margin: 0 auto var(--sp-lg);
   overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.15);
 }
 
 .founder-card .photo img {
@@ -1194,6 +1196,16 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   flex: 1;
   max-width: 340px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.founder-circle-card .text-label {
+  margin-top: var(--sp-md);
+}
+.founder-circle-card h3 {
+  margin-top: var(--sp-sm);
+  margin-bottom: var(--sp-sm);
 }
 
 .founder-circle {
@@ -1202,6 +1214,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto var(--sp-lg);
+  border: 2px solid rgba(255,255,255,0.15);
 }
 
 .founder-circle.accent-frame {
