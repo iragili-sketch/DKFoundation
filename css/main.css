@@ -505,34 +505,44 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   overflow: hidden;
 }
 
-/* Hero Backgrounds */
+/* Hero Background */
 .hero-bg {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   z-index: 1;
 }
-.hero-bg video,
-.hero-bg img {
+.hero-bg img,
+.hero-bg video {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center 30%;
+  animation: heroZoom 20s ease-in-out infinite alternate;
 }
+
+/* Ken Burns slow zoom animation */
+@keyframes heroZoom {
+  0%   { transform: scale(1);    }
+  100% { transform: scale(1.08); }
+}
+
+/* Dark gradient overlay: left-to-right (text side dark, image side fades in) */
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.4) 50%,
-    rgba(0,0,0,0.7) 100%
-  );
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.7) 30%,
+      rgba(0,0,0,0.35) 60%,
+      rgba(0,0,0,0.15) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.6) 0%,
+      transparent 40%
+    );
 }
-
-/* Toggle visibility based on data-hero-mode */
-[data-hero-mode="video"] .hero-bg-image { display: none; }
-[data-hero-mode="video"] .hero-bg-video { display: block; }
-[data-hero-mode="image"] .hero-bg-video { display: none; }
-[data-hero-mode="image"] .hero-bg-image { display: block; }
 
 .hero h1 .line {
   display: block;
