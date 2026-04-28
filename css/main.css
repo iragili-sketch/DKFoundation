@@ -375,7 +375,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--sp-2xl) var(--sp-xl);
+  padding: calc(var(--sp-2xl) + 60px) var(--sp-xl) var(--sp-2xl);
   gap: var(--sp-md);
   transform: translateX(100%);
   transition: transform var(--duration-medium) var(--ease-out);
@@ -1327,11 +1327,11 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   /* — Mobile menu — */
   .mobile-menu { width: 50vw; min-width: 280px; }
 
-  /* — Footer: clean 2-col with centered brand — */
+  /* — Footer: brand on top, 3 nav columns below — */
   .footer { padding: var(--sp-2xl) 0 var(--sp-lg); }
   .footer-top {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--sp-xl);
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--sp-lg);
   }
   .footer-brand {
     grid-column: 1 / -1;
