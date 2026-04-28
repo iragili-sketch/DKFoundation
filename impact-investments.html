@@ -16,13 +16,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link" tabindex="0">Skip to main content</a>
 
   <div class="cursor"></div>
   <div class="cursor-follower"></div>
   <div class="page-transition"></div>
 
   <!-- ═══════════ NAVIGATION ═══════════ -->
-  <nav class="nav">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="index.html" class="nav-logo" data-en="DKF" data-he="DKF">DKF</a>
     <div class="nav-links">
       <a href="index.html" class="nav-link" data-en="Home" data-he="בית">Home</a>
@@ -39,11 +40,11 @@
       </div>
       <a href="news.html" class="nav-link" data-en="News" data-he="חדשות">News</a>
       <a href="contact.html" class="nav-link" data-en="Contact" data-he="צור קשר">Contact</a>
-      <div class="lang-toggle">
+      <div class="lang-toggle" role="button" aria-label="Switch language" tabindex="0">
         <span class="active-lang">EN</span><span>|</span><span>עב</span>
       </div>
     </div>
-    <div class="hamburger"><span></span><span></span><span></span></div>
+    <div class="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"><span></span><span></span><span></span></div>
   </nav>
 
   <div class="mobile-menu">
@@ -71,7 +72,7 @@
       <div class="menu-card-title" data-en="Contact" data-he="צור קשר">Contact</div>
       <div class="menu-card-desc" data-en="Let's talk" data-he="בואו נדבר">Let's talk</div>
     </a>
-    <div class="lang-toggle">
+    <div class="lang-toggle" role="button" aria-label="Switch language" tabindex="0">
       <span class="active-lang">EN</span>
       <span>|</span>
       <span>עב</span>
@@ -190,7 +191,7 @@
 
   <!-- FOOTER -->
   <!-- ═══════════ FOOTER ═══════════ -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
 
       <!-- Footer Top -->
@@ -235,6 +236,7 @@
         <span class="footer-copy" data-en="&copy; 2026 David Kipnis Foundation. All rights reserved." data-he="&copy; 2026 קרן דוד קיפניס. כל הזכויות שמורות.">&copy; 2026 David Kipnis Foundation. All rights reserved.</span>
         <div class="footer-legal">
           <a href="privacy.html" data-en="Privacy Policy" data-he="מדיניות פרטיות">Privacy Policy</a>
+          <a href="accessibility.html" data-en="Accessibility" data-he="הנגשה">Accessibility</a>
           <a href="#" data-en="Terms" data-he="תנאי שימוש">Terms</a>
         </div>
       </div>
@@ -259,5 +261,6 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.userway.org/widget.js" data-account="free" defer></script>
 </body>
 </html>

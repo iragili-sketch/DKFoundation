@@ -167,6 +167,7 @@ function initMobileMenu() {
 
   function openMenu() {
     hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
     mobileMenu.classList.add('open');
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -174,11 +175,19 @@ function initMobileMenu() {
 
   function closeMenu() {
     hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
     mobileMenu.classList.remove('open');
     overlay.classList.remove('open');
     document.body.style.overflow = '';
   }
 
+  // Keyboard support for hamburger
+  hamburger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      hamburger.click();
+    }
+  });
   hamburger.addEventListener('click', () => {
     if (mobileMenu.classList.contains('open')) {
       closeMenu();
