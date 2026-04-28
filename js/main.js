@@ -4,10 +4,10 @@
    ═══════════════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Only init custom cursor on non-touch devices
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    initCursor();
-  }
+  // Custom cursor disabled — use system cursor
+  // if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  //   initCursor();
+  // }
   initNav();
   initDropdowns();
   initLanguageToggle();
@@ -196,21 +196,25 @@ function initMobileMenu() {
 }
 
 // ═══════════ HERO PARALLAX ═══════════
-document.addEventListener('DOMContentLoaded', function() {
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+function initParallax() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+    setTimeout(initParallax, 200);
+    return;
+  }
   gsap.registerPlugin(ScrollTrigger);
 
   const heroBg = document.querySelector('.hero-bg');
   if (\!heroBg) return;
 
   gsap.to(heroBg, {
-    yPercent: 25,
+    yPercent: 20,
     ease: 'none',
     scrollTrigger: {
       trigger: '.hero',
       start: 'top top',
       end: 'bottom top',
-      scrub: true
+      scrub: 0.5
     }
   });
-});
+}
+window.addEventListener('load', initParallax);
