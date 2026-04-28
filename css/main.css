@@ -1649,7 +1649,7 @@ a:focus, button:focus {
 
 /* ══════════ Accessibility Widget ══════════ */
 /* Hide UserWay default button - we use our own */
-.uwy { display: none !important; }
+.uwy .uai { display: none !important; }
 
 .a11y-wrapper {
   position: fixed;
