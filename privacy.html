@@ -3,98 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DKF — Contact</title>
-  <meta name="description" content="Get in touch with DKF. Partner with us, apply for support, or learn more about our healthcare impact fund.">
+  <title>DKF — Privacy Policy</title>
+  <meta name="description" content="DKF Privacy Policy — how we collect, use, and protect your data.">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
 
+  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-
-  <style>
-    /* Contact-specific styles */
-    .contact-form {
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    .form-group {
-      margin-bottom: var(--sp-lg);
-    }
-    .form-group label {
-      display: block;
-      font-size: var(--fs-caption);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: var(--sp-sm);
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 14px 16px;
-      background: var(--secondary);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--text);
-      font-size: var(--fs-body);
-      font-family: var(--font-body);
-      border-radius: 2px;
-      transition: border-color 0.3s ease;
-      outline: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--accent);
-    }
-    .form-group select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%238A8A8A' stroke-width='1.5'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 16px center;
-      padding-right: 40px;
-    }
-    .form-group textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-    .form-group select option {
-      background: var(--secondary);
-      color: var(--text);
-    }
-    .contact-info {
-      text-align: center;
-      margin-top: var(--sp-3xl);
-      padding-top: var(--sp-xl);
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    .contact-info a {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: var(--fs-body-lg);
-      transition: color 0.3s ease;
-    }
-    .contact-info a:hover {
-      color: var(--accent-hover);
-    }
-  </style>
 </head>
 <body>
 
+  <!-- Custom Cursor -->
   <div class="cursor"></div>
   <div class="cursor-follower"></div>
+
+  <!-- Page Transition Overlay -->
   <div class="page-transition"></div>
 
   <!-- ═══════════ NAVIGATION ═══════════ -->
   <nav class="nav">
     <a href="index.html" class="nav-logo" data-en="DKF" data-he="DKF">DKF</a>
+
     <div class="nav-links">
       <a href="index.html" class="nav-link" data-en="Home" data-he="בית">Home</a>
+
       <a href="about.html" class="nav-link" data-en="The Fund" data-he="הקרן">The Fund</a>
+
       <div class="nav-dropdown">
         <a href="#" class="nav-link nav-dropdown-trigger">
           <span data-en="What We Do" data-he="מה אנחנו עושים">What We Do</span>
@@ -105,15 +46,24 @@
           <a href="impact-investments.html" class="nav-dropdown-item" data-en="Impact — Investments" data-he="אימפקט — השקעות">Impact — Investments</a>
         </div>
       </div>
+
       <a href="news.html" class="nav-link" data-en="News" data-he="חדשות">News</a>
-      <a href="contact.html" class="nav-link active" data-en="Contact" data-he="צור קשר">Contact</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-he="צור קשר">Contact</a>
+
       <div class="lang-toggle">
-        <span class="active-lang">EN</span><span>|</span><span>עב</span>
+        <span class="active-lang">EN</span>
+        <span>|</span>
+        <span>עב</span>
       </div>
     </div>
-    <div class="hamburger"><span></span><span></span><span></span></div>
+
+    <!-- Mobile -->
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
   </nav>
 
+  <!-- Mobile Menu -->
   <div class="mobile-menu">
     <a href="index.html" class="menu-card">
       <div class="menu-card-title" data-en="Home" data-he="בית">Home</div>
@@ -135,7 +85,7 @@
       <div class="menu-card-title" data-en="News" data-he="חדשות">News</div>
       <div class="menu-card-desc" data-en="Latest updates" data-he="עדכונים אחרונים">Latest updates</div>
     </a>
-    <a href="contact.html" class="menu-card active">
+    <a href="contact.html" class="menu-card">
       <div class="menu-card-title" data-en="Contact" data-he="צור קשר">Contact</div>
       <div class="menu-card-desc" data-en="Let's talk" data-he="בואו נדבר">Let's talk</div>
     </a>
@@ -146,94 +96,60 @@
     </div>
   </div>
 
-  <!-- ═══════════ SECTION A: HERO ═══════════ -->
-  <section class="hero bg-primary" style="min-height: 60vh;">
-    <div class="container">
-      <h1>
-        <div class="line"><span data-en="Let's" data-he="בואו">Let's</span></div>
-        <div class="line"><span class="text-accent" data-en="talk." data-he="נדבר.">talk.</span></div>
-      </h1>
-    </div>
-  </section>
+  <!-- Privacy Policy Content -->
+  <section class="section-lg bg-primary" style="padding-top: 140px;">
+    <div class="container" style="max-width: 800px;">
+      <p class="text-label reveal">Legal</p>
+      <h1 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-xl);">Privacy Policy</h1>
+      <p class="text-muted reveal" style="margin-bottom: var(--sp-3xl);">Last updated: April 2026</p>
 
-  <!-- ═══════════ SECTION B: THREE PATHS ═══════════ -->
-  <section class="section bg-secondary">
-    <div class="container">
-      <div class="cta-paths cards-stagger" style="margin-bottom: 0;">
-        <div class="cta-path reveal">
-          <h3 data-en="Partner with us" data-he="שותפות">Partner with us</h3>
-          <p class="text-muted" data-en="You share our vision and want to collaborate on healthcare impact." data-he="אתם שותפים לחזון שלנו ורוצים לשתף פעולה בהשפעה בריאותית.">
-            You share our vision and want to collaborate on healthcare impact.
-          </p>
-        </div>
-        <div class="cta-path reveal">
-          <h3 data-en="Apply for support" data-he="בקשת תמיכה">Apply for support</h3>
-          <p class="text-muted" data-en="You run a healthcare initiative, clinic, or program that needs funding." data-he="אתם מנהלים יוזמה בריאותית, מרפאה או תוכנית שזקוקה למימון.">
-            You run a healthcare initiative, clinic, or program that needs funding.
-          </p>
-        </div>
-        <div class="cta-path reveal">
-          <h3 data-en="Learn more" data-he="למידע נוסף">Learn more</h3>
-          <p class="text-muted" data-en="You'd like to know more about DKF and how we work." data-he="אתם רוצים לדעת עוד על DKF ואיך אנחנו פועלות.">
-            You'd like to know more about DKF and how we work.
-          </p>
-        </div>
+      <div class="reveal" style="color: var(--text-muted); line-height: 1.8;">
+
+        <h3 style="color: var(--text-primary); margin-bottom: var(--sp-md);">1. Introduction</h3>
+        <p style="margin-bottom: var(--sp-xl);">
+          David Kipnis Foundation (“DKF”, “we”, “us”) is committed to protecting the privacy of visitors to our website. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information, in compliance with the Israeli Privacy Protection Law (5741-1981), the EU General Data Protection Regulation (GDPR), and other applicable privacy laws.
+        </p>
+
+        <h3 style="color: var(--text-primary); margin-bottom: var(--sp-md);">2. Information We Collect</h3>
+        <p style="margin-bottom: var(--sp-lg);">We may collect the following types of information:</p>
+        <p style="margin-bottom: var(--sp-sm);"><strong>Contact information:</strong> Name, email address, and message content submitted through our contact form.</p>
+        <p style="margin-bottom: var(--sp-sm);"><strong>Usage data:</strong> Pages visited, time spent on pages, browser type, device type, and referring URL. Collected only with your consent via cookies.</p>
+        <p style="margin-bottom: var(--sp-xl);"><strong>Cookies:</strong> Small text files stored on your device. We use only essential cookies (for site functionality) and analytics cookies (with your explicit consent).</p>
+
+        <h3 style="color: var(--text-primary); margin-bottom: var(--sp-md);">3. How We Use Your Information</h3>
+        <p style="margin-bottom: var(--sp-xl);">
+          We use collected information to respond to your inquiries, improve our website experience, analyze site traffic (with consent), and comply with legal obligations. We do not sell, rent, or share your personal information with third parties for marketing purposes.
+        </p>
+
+        <h3 style="color: var(--text-primary); margin-bottom: var(--sp-md);">4. Cookies &amp; Consent</h3>
+        <p style="margin-bottom: var(--sp-xl);">
+          When you first visit our site, a cookie consent banner will appear. You may accept or decline non-essential cookies. Essential cookies required for the site to function cannot be disabled. You can change your cookie preferences at any time by clearing your browser cookies and revisiting the site.
+        </p>
+
+        <h3 style="color: var(--text-primary); margin-bottom: var(--sp-md);">5. Data Retention</h3>
+        <p style="margin-bottom: var(--sp-xl);">
+          We retain personal information only as long as necessary for the purposes described in this policy, or as required by law. Contact form submissions are retained for up to 24 months.
+        </p>
+
+        <h3 style="color: var(--text-primary); margin-bottom: var(--sp-md);">6. Your Rights</h3>
+        <p style="margin-bottom: var(--sp-xl);">
+          Under the Israeli Privacy Protection Law and GDPR, you have the right to access, correct, or delete your personal data; withdraw consent for data processing; request data portability; and lodge a complaint with the relevant supervisory authority. To exercise any of these rights, contact us at <a href="mailto:info@dkf-fund.com" style="color: var(--accent);">info@dkf-fund.com</a>.
+        </p>
+
+        <h3 style="color: var(--text-primary); margin-bottom: var(--sp-md);">7. Data Security</h3>
+        <p style="margin-bottom: var(--sp-xl);">
+          We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. Our site is served over HTTPS to ensure encrypted communication.
+        </p>
+
+        <h3 style="color: var(--text-primary); margin-bottom: var(--sp-md);">8. Contact</h3>
+        <p style="margin-bottom: var(--sp-xl);">
+          For questions about this Privacy Policy or to exercise your data rights, please contact us at: <a href="mailto:info@dkf-fund.com" style="color: var(--accent);">info@dkf-fund.com</a>
+        </p>
+
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ SECTION C: FORM ═══════════ -->
-  <section class="section-lg bg-primary">
-    <div class="container">
-      <form class="contact-form reveal">
-        <div class="form-group">
-          <label data-en="Full name" data-he="שם מלא">Full name</label>
-          <input type="text" name="name" required>
-        </div>
-
-        <div class="form-group">
-          <label data-en="Email" data-he="דוא&quot;ל">Email</label>
-          <input type="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-          <label data-en="I am a..." data-he="אני...">I am a...</label>
-          <select name="type" id="contact-type">
-            <option value="" disabled selected data-en="Select one" data-he="בחרו">Select one</option>
-            <option value="partner" data-en="Potential partner or collaborator" data-he="שותף או משתף פעולה פוטנציאלי">Potential partner or collaborator</option>
-            <option value="applicant" data-en="Healthcare professional seeking support" data-he="איש מקצוע בבריאות המחפש תמיכה">Healthcare professional seeking support</option>
-            <option value="donor" data-en="Individual interested in giving" data-he="אדם פרטי המעוניין לתרום">Individual interested in giving</option>
-            <option value="fund" data-en="Health-Tech fund manager" data-he="מנהל קרן Health-Tech">Health-Tech fund manager</option>
-            <option value="media" data-en="Media or press" data-he="מדיה או עיתונות">Media or press</option>
-            <option value="other" data-en="Other" data-he="אחר">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label data-en="Message" data-he="הודעה">Message</label>
-          <textarea name="message" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Send message" data-he="שלחו הודעה">Send message</button>
-      </form>
-
-      <!-- ═══════════ SECTION D: CONTACT INFO ═══════════ -->
-      <div class="contact-info reveal">
-        <div class="contact-item">
-          <h3 data-en="Email" data-he="אימייל">Email</h3>
-          <a href="mailto:info@dkf-fund.com">info@dkf-fund.com</a>
-        </div>
-        <div class="contact-item">
-          <h3 data-en="Location" data-he="מיקום">Location</h3>
-          <p data-en="Tel Aviv, Israel" data-he="תל אביב, ישראל">Tel Aviv, Israel</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
     <div class="container">
 
@@ -289,8 +205,6 @@
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
 
-
-  <!-- ═══════════ COOKIE CONSENT ═══════════ -->
   <div class="cookie-banner" id="cookieBanner">
     <div class="cookie-content">
       <p data-en="We use cookies to improve your experience. By continuing to use this site, you consent to our use of cookies in accordance with our" data-he="אנו משתמשים בעוגיות כדי לשפר את החוויה שלך. בהמשך השימוש באתר, את/ה מסכים/ה לשימוש בעוגיות בהתאם ל">

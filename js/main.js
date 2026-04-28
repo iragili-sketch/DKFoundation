@@ -196,3 +196,37 @@ function initMobileMenu() {
 }
 
 
+
+/* ══════════ Cookie Consent Banner ══════════ */
+(function() {
+  var banner = document.getElementById('cookieBanner');
+  var acceptBtn = document.getElementById('cookieAccept');
+  var declineBtn = document.getElementById('cookieDecline');
+  if (\!banner) return;
+
+  var consent = localStorage.getItem('dkf_cookie_consent');
+  if (consent) return; // already answered
+
+  // Show banner after short delay
+  setTimeout(function() {
+    banner.classList.add('visible');
+  }, 1200);
+
+  function hideBanner(choice) {
+    localStorage.setItem('dkf_cookie_consent', choice);
+    banner.classList.remove('visible');
+    setTimeout(function() { banner.remove(); }, 500);
+    if (choice === 'declined') {
+      // Delete non-essential cookies
+      document.cookie.split(';').forEach(function(c) {
+        var name = c.split('=')[0].trim();
+        if (name && name \!== 'dkf_cookie_consent') {
+          document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+        }
+      });
+    }
+  }
+
+  if (acceptBtn) acceptBtn.addEventListener('click', function() { hideBanner('accepted'); });
+  if (declineBtn) declineBtn.addEventListener('click', function() { hideBanner('declined'); });
+})();
