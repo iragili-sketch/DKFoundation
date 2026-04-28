@@ -1167,6 +1167,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 /* Founder links */
 .founder-link {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   text-decoration: none;
   color: inherit;
   display: block;
