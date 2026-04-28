@@ -1171,6 +1171,16 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 /* ── Tablet-portrait & phones (max 768px) ── */
 @media (max-width: 768px) {
 
+
+  /* — Founder Photos — */
+  .founder-primary-img {
+    width: 90vw !important;
+    max-width: 90vw !important;
+  }
+  .team-photo {
+    width: 130px !important;
+    height: 130px !important;
+  }
   /* — Layout — */
   .container { padding: 0 var(--sp-lg); }
   .nav { padding: 0 var(--sp-lg); }
@@ -1353,6 +1363,16 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 /* ── Small phones (max 480px) ── */
 @media (max-width: 480px) {
   .container { padding: 0 var(--sp-md); }
+
+  /* — Founder Photos — */
+  .founder-primary-img {
+    width: 85vw !important;
+    max-width: 85vw !important;
+  }
+  .team-photo {
+    width: 110px !important;
+    height: 110px !important;
+  }
   .nav { padding: 0 var(--sp-md); }
 
   .hero { min-height: 80vh; }
