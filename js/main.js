@@ -240,28 +240,33 @@ document.addEventListener("DOMContentLoaded", function() {
   if (declineBtn) declineBtn.addEventListener('click', function() { hideBanner('declined'); });
 });
 
-/* ══════════ Accessibility Toggle ══════════ */
+/* Accessibility Toggle */
 document.addEventListener('DOMContentLoaded', function() {
+  var wrapper = document.getElementById('a11yWrapper');
   var btn = document.getElementById('a11yToggle');
-  if (!btn) return;
+  var closeBtn = document.getElementById('a11yClose');
+  if (!wrapper || !btn) return;
 
-  // If UserWay widget loads, hide our button (UserWay has its own)
-  var checkUW = setInterval(function() {
-    var uw = document.querySelector('.uwy, .userway_p, [data-userway]');
-    if (uw) {
-      btn.classList.add('hidden');
-      clearInterval(checkUW);
-    }
-  }, 500);
+  // If closed this session, stay hidden
+  if (sessionStorage.getItem('dkf_a11y_closed') === '1') {
+    wrapper.classList.add('hidden');
+    return;
+  }
 
-  // Fallback: if UserWay doesn't load in 5s, keep our button
-  setTimeout(function() { clearInterval(checkUW); }, 5000);
+  // X closes icon for this session only (comes back on refresh/new tab)
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      wrapper.classList.add('hidden');
+      sessionStorage.setItem('dkf_a11y_closed', '1');
+    });
+  }
 
+  // Click icon opens UserWay menu
   btn.addEventListener('click', function() {
-    // Try to trigger UserWay
-    var uwBtn = document.querySelector('.uwy .uai, .userway_p button, [data-userway-widget]');
-    if (uwBtn) {
-      uwBtn.click();
+    if (typeof UserWay !== 'undefined') {
+      UserWay.widgetOpen();
     }
   });
 });
+
