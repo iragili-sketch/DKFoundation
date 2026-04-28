@@ -1179,10 +1179,27 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   .section-lg { padding: var(--sp-4xl) 0; }
 
   /* — Hero — */
-  .hero { min-height: 85vh; }
+  .hero { min-height: 100vh; }
   h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
   .hero-subtitle { font-size: 1rem; max-width: 100%; }
-  .hero-bg video, .hero-bg img { object-position: center center; }
+  .hero-bg video, .hero-bg img {
+    object-position: 65% center;
+    min-height: 100vh;
+  }
+  .hero-overlay {
+    background:
+      linear-gradient(
+        to right,
+        rgba(0,0,0,0.9) 0%,
+        rgba(0,0,0,0.75) 40%,
+        rgba(0,0,0,0.3) 100%
+      ),
+      linear-gradient(
+        to top,
+        rgba(0,0,0,0.7) 0%,
+        transparent 50%
+      ) !important;
+  }
 
   /* — Grids collapse — */
   .grid-2 { grid-template-columns: 1fr; }
