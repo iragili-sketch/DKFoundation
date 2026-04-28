@@ -374,8 +374,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   z-index: 999;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: calc(var(--sp-2xl) + 60px) var(--sp-xl) var(--sp-2xl);
+  justify-content: flex-start;
+  padding: 80px var(--sp-xl) var(--sp-2xl);
   gap: var(--sp-md);
   transform: translateX(100%);
   transition: transform var(--duration-medium) var(--ease-out);
@@ -1413,11 +1413,11 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     width: 100vw;
     min-width: unset;
     border-left: none;
-    padding: var(--sp-xl) var(--sp-md);
+    padding: 80px var(--sp-md) var(--sp-xl);
   }
 
-  /* Footer single column */
-  .footer-top { grid-template-columns: 1fr; gap: var(--sp-lg); }
+  /* Footer 3 columns */
+  .footer-top { grid-template-columns: 1fr 1fr 1fr; gap: var(--sp-sm); }
   .footer-logo { font-size: 1.25rem; }
 
   /* Scroll indicator hide */
