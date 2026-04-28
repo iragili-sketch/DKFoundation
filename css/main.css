@@ -1641,3 +1641,31 @@ a:focus, button:focus {
 .text-muted {
   color: #aaa !important;
 }
+
+/* ══════════ Accessibility Toggle Button ══════════ */
+.a11y-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9998;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #000;
+  border: 2px solid #B8896A;
+  color: #B8896A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.a11y-toggle:hover {
+  transform: scale(1.1);
+}
+.a11y-toggle.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+}

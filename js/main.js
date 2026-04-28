@@ -239,3 +239,29 @@ document.addEventListener("DOMContentLoaded", function() {
   if (acceptBtn) acceptBtn.addEventListener('click', function() { hideBanner('accepted'); });
   if (declineBtn) declineBtn.addEventListener('click', function() { hideBanner('declined'); });
 });
+
+/* ══════════ Accessibility Toggle ══════════ */
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('a11yToggle');
+  if (!btn) return;
+
+  // If UserWay widget loads, hide our button (UserWay has its own)
+  var checkUW = setInterval(function() {
+    var uw = document.querySelector('.uwy, .userway_p, [data-userway]');
+    if (uw) {
+      btn.classList.add('hidden');
+      clearInterval(checkUW);
+    }
+  }, 500);
+
+  // Fallback: if UserWay doesn't load in 5s, keep our button
+  setTimeout(function() { clearInterval(checkUW); }, 5000);
+
+  btn.addEventListener('click', function() {
+    // Try to trigger UserWay
+    var uwBtn = document.querySelector('.uwy .uai, .userway_p button, [data-userway-widget]');
+    if (uwBtn) {
+      uwBtn.click();
+    }
+  });
+});
