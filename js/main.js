@@ -202,7 +202,7 @@ function initMobileMenu() {
   var banner = document.getElementById('cookieBanner');
   var acceptBtn = document.getElementById('cookieAccept');
   var declineBtn = document.getElementById('cookieDecline');
-  if (\!banner) return;
+  if (!banner) return;
 
   var consent = localStorage.getItem('dkf_cookie_consent');
   if (consent) return; // already answered
@@ -220,7 +220,7 @@ function initMobileMenu() {
       // Delete non-essential cookies
       document.cookie.split(';').forEach(function(c) {
         var name = c.split('=')[0].trim();
-        if (name && name \!== 'dkf_cookie_consent') {
+        if (name && name !== 'dkf_cookie_consent') {
           document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
         }
       });
