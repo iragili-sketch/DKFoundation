@@ -1202,11 +1202,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 .founder-circle-card .text-label {
   margin-top: var(--sp-xl);
-  min-height: 3em;
+  min-height: 2em;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
 }
 .founder-circle-card h3 {
   margin-top: var(--sp-md);
