@@ -198,7 +198,7 @@ function initMobileMenu() {
 
 
 /* ══════════ Cookie Consent Banner ══════════ */
-(function() {
+document.addEventListener("DOMContentLoaded", function() {
   var banner = document.getElementById('cookieBanner');
   var acceptBtn = document.getElementById('cookieAccept');
   var declineBtn = document.getElementById('cookieDecline');
@@ -229,4 +229,4 @@ function initMobileMenu() {
 
   if (acceptBtn) acceptBtn.addEventListener('click', function() { hideBanner('accepted'); });
   if (declineBtn) declineBtn.addEventListener('click', function() { hideBanner('declined'); });
-})();
+});
