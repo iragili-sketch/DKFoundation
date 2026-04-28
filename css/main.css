@@ -697,14 +697,17 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 .founder-primary .photo {
-  width: 280px;
-  height: 350px;
+  width: 200px;
+  height: 250px;
   background: var(--surface);
-  border: 2px solid var(--accent);
   border-radius: 8px;
-  margin: 0 auto var(--sp-xl);
+  margin: 0 auto var(--sp-lg);
   overflow: hidden;
   position: relative;
+}
+
+.founder-primary .photo.accent-frame {
+  border: 2px solid var(--accent);
 }
 
 .founder-primary .photo img {
@@ -1161,6 +1164,20 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
    ══════════════════════════════════════════════════ */
 
 /* ── Tablet (max 1024px) ── */
+
+/* Founder links */
+.founder-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.founder-link:hover .founder-name {
+  color: var(--accent);
+}
+.founder-link:hover .photo img {
+  filter: grayscale(0%) !important;
+}
 @media (max-width: 1024px) {
   .founder-feature {
     grid-template-columns: 1fr 1fr;
