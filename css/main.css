@@ -1758,3 +1758,20 @@ section, .container, .hero { max-width: 100%; }
     padding-top: 80px;
   }
 }
+
+/* ══════════ Form Status Messages ══════════ */
+.form-status-success {
+  background: rgba(29, 158, 117, 0.15);
+  border: 1px solid rgba(29, 158, 117, 0.4);
+}
+.form-status-success p { color: #1D9E75; }
+.form-status-error {
+  background: rgba(226, 75, 74, 0.15);
+  border: 1px solid rgba(226, 75, 74, 0.4);
+}
+.form-status-error p { color: #E24B4A; }
+.form-status p { margin: 0; font-size: 0.95rem; }
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

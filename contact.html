@@ -188,7 +188,7 @@
   <!-- ═══════════ SECTION C: FORM ═══════════ -->
   <section class="section-lg bg-primary">
     <div class="container">
-      <form class="contact-form reveal">
+      <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/ajax/info@dkfound.com" method="POST">
         <div class="form-group">
           <label for="contact-name" data-en="Full name" data-he="שם מלא">Full name</label>
           <input type="text" name="name" id="contact-name" required>
@@ -217,7 +217,11 @@
           <textarea name="message" id="contact-message" required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Send message" data-he="שלחו הודעה">Send message</button>
+        <button type="submit" class="btn btn-primary" style="width: 100%;" id="contactSubmit" data-en="Send message" data-he="שלחו הודעה">Send message</button>
+
+        <div class="form-status" id="formStatus" style="display:none; margin-top: var(--sp-lg); padding: var(--sp-lg); border-radius: 8px; text-align: center;">
+          <p class="form-status-text" id="formStatusText"></p>
+        </div>
       </form>
 
       <!-- ═══════════ SECTION D: CONTACT INFO ═══════════ -->

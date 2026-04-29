@@ -268,3 +268,59 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+/* ══════════ Contact Form Submission ══════════ */
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+
+  var submitBtn = document.getElementById('contactSubmit');
+  var statusDiv = document.getElementById('formStatus');
+  var statusText = document.getElementById('formStatusText');
+  var originalBtnText = submitBtn ? submitBtn.textContent : 'Send message';
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Disable button + show loading
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(response) {
+      return response.json().then(function(data) {
+        return { ok: response.ok, data: data };
+      });
+    })
+    .then(function(result) {
+      statusDiv.style.display = 'block';
+      if (result.ok) {
+        statusDiv.className = 'form-status form-status-success';
+        statusText.textContent = 'Message sent successfully! We will get back to you soon.';
+        form.reset();
+      } else {
+        statusDiv.className = 'form-status form-status-error';
+        statusText.textContent = 'Something went wrong. Please try again or email us directly.';
+      }
+    })
+    .catch(function() {
+      statusDiv.style.display = 'block';
+      statusDiv.className = 'form-status form-status-error';
+      statusText.textContent = 'Connection error. Please try again or email us at info@dkfound.com';
+    })
+    .finally(function() {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+      // Auto-hide after 8 seconds
+      setTimeout(function() {
+        statusDiv.style.display = 'none';
+      }, 8000);
+    });
+  });
+});
