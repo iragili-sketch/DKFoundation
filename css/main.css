@@ -1400,6 +1400,12 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     align-items: center;
     gap: var(--sp-2xl);
   }
+  /* Alin first on mobile */
+  .founders-row .founder-circle-card:nth-child(2),
+  .founders-row a.founder-link:nth-child(2) {
+    order: -1;
+  }
+
   .founder-circle {
     width: 160px;
     height: 160px;
