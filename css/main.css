@@ -1710,3 +1710,51 @@ a:focus, button:focus {
 .a11y-close:hover {
   transform: scale(1.15);
 }
+
+
+/* ══════════ Mobile Fixes ══════════ */
+@media (max-width: 480px) {
+  /* Cookie banner: buttons side by side, smaller */
+  .cookie-content p { font-size: 0.75rem; }
+  .cookie-buttons { width: 100%; justify-content: center; }
+  .cookie-buttons .btn {
+    min-width: 70px;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    width: auto;
+  }
+
+  /* A11y widget: smaller on small screens */
+  .a11y-toggle { width: 40px; height: 40px; }
+  .a11y-toggle svg { width: 20px; height: 20px; }
+  .a11y-close { width: 18px; height: 18px; }
+  .a11y-wrapper { bottom: 14px; right: 14px; }
+
+  /* Founders: smaller rectangles */
+  .founder-circle { width: 180px; height: 240px; }
+
+  /* Hero content padding */
+  .hero-content { padding: 0 var(--sp-md); }
+
+  /* Quote smaller */
+  .quote { font-size: 1rem; padding: var(--sp-lg) 0; }
+  .quote p { font-size: 0.9rem; line-height: 1.6; }
+
+  /* Approach cards full width */
+  .cards-stagger .card { margin-bottom: var(--sp-md); }
+}
+
+/* Prevent any horizontal overflow on all screen sizes */
+html, body { overflow-x: hidden; max-width: 100vw; }
+section, .container, .hero { max-width: 100%; }
+
+/* Cookie banner above a11y widget */
+.cookie-banner { padding-bottom: calc(var(--sp-lg) + 60px); }
+
+/* Mobile menu fix: content starts below logo */
+@media (max-width: 768px) {
+  .mobile-menu {
+    justify-content: flex-start;
+    padding-top: 80px;
+  }
+}
