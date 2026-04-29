@@ -276,15 +276,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var submitBtn = document.getElementById('contactSubmit');
   var statusDiv = document.getElementById('formStatus');
-  var statusText = document.getElementById('formStatusText');
-  var originalBtnText = submitBtn ? submitBtn.textContent : 'Send message';
+  var iconEl = document.getElementById('formStatusIcon');
+  var titleEl = document.getElementById('formStatusTitle');
+  var subEl = document.getElementById('formStatusSub');
+
+  function showStatus(type, icon, title, sub) {
+    statusDiv.className = 'form-status is-' + type;
+    statusDiv.style.display = 'block';
+    iconEl.textContent = icon;
+    titleEl.textContent = title;
+    subEl.textContent = sub;
+    setTimeout(function() { statusDiv.style.display = 'none'; }, 10000);
+  }
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-
-    // Disable button + show loading
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
+    submitBtn.classList.add('is-sending');
+    statusDiv.style.display = 'none';
 
     var formData = new FormData(form);
 
@@ -299,28 +308,19 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
     .then(function(result) {
-      statusDiv.style.display = 'block';
       if (result.ok) {
-        statusDiv.className = 'form-status form-status-success';
-        statusText.innerHTML = '<span style="font-size:1.2rem">✓</span> Message sent successfully! We will get back to you soon.';
+        showStatus('success', '✓', 'Message sent', 'Thank you for reaching out. We will get back to you shortly.');
         form.reset();
       } else {
-        statusDiv.className = 'form-status form-status-error';
-        statusText.innerHTML = '<span style="font-size:1.2rem">✗</span> Something went wrong. Please try again or email us directly.';
+        showStatus('error', '✗', 'Could not send', 'Something went wrong. Please try again or email us directly.');
       }
     })
     .catch(function() {
-      statusDiv.style.display = 'block';
-      statusDiv.className = 'form-status form-status-error';
-      statusText.innerHTML = '<span style="font-size:1.2rem">✗</span> Connection error. Please try again or email us at info@dkfound.com';
+      showStatus('error', '✗', 'Connection error', 'Please check your connection and try again, or email info@dkfound.com');
     })
     .finally(function() {
       submitBtn.disabled = false;
-      submitBtn.textContent = originalBtnText;
-      // Auto-hide after 8 seconds
-      setTimeout(function() {
-        statusDiv.style.display = 'none';
-      }, 8000);
+      submitBtn.classList.remove('is-sending');
     });
   });
 });
