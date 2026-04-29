@@ -67,7 +67,6 @@ function initNav() {
   const nav = document.querySelector('.nav');
   if (!nav) return;
 
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     if (scrollY > 50) {
@@ -75,7 +74,6 @@ function initNav() {
     } else {
       nav.classList.remove('scrolled');
     }
-    lastScroll = scrollY;
   });
 }
 

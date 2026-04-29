@@ -147,6 +147,8 @@
     </div>
   </div>
 
+  <main id="main-content">
+
   <!-- ═══════════ SECTION A: HERO ═══════════ -->
   <section class="hero bg-primary" style="min-height: 60vh;">
     <div class="container">
@@ -188,17 +190,17 @@
     <div class="container">
       <form class="contact-form reveal">
         <div class="form-group">
-          <label data-en="Full name" data-he="שם מלא">Full name</label>
-          <input type="text" name="name" required>
+          <label for="contact-name" data-en="Full name" data-he="שם מלא">Full name</label>
+          <input type="text" name="name" id="contact-name" required>
         </div>
 
         <div class="form-group">
-          <label data-en="Email" data-he="דוא&quot;ל">Email</label>
-          <input type="email" name="email" required>
+          <label for="contact-email" data-en="Email" data-he="דוא&quot;ל">Email</label>
+          <input type="email" name="email" id="contact-email" required>
         </div>
 
         <div class="form-group">
-          <label data-en="I am a..." data-he="אני...">I am a...</label>
+          <label for="contact-type" data-en="I am a..." data-he="אני...">I am a...</label>
           <select name="type" id="contact-type">
             <option value="" disabled selected data-en="Select one" data-he="בחרו">Select one</option>
             <option value="partner" data-en="Potential partner or collaborator" data-he="שותף או משתף פעולה פוטנציאלי">Potential partner or collaborator</option>
@@ -211,8 +213,8 @@
         </div>
 
         <div class="form-group">
-          <label data-en="Message" data-he="הודעה">Message</label>
-          <textarea name="message" required></textarea>
+          <label for="contact-message" data-en="Message" data-he="הודעה">Message</label>
+          <textarea name="message" id="contact-message" required></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Send message" data-he="שלחו הודעה">Send message</button>
@@ -235,6 +237,8 @@
 
   <!-- FOOTER -->
   <!-- ═══════════ FOOTER ═══════════ -->
+  </main>
+
   <footer class="footer" role="contentinfo">
     <div class="container">
 
