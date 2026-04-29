@@ -302,17 +302,17 @@ document.addEventListener('DOMContentLoaded', function() {
       statusDiv.style.display = 'block';
       if (result.ok) {
         statusDiv.className = 'form-status form-status-success';
-        statusText.textContent = 'Message sent successfully! We will get back to you soon.';
+        statusText.innerHTML = '<span style="font-size:1.2rem">✓</span> Message sent successfully! We will get back to you soon.';
         form.reset();
       } else {
         statusDiv.className = 'form-status form-status-error';
-        statusText.textContent = 'Something went wrong. Please try again or email us directly.';
+        statusText.innerHTML = '<span style="font-size:1.2rem">✗</span> Something went wrong. Please try again or email us directly.';
       }
     })
     .catch(function() {
       statusDiv.style.display = 'block';
       statusDiv.className = 'form-status form-status-error';
-      statusText.textContent = 'Connection error. Please try again or email us at info@dkfound.com';
+      statusText.innerHTML = '<span style="font-size:1.2rem">✗</span> Connection error. Please try again or email us at info@dkfound.com';
     })
     .finally(function() {
       submitBtn.disabled = false;

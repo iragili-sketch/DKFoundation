@@ -199,7 +199,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--sp-2xl);
+  padding: 0 var(--sp-xl);
   z-index: 1000;
   transition: background var(--duration-fast) var(--ease-out),
               backdrop-filter var(--duration-fast);
@@ -459,7 +459,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--sp-2xl);
+  padding: 0 var(--sp-xl);
 }
 
 .section {
@@ -1761,16 +1761,16 @@ section, .container, .hero { max-width: 100%; }
 
 /* ══════════ Form Status Messages ══════════ */
 .form-status-success {
-  background: rgba(29, 158, 117, 0.15);
-  border: 1px solid rgba(29, 158, 117, 0.4);
+  background: rgba(29, 158, 117, 0.12);
+  border: 1px solid rgba(29, 158, 117, 0.3);
 }
-.form-status-success p { color: #1D9E75; }
+.form-status-success p { color: #5DCAA5; }
 .form-status-error {
-  background: rgba(226, 75, 74, 0.15);
-  border: 1px solid rgba(226, 75, 74, 0.4);
+  background: rgba(226, 75, 74, 0.12);
+  border: 1px solid rgba(226, 75, 74, 0.3);
 }
-.form-status-error p { color: #E24B4A; }
-.form-status p { margin: 0; font-size: 0.95rem; }
+.form-status-error p { color: #F09595; }
+.form-status p { margin: 0; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .btn-primary:disabled {
   opacity: 0.6;
   cursor: not-allowed;
