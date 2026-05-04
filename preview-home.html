@@ -8,7 +8,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
@@ -36,9 +36,7 @@
   /* Typography */
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-he: 'Heebo', sans-serif;
-
-  /* Spacing (8pt grid) */
+/* Spacing (8pt grid) */
   --sp-xs: 4px;
   --sp-sm: 8px;
   --sp-md: 16px;
@@ -311,26 +309,11 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* Language Toggle */
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-xs);
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  transition: border-color var(--duration-fast);
-}
 
-.lang-toggle:hover {
-  border-color: var(--accent);
-}
 
-.lang-toggle .active-lang {
-  color: var(--accent);
-}
+
+
+
 
 /* Hamburger */
 .hamburger {
@@ -749,39 +732,33 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     <a href="#" class="nav-logo">DKF</a>
 
     <div class="nav-links">
-      <a href="#" class="nav-link active" data-en="Home" data-he="בית">Home</a>
+      <a href="#" class="nav-link active" data-en="Home">Home</a>
 
       <div class="nav-dropdown">
         <a href="#" class="nav-link nav-dropdown-trigger">
-          <span data-en="About" data-he="אודות">About</span>
+          <span data-en="About">About</span>
           <span class="arrow">&#9662;</span>
         </a>
         <div class="nav-dropdown-menu">
-          <a href="#" class="nav-dropdown-item" data-en="The Fund" data-he="הקרן">The Fund</a>
-          <a href="#" class="nav-dropdown-item" data-en="The Founders" data-he="המייסדות">The Founders</a>
+          <a href="#" class="nav-dropdown-item" data-en="The Fund">The Fund</a>
+          <a href="#" class="nav-dropdown-item" data-en="The Founders">The Founders</a>
         </div>
       </div>
 
       <div class="nav-dropdown">
         <a href="#" class="nav-link nav-dropdown-trigger">
-          <span data-en="What We Do" data-he="מה אנחנו עושים">What We Do</span>
+          <span data-en="What We Do">What We Do</span>
           <span class="arrow">&#9662;</span>
         </a>
         <div class="nav-dropdown-menu">
-          <a href="#" class="nav-dropdown-item" data-en="Impact — Donations" data-he="אימפקט — תרומות">Impact — Donations</a>
-          <a href="#" class="nav-dropdown-item" data-en="Impact — Investments" data-he="אימפקט — השקעות">Impact — Investments</a>
+          <a href="#" class="nav-dropdown-item" data-en="Impact — Donations">Impact — Donations</a>
+          <a href="#" class="nav-dropdown-item" data-en="Impact — Investments">Impact — Investments</a>
         </div>
       </div>
 
-      <a href="#" class="nav-link" data-en="News" data-he="חדשות">News</a>
-      <a href="#" class="nav-link" data-en="Contact" data-he="צור קשר">Contact</a>
-
-      <div class="lang-toggle">
-        <span class="active-lang">EN</span>
-        <span>|</span>
-        <span>עב</span>
-      </div>
-    </div>
+      <a href="#" class="nav-link" data-en="News">News</a>
+      <a href="#" class="nav-link" data-en="Contact">Contact</a>
+</div>
 
     <!-- Mobile -->
     <div class="hamburger">
@@ -791,34 +768,29 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
   <!-- Mobile Menu -->
   <div class="mobile-menu">
-    <a href="#" data-en="Home" data-he="בית">Home</a>
-    <a href="#" data-en="The Fund" data-he="הקרן">The Fund</a>
-    <a href="#" data-en="The Founders" data-he="המייסדות">The Founders</a>
-    <a href="#" data-en="Impact — Donations" data-he="אימפקט — תרומות">Impact — Donations</a>
-    <a href="#" data-en="Impact — Investments" data-he="אימפקט — השקעות">Impact — Investments</a>
-    <a href="#" data-en="News" data-he="חדשות">News</a>
-    <a href="#" data-en="Contact" data-he="צור קשר">Contact</a>
-    <div class="lang-toggle" style="margin-top: 2rem;">
-      <span class="active-lang">EN</span>
-      <span>|</span>
-      <span>עב</span>
-    </div>
-  </div>
+    <a href="#" data-en="Home">Home</a>
+    <a href="#" data-en="The Fund">The Fund</a>
+    <a href="#" data-en="The Founders">The Founders</a>
+    <a href="#" data-en="Impact — Donations">Impact — Donations</a>
+    <a href="#" data-en="Impact — Investments">Impact — Investments</a>
+    <a href="#" data-en="News">News</a>
+    <a href="#" data-en="Contact">Contact</a>
+</div>
 
   <!-- ═══════════ SECTION 1: HERO ═══════════ -->
   <section class="hero bg-primary">
     <div class="container">
       <h1>
-        <div class="line"><span data-en="Giving." data-he="נותנות.">Giving.</span></div>
-        <div class="line"><span data-en="Investing." data-he="משקיעות.">Investing.</span></div>
-        <div class="line"><span class="text-accent" data-en="Reshaping healthcare." data-he="משנות בריאות.">Reshaping healthcare.</span></div>
+        <div class="line"><span data-en="Giving.">Giving.</span></div>
+        <div class="line"><span data-en="Investing.">Investing.</span></div>
+        <div class="line"><span class="text-accent" data-en="Reshaping healthcare.">Reshaping healthcare.</span></div>
       </h1>
-      <p class="hero-subtitle" data-en="A philanthropic fund channeling capital where it matters most — health, community, and medical technology." data-he="קרן פילנטרופית שמפנה הון לשם שחשוב — בריאות, קהילה וטכנולוגיה רפואית.">
+      <p class="hero-subtitle" data-en="A philanthropic fund channeling capital where it matters most — health, community, and medical technology.">
         A philanthropic fund channeling capital where it matters most — health, community, and medical technology.
       </p>
     </div>
     <div class="scroll-indicator">
-      <span data-en="Scroll" data-he="גלול">Scroll</span>
+      <span data-en="Scroll">Scroll</span>
       <div class="line"></div>
     </div>
   </section>
@@ -826,7 +798,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   <!-- ═══════════ SECTION 2: WHAT WE ARE ═══════════ -->
   <section class="section-lg bg-primary">
     <div class="container">
-      <p class="text-display reveal" style="max-width: 900px;" data-en="A philanthropic fund that channels capital where it matters most — health, community, and medical technology." data-he="קרן פילנטרופית שמפנה הון לשם שחשוב — בריאות, קהילה וטכנולוגיה רפואית.">
+      <p class="text-display reveal" style="max-width: 900px;" data-en="A philanthropic fund that channels capital where it matters most — health, community, and medical technology.">
         A philanthropic fund that channels capital where it matters most — health, community, and medical technology.
       </p>
     </div>
@@ -835,38 +807,38 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   <!-- ═══════════ SECTION 3: WHAT WE DO ═══════════ -->
   <section class="section bg-secondary">
     <div class="container">
-      <p class="text-label reveal" data-en="What we do" data-he="מה אנחנו עושים">What we do</p>
-      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);" data-en="Three pillars of impact" data-he="שלושה נתיבי השפעה">Three pillars of impact</h2>
+      <p class="text-label reveal" data-en="What we do">What we do</p>
+      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);" data-en="Three pillars of impact">Three pillars of impact</h2>
 
       <div class="grid-3 cards-stagger">
         <!-- Card 1: Giving -->
         <a href="#" class="card card-accent-top">
-          <p class="text-label" data-en="01" data-he="01">01</p>
-          <h3 style="margin-top: var(--sp-md);" data-en="Giving" data-he="נתינה">Giving</h3>
-          <p data-en="Direct philanthropy to health and community. Hospitals, clinics, soldier welfare, and medical education." data-he="פילנטרופיה ישירה לבריאות ולקהילה. בתי חולים, מרפאות, רווחת חיילים וחינוך רפואי.">
+          <p class="text-label" data-en="01">01</p>
+          <h3 style="margin-top: var(--sp-md);" data-en="Giving">Giving</h3>
+          <p data-en="Direct philanthropy to health and community. Hospitals, clinics, soldier welfare, and medical education.">
             Direct philanthropy to health and community. Hospitals, clinics, soldier welfare, and medical education.
           </p>
-          <span class="card-arrow" data-en="Learn more →" data-he="למידע נוסף →">Learn more →</span>
+          <span class="card-arrow" data-en="Learn more →">Learn more →</span>
         </a>
 
         <!-- Card 2: Investing -->
         <a href="#" class="card card-accent-top">
-          <p class="text-label" data-en="02" data-he="02">02</p>
-          <h3 style="margin-top: var(--sp-md);" data-en="Investing" data-he="השקעה">Investing</h3>
-          <p data-en="Health-Tech funds as strategic LP. Returns cycle back to fuel more giving." data-he="קרנות Health-Tech כשותפות אסטרטגיות. התשואות חוזרות ומניעות עוד נתינה.">
+          <p class="text-label" data-en="02">02</p>
+          <h3 style="margin-top: var(--sp-md);" data-en="Investing">Investing</h3>
+          <p data-en="Health-Tech funds as strategic LP. Returns cycle back to fuel more giving.">
             Health-Tech funds as strategic LP. Returns cycle back to fuel more giving.
           </p>
-          <span class="card-arrow" data-en="Learn more →" data-he="למידע נוסף →">Learn more →</span>
+          <span class="card-arrow" data-en="Learn more →">Learn more →</span>
         </a>
 
         <!-- Card 3: Building -->
         <a href="#" class="card card-accent-top">
-          <p class="text-label" data-en="03" data-he="03">03</p>
-          <h3 style="margin-top: var(--sp-md);" data-en="Building" data-he="בנייה">Building</h3>
-          <p data-en="Healthcare real estate and clinical spaces. Rehab centers, clinics, and care facilities." data-he="נדל&quot;ן רפואי ומרחבים קליניים. מרכזי שיקום, מרפאות ומתקני טיפול.">
+          <p class="text-label" data-en="03">03</p>
+          <h3 style="margin-top: var(--sp-md);" data-en="Building">Building</h3>
+          <p data-en="Healthcare real estate and clinical spaces. Rehab centers, clinics, and care facilities.">
             Healthcare real estate and clinical spaces. Rehab centers, clinics, and care facilities.
           </p>
-          <span class="card-arrow" data-en="Learn more →" data-he="למידע נוסף →">Learn more →</span>
+          <span class="card-arrow" data-en="Learn more →">Learn more →</span>
         </a>
       </div>
     </div>
@@ -875,33 +847,33 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   <!-- ═══════════ SECTION 4: IMPACT NUMBERS ═══════════ -->
   <section class="section bg-primary">
     <div class="container">
-      <p class="text-label reveal" data-en="Impact in numbers" data-he="אימפקט במספרים">Impact in numbers</p>
+      <p class="text-label reveal" data-en="Impact in numbers">Impact in numbers</p>
       <div class="divider reveal"></div>
 
       <div class="stats-grid" style="margin-top: var(--sp-3xl);">
         <div class="stat-item reveal">
           <div class="stat-number" data-count="12" data-prefix="₪" data-suffix="M+">0</div>
-          <p class="label" data-en="Donated & invested" data-he="תרומות והשקעות">Donated & invested</p>
+          <p class="label" data-en="Donated & invested">Donated & invested</p>
         </div>
         <div class="stat-item reveal">
           <div class="stat-number" data-count="4" data-suffix="">0</div>
-          <p class="label" data-en="Funds backed" data-he="קרנות נתמכות">Funds backed</p>
+          <p class="label" data-en="Funds backed">Funds backed</p>
         </div>
         <div class="stat-item reveal">
           <div class="stat-number" data-count="1200" data-suffix="+">0</div>
-          <p class="label" data-en="Patients reached" data-he="מטופלים שנגענו בהם">Patients reached</p>
+          <p class="label" data-en="Patients reached">Patients reached</p>
         </div>
         <div class="stat-item reveal">
           <div class="stat-number" data-count="3" data-suffix="">0</div>
-          <p class="label" data-en="Communities supported" data-he="קהילות נתמכות">Communities supported</p>
+          <p class="label" data-en="Communities supported">Communities supported</p>
         </div>
         <div class="stat-item reveal">
           <div class="stat-number" data-count="850" data-suffix=" m²">0</div>
-          <p class="label" data-en="Clinical space built" data-he="שטח רפואי שנבנה">Clinical space built</p>
+          <p class="label" data-en="Clinical space built">Clinical space built</p>
         </div>
         <div class="stat-item reveal">
           <div class="stat-number" data-count="15" data-suffix="+">0</div>
-          <p class="label" data-en="Healthcare professionals funded" data-he="אנשי מקצוע שמומנו">Healthcare professionals funded</p>
+          <p class="label" data-en="Healthcare professionals funded">Healthcare professionals funded</p>
         </div>
       </div>
     </div>
@@ -910,7 +882,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   <!-- ═══════════ SECTION 5: FOUNDERS ═══════════ -->
   <section class="section bg-secondary">
     <div class="container">
-      <p class="text-label reveal" data-en="Behind the fund" data-he="מי מאחורי הקרן">Behind the fund</p>
+      <p class="text-label reveal" data-en="Behind the fund">Behind the fund</p>
       <div class="divider reveal"></div>
 
       <!-- Primary Founder -->
@@ -918,8 +890,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
         <div class="photo">
           <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface),var(--secondary));display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.75rem;">Photo</div>
         </div>
-        <h3 class="founder-name" data-en="[Name]" data-he="[שם]">[Name]</h3>
-        <p class="founder-role" data-en="Founder & Visionary" data-he="מייסדת">Founder & Visionary</p>
+        <h3 class="founder-name" data-en="[Name]">[Name]</h3>
+        <p class="founder-role" data-en="Founder & Visionary">Founder & Visionary</p>
       </div>
 
       <!-- Team -->
@@ -928,25 +900,25 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
           <div class="photo">
             <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface),var(--secondary));display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.75rem;">Photo</div>
           </div>
-          <h3 class="founder-name" data-en="[Name]" data-he="[שם]">[Name]</h3>
-          <p class="founder-role" data-en="Head of Innovation & Ventures" data-he="מנהלת חדשנות והשקעות">Head of Innovation & Ventures</p>
+          <h3 class="founder-name" data-en="[Name]">[Name]</h3>
+          <p class="founder-role" data-en="Head of Innovation & Ventures">Head of Innovation & Ventures</p>
         </div>
         <div class="founder-card reveal">
           <div class="photo">
             <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface),var(--secondary));display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.75rem;">Photo</div>
           </div>
-          <h3 class="founder-name" data-en="[Name]" data-he="[שם]">[Name]</h3>
-          <p class="founder-role" data-en="Head of Philanthropy & Social Impact" data-he="מנהלת פילנטרופיה והשפעה חברתית">Head of Philanthropy & Social Impact</p>
+          <h3 class="founder-name" data-en="[Name]">[Name]</h3>
+          <p class="founder-role" data-en="Head of Philanthropy & Social Impact">Head of Philanthropy & Social Impact</p>
         </div>
       </div>
 
       <!-- Quote -->
-      <blockquote class="quote" data-en="&ldquo;We didn't start a fund. We made a decision about what capital should do.&rdquo;" data-he="&ldquo;לא הקמנו קרן. קיבלנו החלטה על מה שהון צריך לעשות.&rdquo;">
+      <blockquote class="quote" data-en="&ldquo;We didn't start a fund. We made a decision about what capital should do.&rdquo;">
         &ldquo;We didn't start a fund. We made a decision about what capital should do.&rdquo;
       </blockquote>
 
       <div style="text-align: center;">
-        <a href="#" class="btn btn-outline" data-en="Meet the team →" data-he="הכירו את הצוות →">Meet the team →</a>
+        <a href="#" class="btn btn-outline" data-en="Meet the team →">Meet the team →</a>
       </div>
     </div>
   </section>
@@ -954,25 +926,25 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   <!-- ═══════════ SECTION 6: CONTACT / CTA ═══════════ -->
   <section class="section bg-primary">
     <div class="container" style="text-align: center;">
-      <h2 class="reveal" data-en="Let's talk" data-he="בואו נדבר">Let's talk</h2>
-      <p class="text-body-lg text-muted reveal" style="max-width: 600px; margin: var(--sp-lg) auto 0;" data-en="Whether you share our vision, seek support, or simply want to learn more — we're listening." data-he="בין אם אתם שותפים לחזון, מחפשים תמיכה, או פשוט רוצים לדעת יותר — אנחנו כאן.">
+      <h2 class="reveal" data-en="Let's talk">Let's talk</h2>
+      <p class="text-body-lg text-muted reveal" style="max-width: 600px; margin: var(--sp-lg) auto 0;" data-en="Whether you share our vision, seek support, or simply want to learn more — we're listening.">
         Whether you share our vision, seek support, or simply want to learn more — we're listening.
       </p>
 
       <div class="cta-paths cards-stagger">
         <a href="#" class="cta-path">
-          <h3 data-en="Partner with us" data-he="שותפות">Partner with us</h3>
-          <p class="text-muted" data-en="Join our mission" data-he="הצטרפו למשימה שלנו">Join our mission</p>
+          <h3 data-en="Partner with us">Partner with us</h3>
+          <p class="text-muted" data-en="Join our mission">Join our mission</p>
           <div class="arrow">→</div>
         </a>
         <a href="#" class="cta-path">
-          <h3 data-en="Apply for support" data-he="בקשת תמיכה">Apply for support</h3>
-          <p class="text-muted" data-en="Healthcare funding" data-he="מימון בריאות">Healthcare funding</p>
+          <h3 data-en="Apply for support">Apply for support</h3>
+          <p class="text-muted" data-en="Healthcare funding">Healthcare funding</p>
           <div class="arrow">→</div>
         </a>
         <a href="#" class="cta-path">
-          <h3 data-en="Learn more" data-he="למידע נוסף">Learn more</h3>
-          <p class="text-muted" data-en="Get in touch" data-he="צרו קשר">Get in touch</p>
+          <h3 data-en="Learn more">Learn more</h3>
+          <p class="text-muted" data-en="Get in touch">Get in touch</p>
           <div class="arrow">→</div>
         </a>
       </div>
@@ -987,7 +959,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   <footer class="footer">
     <div class="container footer-inner">
       <span class="footer-logo">DKF</span>
-      <span class="footer-copy" data-en="&copy; 2026 DKF Fund. All rights reserved." data-he="&copy; 2026 DKF Fund. כל הזכויות שמורות.">&copy; 2026 DKF Fund. All rights reserved.</span>
+      <span class="footer-copy" data-en="&copy; 2026 DKF Fund. All rights reserved.">&copy; 2026 DKF Fund. All rights reserved.</span>
     </div>
   </footer>
 
@@ -1025,7 +997,7 @@ function initCursor() {
   }
   followCursor();
 
-  const hoverEls = document.querySelectorAll('a, button, .card, .cta-path, .btn, .nav-link, .lang-toggle');
+  const hoverEls = document.querySelectorAll('a, button, .card, .cta-path, .btn, .nav-link');
   hoverEls.forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -1064,27 +1036,7 @@ function initDropdowns() {
 }
 
 function initLanguageToggle() {
-  const toggles = document.querySelectorAll('.lang-toggle');
-  toggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const html = document.documentElement;
-      const currentLang = html.getAttribute('lang') || 'en';
-      const newLang = currentLang === 'en' ? 'he' : 'en';
-
-      html.setAttribute('lang', newLang);
-      html.setAttribute('dir', newLang === 'he' ? 'rtl' : 'ltr');
-
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = newLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-he');
-      });
-
-      document.querySelectorAll('.lang-toggle').forEach(t => {
-        const spans = t.querySelectorAll('span');
-        spans.forEach(s => s.classList.remove('active-lang'));
-        if (newLang === 'en') {
-          spans[0].classList.add('active-lang');
-        } else {
-          spans[2].classList.add('active-lang');
+  
         }
       });
 

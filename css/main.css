@@ -20,9 +20,7 @@
   --font-display: 'Space Grotesk', sans-serif;
   --font-logo: 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-he: 'Heebo', sans-serif;
-
-  /* Font Sizes */
+/* Font Sizes */
   --fs-h1: clamp(3rem, 8vw, 7.5rem);
   --fs-h2: clamp(2rem, 4vw, 3rem);
   --fs-h3: clamp(1.25rem, 2vw, 1.5rem);
@@ -79,13 +77,6 @@ body {
 /* System cursor hidden via JS canvas workaround (Chrome bug fix) */
 
 /* RTL Support */
-[dir="rtl"] body {
-  font-family: var(--font-he);
-}
-[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3,
-[dir="rtl"] .display-text {
-  font-family: var(--font-he);
-}
 
 a {
   color: inherit;
@@ -307,26 +298,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* Language Toggle */
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-xs);
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  cursor: none !important;
-  transition: border-color var(--duration-fast);
-}
-
-.lang-toggle:hover {
-  border-color: var(--accent);
-}
-
-.lang-toggle .active-lang {
-  color: var(--accent);
-}
 
 /* Hamburger — Always visible */
 .hamburger {
@@ -450,10 +421,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* Lang toggle in menu */
-.mobile-menu .lang-toggle {
-  margin-top: var(--sp-md);
-  align-self: center;
-}
+.mobile-menu 
 
 /* ── Layout ───────────────────────────────────── */
 .container {
@@ -844,7 +812,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-color: var(--accent);
 }
 
-
 /* ── Partners Marquee ──────────────────────────── */
 .partners-marquee {
   width: 100%;
@@ -900,8 +867,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   0% { transform: translateX(0); }
   100% { transform: translateX(-33.333%); }
 }
-
-
 
 /* ── Footer ────────────────────────────────────── */
 
@@ -960,7 +925,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   0% { transform: translateX(0); }
   100% { transform: translateX(-33.333%); }
 }
-
 
 /* ── Footer ─────────────────────────────────────── */
 .footer {
@@ -1091,9 +1055,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* Footer RTL */
-[dir="rtl"] .footer-top {
-  direction: rtl;
-}
 
 /* Footer responsive */
 /* ── Responsive: Tablet (768px) ─────────────────── */
@@ -1155,13 +1116,9 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 /* ── Touch device helpers ── */
 
-
 /* ══════════════════════════════════════════════════
    MOBILE FIX PASS 2 — Based on screenshot feedback
    ══════════════════════════════════════════════════ */
-
-
-
 
 /* ══════════════════════════════════════════════════
    RESPONSIVE — SINGLE CLEAN PASS
@@ -1254,7 +1211,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 /* ── Tablet-portrait & phones (max 768px) ── */
 @media (max-width: 768px) {
-
 
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -1656,11 +1612,6 @@ a:focus, button:focus {
   color: #aaa !important;
 }
 
-
-
-
-
-
 /* ══════════ Accessibility Widget ══════════ */
 /* Hide UserWay default button - we use our own */
 .uwy .uai { display: none !important; }
@@ -1716,7 +1667,6 @@ a:focus, button:focus {
 .a11y-close:hover {
   transform: scale(1.15);
 }
-
 
 /* ══════════ Mobile Fixes ══════════ */
 @media (max-width: 480px) {

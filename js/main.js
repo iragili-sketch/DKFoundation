@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   initNav();
   initDropdowns();
-  initLanguageToggle();
-  initMobileMenu();
+initMobileMenu();
 });
 
 /* ── Hide System Cursor (Chrome bug workaround) ── */
@@ -55,7 +54,7 @@ function initCursor() {
   followCursor();
 
   // Hover effects
-  const hoverEls = document.querySelectorAll('a, button, .card, .cta-path, .btn, .nav-link, .lang-toggle, .hamburger, .menu-card, .nav-dropdown-trigger');
+  const hoverEls = document.querySelectorAll('a, button, .card, .cta-path, .btn, .nav-link, .hamburger, .menu-card, .nav-dropdown-trigger');
   hoverEls.forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -100,54 +99,6 @@ function initDropdowns() {
   });
 }
 
-/* ── Language Toggle ──────────────────────────── */
-function initLanguageToggle() {
-  const toggle = document.querySelector('.lang-toggle');
-  if (!toggle) return;
-
-  toggle.addEventListener('click', () => {
-    const html = document.documentElement;
-    const currentLang = html.getAttribute('lang') || 'en';
-    const newLang = currentLang === 'en' ? 'he' : 'en';
-
-    html.setAttribute('lang', newLang);
-    html.setAttribute('dir', newLang === 'he' ? 'rtl' : 'ltr');
-
-    // Swap visible content
-    document.querySelectorAll('[data-en]').forEach(el => {
-      if (newLang === 'en') {
-        el.textContent = el.getAttribute('data-en');
-      } else {
-        el.textContent = el.getAttribute('data-he');
-      }
-    });
-
-    // Swap innerHTML content (for elements with child tags)
-    document.querySelectorAll('[data-en-html]').forEach(el => {
-      if (newLang === 'en') {
-        el.innerHTML = el.getAttribute('data-en-html');
-      } else {
-        el.innerHTML = el.getAttribute('data-he-html');
-      }
-    });
-
-    // Update toggle display
-    const spans = toggle.querySelectorAll('span');
-    spans.forEach(s => s.classList.remove('active-lang'));
-    if (newLang === 'en') {
-      spans[0].classList.add('active-lang');
-    } else {
-      spans[1].classList.add('active-lang');
-    }
-
-    // Update font family for body
-    if (newLang === 'he') {
-      document.body.style.fontFamily = "var(--font-he)";
-    } else {
-      document.body.style.fontFamily = "var(--font-body)";
-    }
-  });
-}
 
 /* ── Mobile Menu (Side Panel) ────────────────── */
 function initMobileMenu() {
