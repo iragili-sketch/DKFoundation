@@ -1045,6 +1045,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   display: flex;
   gap: var(--sp-lg);
   padding-right: 80px;
+  flex-wrap: wrap;
 }
 
 .footer-legal a {
@@ -1792,4 +1793,10 @@ section, .container, .hero { max-width: 100%; box-sizing: border-box; }
 }
 @keyframes btnSpin {
   to { transform: rotate(360deg); }
+}
+
+
+/* ── Where We Focus: center stat items ── */
+.stat-item {
+  text-align: center;
 }
