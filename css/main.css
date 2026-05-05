@@ -1042,6 +1042,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .footer-legal {
   display: flex;
   gap: var(--sp-lg);
+  padding-right: 80px;
 }
 
 .footer-legal a {
