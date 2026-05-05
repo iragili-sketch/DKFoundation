@@ -1229,7 +1229,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     height: 130px !important;
   }
   /* — Layout — */
-  .container { padding: 0 var(--sp-lg); }
+  .container { padding: 0 var(--sp-xl); }
   .nav { padding: 0 var(--sp-lg); }
   .section { padding: var(--sp-3xl) 0; }
   .section-sm { padding: var(--sp-2xl) 0; }
@@ -1425,7 +1425,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 /* ── Small phones (max 480px) ── */
 @media (max-width: 480px) {
-  .container { padding: 0 var(--sp-md); }
+  .container { padding: 0 var(--sp-lg); }
 
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -1799,4 +1799,10 @@ section, .container, .hero { max-width: 100%; box-sizing: border-box; }
 /* ── Where We Focus: center stat items ── */
 .stat-item {
   text-align: center;
+}
+
+/* ── Ensure hero text never touches edges ── */
+.hero .container {
+  padding-left: clamp(32px, 5vw, 80px);
+  padding-right: clamp(32px, 5vw, 80px);
 }
