@@ -428,7 +428,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 clamp(32px, 5vw, 80px);
+  padding: 0 clamp(40px, 5vw, 80px) !important;
 }
 
 .section {
