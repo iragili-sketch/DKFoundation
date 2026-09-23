@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DKF — Healthcare Impact Fund</title>
-  <meta name="description" content="DKF is a philanthropic fund channeling capital into healthcare, community, and medical technology.">
+  <meta name="description" content="DKF connects people who care with the places that heal — hospitals, health initiatives and Health-Tech ventures.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DKF">
+  <meta property="og:title" content="DKF — Healthcare Impact Fund">
+  <meta property="og:description" content="DKF connects people who care with the places that heal — hospitals, health initiatives and Health-Tech ventures.">
+  <meta property="og:image" content="https://dkfound.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://dkfound.com/assets/img/og-image.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +26,16 @@
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <style>
+    .home-story { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+    .home-story:hover { transform: none; }
+    .home-story-media { aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface); }
+    .home-story-media img, .home-story-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .home-story-body { padding: var(--sp-xl); display: flex; flex-direction: column; flex: 1; }
+    .home-story-body h3 { font-size: 1.25rem; line-height: 1.35; margin: var(--sp-sm) 0 var(--sp-lg); }
+    .home-story-body .card-arrow { margin-top: auto; }
+    .home-stories-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--sp-lg); flex-wrap: wrap; }
+  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link" tabindex="0">Skip to main content</a>
@@ -57,12 +76,12 @@
       <div class="menu-card-desc">Story, approach & values</div>
     </a>
     <a href="about.html#giving" class="menu-card">
-      <div class="menu-card-title">Giving</div>
-      <div class="menu-card-desc">Where the giving goes</div>
+      <div class="menu-card-title">Philanthropy-led</div>
+      <div class="menu-card-desc">Donors &amp; health institutions</div>
     </a>
     <a href="about.html#investing" class="menu-card">
-      <div class="menu-card-title">Investing</div>
-      <div class="menu-card-desc">Giving that keeps working</div>
+      <div class="menu-card-title">Investment-backed</div>
+      <div class="menu-card-desc">Health-Tech ventures</div>
     </a>
     <a href="contact.html" class="menu-card">
       <div class="menu-card-title">Contact</div>
@@ -83,12 +102,12 @@
 
     <div class="container" style="position:relative;z-index:2;">
       <h1>
-        <div class="line"><span>Giving.</span></div>
-        <div class="line"><span>Investing.</span></div>
-        <div class="line"><span class="text-accent">Reshaping healthcare.</span></div>
+        <div class="line"><span>Philanthropy.</span></div>
+        <div class="line"><span>Investment.</span></div>
+        <div class="line"><span class="text-accent">Better healthcare.</span></div>
       </h1>
       <p class="hero-subtitle">
-        A philanthropic fund channeling capital where it matters most — health, community, and medical technology.
+        DKF connects people who care with the places that heal — hospitals, health initiatives and Health-Tech ventures.
       </p>
     </div>
     <div class="scroll-indicator" style="position:relative;z-index:2;">
@@ -102,15 +121,15 @@
     <div class="container">
       <div class="grid-2" style="align-items: start; gap: var(--sp-3xl);">
         <p class="text-display reveal" style="margin-top: 0;">
-          A philanthropic fund that channels capital where it matters most — health, community, and medical technology.
+          We don't hold the money. <span class="text-accent">We open the doors.</span>
         </p>
         <div>
           <p class="text-label reveal">Our story</p>
           <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-xl);">How it started</h2>
           <div class="reveal">
-            <p class="text-body-lg" style="margin-bottom: var(--sp-lg);">DKF was born from a simple conviction: wealth should be a vehicle for healing, not just for accumulation. Founded by three women with deep roots in design, business, and healthcare, the fund channels private capital into areas where it can do the most good.</p>
-            <p class="text-body-lg" style="margin-bottom: var(--sp-lg);">We started with the understanding that philanthropy alone isn't enough. Donations create immediate change, but sustained impact requires a model that regenerates. That's why DKF operates on two parallel tracks — direct giving and strategic investments in Health-Tech — ensuring that our ability to give only grows over time.</p>
-            <p class="text-body-lg">What began as a personal commitment has become a structured system for impact. Every shekel we invest, every grant we make, every partnership we form — it all flows back to one purpose: better healthcare for more people.</p>
+            <p class="text-body-lg" style="margin-bottom: var(--sp-lg);">DKF was born from a simple conviction: wealth should be a vehicle for healing. Founded by three women with roots in design, business and healthcare, DKF brings together people who want to make a difference and the institutions and ventures doing the work.</p>
+            <p class="text-body-lg" style="margin-bottom: var(--sp-lg);">We don't collect or manage funds. We open doors — introducing donors to hospitals such as Sheba, connecting investors with Health-Tech companies, and raising awareness of where support matters most.</p>
+            <p class="text-body-lg">Every connection we make flows back to one purpose: better healthcare for more people.</p>
           </div>
           <blockquote class="quote reveal" style="margin-top: var(--sp-3xl);">
             <p>&ldquo;Philanthropy is not about money… it's about using whatever resources you have at your fingertips and applying them to improving the world.&rdquo; — Melinda French Gates</p>
@@ -120,60 +139,32 @@
     </div>
   </section>
 
-  <!-- ═══════════ SECTION 3: WHAT WE DO ═══════════ -->
+  <!-- ═══════════ SECTION 3: HOW WE CONNECT ═══════════ -->
   <section class="section bg-secondary">
     <div class="container">
       <p class="text-label reveal">What we do</p>
-      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">Two pillars of impact</h2>
+      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">How we connect</h2>
 
       <div class="grid-2 cards-stagger">
-        <!-- Card 1: Giving -->
         <a href="about.html#giving" class="card card-accent-top">
           <p class="text-label">01</p>
-          <h3 style="margin-top: var(--sp-md);">Giving</h3>
+          <h3 style="margin-top: var(--sp-md);">Philanthropy-led</h3>
           <p>
-            Direct philanthropy to community health. Hospitals, clinics, and access to care for underserved communities.
+            We introduce donors to hospitals and community health initiatives — like Sheba — and help them see the impact firsthand.
           </p>
           <span class="card-arrow">Learn more →</span>
         </a>
-
-        <!-- Card 2: Investing -->
         <a href="about.html#investing" class="card card-accent-top">
           <p class="text-label">02</p>
-          <h3 style="margin-top: var(--sp-md);">Investing</h3>
+          <h3 style="margin-top: var(--sp-md);">Investment-backed</h3>
           <p>
-            Health-Tech funds as strategic LP. Returns cycle back to fuel more giving.
+            We connect investors with Health-Tech companies that put patient safety and access to care first.
           </p>
           <span class="card-arrow">Learn more →</span>
         </a>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══════════ SECTION 4: WHERE WE FOCUS ═══════════ -->
-  <section class="section bg-primary">
-    <div class="container">
-      <p class="text-label reveal">Where We Focus</p>
-      <div class="divider reveal"></div>
-
-      <div class="stats-grid" style="margin-top: var(--sp-3xl);">
-        <div class="stat-item reveal">
-          <h3 class="stat-number" style="font-size: clamp(1.2rem, 2vw, 1.6rem); letter-spacing: 0.15em; font-weight: 600;">HEALTH</h3>
-          <p class="label" style="text-align: center;">Hospitals, clinics, access to care</p>
-        </div>
-        <div class="stat-item reveal">
-          <h3 class="stat-number" style="font-size: clamp(1.2rem, 2vw, 1.6rem); letter-spacing: 0.15em; font-weight: 600;">RESEARCH</h3>
-          <p class="label" style="text-align: center;">Health-Tech investment and innovation</p>
-        </div>
-        <div class="stat-item reveal">
-          <h3 class="stat-number" style="font-size: clamp(1.2rem, 2vw, 1.6rem); letter-spacing: 0.15em; font-weight: 600;">COMMUNITY</h3>
-          <p class="label" style="text-align: center;">Community health, social impact</p>
-        </div>
-      </div>
-
-      <!-- Partners -->
-      <div class="divider reveal" style="margin-top: var(--sp-3xl);"></div>
-      <p class="text-label reveal" style="text-align: center; margin-top: var(--sp-2xl);">Our Partners</p>
+      <p class="text-label reveal" style="text-align: center; margin-top: var(--sp-3xl);">Our Partners</p>
     </div>
     <div class="partners-marquee" style="margin-top: var(--sp-xl); overflow: hidden;">
       <div class="partners-track">
@@ -196,8 +187,56 @@
 
 
 
+  <!-- ═══════════ SECTION 4: LATEST STORIES ═══════════ -->
+  <section class="section bg-primary">
+    <div class="container">
+      <div class="home-stories-head">
+        <div>
+          <p class="text-label reveal">Stories</p>
+          <h2 class="reveal" style="margin-top: var(--sp-md);">Latest from the field</h2>
+        </div>
+        <a href="about.html#giving-stories" class="btn btn-outline reveal">All stories →</a>
+      </div>
+      <div class="grid-3 cards-stagger" style="margin-top: var(--sp-2xl);">
+        <a href="about.html#investing-stories" class="card card-accent-top home-story">
+          <div class="home-story-media"><video muted loop playsinline autoplay preload="metadata" src="assets/img/story-tenasors-medical.mp4" aria-label="Tenasors Medical — advancing safer endoscopy"></video></div>
+          <div class="home-story-body">
+            <p class="text-label">Health-Tech</p>
+            <h3>Tenasors Medical: Safer, Smarter Endoscopy</h3>
+            <span class="card-arrow">Read the story →</span>
+          </div>
+        </a>
+        <a href="about.html#giving-stories" class="card card-accent-top home-story">
+          <div class="home-story-media"><img loading="lazy" src="assets/img/story-sheba-donor-visit.webp" alt="Donors visiting Sheba Medical Center"></div>
+          <div class="home-story-body">
+            <p class="text-label">Donor Visit</p>
+            <h3>Seeing Impact Firsthand at Sheba</h3>
+            <span class="card-arrow">Read the story →</span>
+          </div>
+        </a>
+        <a href="about.html#giving-stories" class="card card-accent-top home-story">
+          <div class="home-story-media"><img loading="lazy" src="assets/img/story-appreciation-evening.webp" alt="Appreciation evening"></div>
+          <div class="home-story-body">
+            <p class="text-label">Community</p>
+            <h3>Giving Back to Those Who Give</h3>
+            <span class="card-arrow">Read the story →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 5: FOUNDED BY ═══════════ -->
+  <section class="section bg-secondary" style="padding-top: var(--sp-2xl); padding-bottom: var(--sp-2xl);">
+    <div class="container" style="text-align: center;">
+      <p class="text-label reveal">Founded by</p>
+      <p class="text-body-lg reveal" style="margin-top: var(--sp-md);">Alin Kipnis · Ira Fradkin · Carine Bar Or</p>
+      <a href="about.html#founders" class="card-arrow reveal" style="display: inline-block; margin-top: var(--sp-md);">Meet the founders →</a>
+    </div>
+  </section>
+
   <!-- ═══════════ SECTION 6: CONTACT / CTA ═══════════ -->
-  <section class="section bg-secondary">
+  <section class="section bg-primary">
     <div class="container" style="text-align: center;">
       <h2 class="reveal">Let's talk</h2>
       <p class="text-body-lg text-muted reveal" style="max-width: 600px; margin: var(--sp-lg) auto 0;">
@@ -239,7 +278,7 @@
         <!-- Brand Column -->
         <div class="footer-brand">
           <span class="footer-logo">DKF</span>
-          <p class="footer-tagline">A philanthropic fund channeling capital into healthcare, community, and medical technology.</p>
+          <p class="footer-tagline">Connecting people who care with the places that heal.</p>
           <a href="mailto:info@dkfound.com" class="footer-email">info@dkfound.com</a>
         </div>
 
@@ -252,8 +291,8 @@
         <!-- Impact Column -->
         <div class="footer-col">
           <h4>Impact</h4>
-          <a href="about.html#giving">Giving</a>
-          <a href="about.html#investing">Investing</a>
+          <a href="about.html#giving">Philanthropy-led</a>
+          <a href="about.html#investing">Investment-backed</a>
         </div>
 
         <!-- Connect Column -->
@@ -261,9 +300,12 @@
           <h4>Connect</h4>
           <a href="contact.html">Contact us</a>
           <a href="contact.html?type=partner">Partner with us</a>
+          <a href="https://www.linkedin.com/in/dk-foundation-003783408/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
 
       </div>
+
+      <p class="footer-note" style="font-size: 0.8125rem; color: var(--text-muted); margin: var(--sp-xl) 0 0; max-width: 720px;">DKF does not collect or manage donations or investments. All contributions are made directly to the partner institutions and companies.</p>
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
