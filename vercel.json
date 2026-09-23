@@ -39,6 +39,36 @@
       "source": "/preview-all",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/news.html",
+      "destination": "/about.html#giving-stories",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/about.html#giving-stories",
+      "permanent": true
+    },
+    {
+      "source": "/article-sheba-gala.html",
+      "destination": "/about.html#giving-stories",
+      "permanent": true
+    },
+    {
+      "source": "/article-sheba-gala",
+      "destination": "/about.html#giving-stories",
+      "permanent": true
+    },
+    {
+      "source": "/article-healthcare-investment.html",
+      "destination": "/about.html#investing-stories",
+      "permanent": true
+    },
+    {
+      "source": "/article-healthcare-investment",
+      "destination": "/about.html#investing-stories",
+      "permanent": true
     }
   ],
   "headers": [
