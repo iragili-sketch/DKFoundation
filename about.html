@@ -15,6 +15,35 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <style>
+    .stories { margin-top: var(--sp-3xl); }
+    .stories-head { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-md); margin-bottom: var(--sp-lg); }
+    .stories-nav { display: flex; gap: var(--sp-sm); }
+    .stories-arrow { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--accent); background: transparent; color: var(--accent); font-size: 1.1rem; cursor: pointer; transition: background .2s, color .2s, opacity .2s; }
+    .stories-arrow:hover { background: var(--accent); color: var(--primary); }
+    .stories-arrow:disabled { opacity: .3; pointer-events: none; }
+    .stories-track { display: flex; align-items: flex-start; gap: var(--sp-xl); overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 2px var(--sp-md); scrollbar-width: thin; scrollbar-color: var(--accent) transparent; }
+    .stories-track::-webkit-scrollbar { height: 4px; }
+    .stories-track::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+    .story { flex: 0 0 min(420px, 85%); scroll-snap-align: start; padding: 0; overflow: hidden; text-align: left; }
+    .story:hover { transform: none; }
+    .story-media { aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface); }
+    .story-media img, .story-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .story-body { padding: var(--sp-xl); }
+    .story-meta { display: flex; align-items: center; gap: var(--sp-md); margin-bottom: var(--sp-sm); }
+    .story-meta .text-label { font-size: 0.75rem; }
+    .story-date { font-size: 0.8125rem; color: var(--text-muted); }
+    .story h3 { font-size: 1.25rem; line-height: 1.35; margin-bottom: var(--sp-md); }
+    .story-text { position: relative; max-height: 10.5em; overflow: hidden; transition: max-height .5s ease; }
+    .story-text p + p { margin-top: var(--sp-md); }
+    .story-text.is-clamped::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3em; background: linear-gradient(to bottom, transparent, var(--secondary)); pointer-events: none; }
+    .story-text.is-open { max-height: none; }
+    .story-text.is-open::after { display: none; }
+    .story-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-sm); margin-top: var(--sp-lg); }
+    .story-gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+    .story-toggle { margin-top: var(--sp-md); background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-size: 0.875rem; font-weight: 500; cursor: pointer; }
+    .story-toggle:hover { color: var(--accent-hover); }
+  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link" tabindex="0">Skip to main content</a>
@@ -123,45 +152,78 @@
 
   <!-- ═══════════ GIVING ═══════════ -->
   <section class="section-lg bg-secondary" id="giving" style="scroll-margin-top: 80px;">
-    <div class="container" style="max-width: 700px; text-align: center; margin: 0 auto;">
-      <p class="text-label reveal">Giving</p>
-      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-xl);">Where the <span class="text-accent">giving goes.</span></h2>
-      <div class="card card-accent-top reveal" style="padding: var(--sp-xl); text-align: left;">
-        <p class="text-label text-accent">Focus</p>
-        <h3 style="margin-top: var(--sp-md); margin-bottom: var(--sp-md);">Community Health</h3>
-        <p>
-          Funding hospitals, clinics, and health services in underserved communities. Making quality care accessible to those who need it most.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-lg bg-primary">
     <div class="container">
-      <div class="founder-feature reveal">
-        <div class="founder-feature-img">
-          <img src="assets/img/sheba-friends.jpg" alt="DKF and Sheba Medical Center Friends Program" style="width: 100%; border-radius: 4px; object-fit: cover;">
+      <div style="text-align: center;">
+        <p class="text-label reveal">Giving</p>
+        <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">Where the <span class="text-accent">giving goes.</span></h2>
+      </div>
+      <div class="grid-3 cards-stagger">
+        <div class="card card-accent-top">
+          <p class="text-label">01</p>
+          <h3 style="margin-top: var(--sp-md);">Community Health</h3>
+          <p>Funding hospitals, clinics, and health services in underserved communities. Making quality care accessible to those who need it most.</p>
         </div>
-        <div class="founder-feature-text">
-          <p class="text-label text-accent">Partnership</p>
-          <h2 style="margin-top: var(--sp-sm); margin-bottom: var(--sp-lg);">DKF &amp; the Friends of Sheba</h2>
-          <p class="text-body-lg" style="margin-bottom: var(--sp-lg);">
-            Sheba Medical Center, one of the world's leading hospitals, operates a global Friends network that connects philanthropists with the medical center's mission. DKF is a proud partner within this network, contributing to Sheba's efforts in clinical care, medical research, and healthcare innovation.
-          </p>
-          <p class="text-body-lg">
-            Through this collaboration, DKF supports initiatives that bring together leaders in medicine, technology, and philanthropy — united by the belief that world-class healthcare should be accessible to all. From rehabilitation wings to pediatric care, the partnership channels resources where they matter most.
-          </p>
+        <div class="card card-accent-top">
+          <p class="text-label">02</p>
+          <h3 style="margin-top: var(--sp-md);">Medical Equipment</h3>
+          <p>Funding advanced equipment for hospitals and clinics, so more patients get the right diagnosis and the right treatment.</p>
+        </div>
+        <div class="card card-accent-top">
+          <p class="text-label">03</p>
+          <h3 style="margin-top: var(--sp-md);">Prevention &amp; Awareness</h3>
+          <p>Screening, early detection, and community health programs that stop illness before it starts.</p>
+        </div>
+      </div>
+
+      <div class="stories" id="giving-stories" style="scroll-margin-top: 80px;">
+        <div class="stories-head">
+          <p class="text-label">Stories</p>
+          <div class="stories-nav">
+            <button class="stories-arrow" data-dir="-1" aria-label="Previous story">←</button>
+            <button class="stories-arrow" data-dir="1" aria-label="Next story">→</button>
+          </div>
+        </div>
+        <div class="stories-track">
+          <article class="story card card-accent-top">
+            <div class="story-media"><img src="assets/img/sheba-friends.jpg" alt="DKF founders with the Friends of Sheba" loading="lazy"></div>
+            <div class="story-body">
+              <p class="story-meta"><span class="text-label">Partnership</span></p>
+              <h3>DKF &amp; the Friends of Sheba</h3>
+              <div class="story-text">
+                <p>Sheba Medical Center, one of the world's leading hospitals, operates a global Friends network that connects philanthropists with the medical center's mission. DKF is a proud partner within this network, contributing to Sheba's efforts in clinical care, medical research, and healthcare innovation.</p>
+                <p>Through this collaboration, DKF supports initiatives that bring together leaders in medicine, technology, and philanthropy — united by the belief that world-class healthcare should be accessible to all. From rehabilitation wings to pediatric care, the partnership channels resources where they matter most.</p>
+              </div>
+              <button class="story-toggle" aria-expanded="false" hidden>Read more ↓</button>
+            </div>
+          </article>
+
+          <article class="story card card-accent-top">
+            <div class="story-media"><img src="assets/img/news-sheba-gala.jpg" alt="Swiss Friends of Sheba Gala, St. Moritz" loading="lazy"></div>
+            <div class="story-body">
+              <p class="story-meta"><span class="text-label">Philanthropy</span> <span class="story-date">April 2026</span></p>
+              <h3>DKF at the Swiss Friends of Sheba Gala — 20 Years of Healing &amp; Hope</h3>
+              <div class="story-text">
+                <p>The David Kipnis Foundation joined 170 distinguished guests at the Carlton Hotel St. Moritz for the 20th anniversary Healing &amp; Hope Gala, hosted by the Swiss Friends of Sheba Medical Center.</p>
+                <p>The evening celebrated two decades of support for Sheba — the Middle East's largest medical center — with a cumulative €16.5 million raised over 20 years.</p>
+                <p>DKF founders Alin Kipnis, Ira Fradkin, and Carine Bar Or attended the event, reinforcing DKF's commitment to advancing healthcare through strategic philanthropy.</p>
+                <p>The gala was dedicated to the Ellen Ringier Rehabilitation Wing at Sheba's Children's Hospital, a cause closely aligned with DKF's mission of building clinical spaces and supporting medical innovation.</p>
+              </div>
+              <button class="story-toggle" aria-expanded="false" hidden>Read more ↓</button>
+            </div>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════ INVESTING ═══════════ -->
-  <section class="section-lg bg-secondary" id="investing" style="scroll-margin-top: 80px;">
-    <div class="container" style="text-align: center;">
-      <p class="text-label reveal">Investing</p>
-      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">Giving that <span class="text-accent">keeps working.</span></h2>
-      <div class="grid-3 cards-stagger" style="text-align: left;">
+  <section class="section-lg bg-primary" id="investing" style="scroll-margin-top: 80px;">
+    <div class="container">
+      <div style="text-align: center;">
+        <p class="text-label reveal">Investing</p>
+        <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">Giving that <span class="text-accent">keeps working.</span></h2>
+      </div>
+      <div class="grid-3 cards-stagger">
         <div class="card card-accent-top">
           <p class="text-label">01</p>
           <h3 style="margin-top: var(--sp-md);">Capital is allocated</h3>
@@ -178,10 +240,37 @@
           <p>Investment returns are recycled back into philanthropy — more grants, more projects, more impact. The cycle repeats.</p>
         </div>
       </div>
+
+      <div class="stories" id="investing-stories" style="scroll-margin-top: 80px;">
+        <div class="stories-head">
+          <p class="text-label">Stories</p>
+          <div class="stories-nav">
+            <button class="stories-arrow" data-dir="-1" aria-label="Previous story">←</button>
+            <button class="stories-arrow" data-dir="1" aria-label="Next story">→</button>
+          </div>
+        </div>
+        <div class="stories-track">
+          <article class="story card card-accent-top">
+            <div class="story-media"><video src="assets/img/news-healthcare-investment.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Healthcare investment"></video></div>
+            <div class="story-body">
+              <p class="story-meta"><span class="text-label">Investments</span> <span class="story-date">April 2026</span></p>
+              <h3>Why Healthcare Investment Is a Community Decision</h3>
+              <div class="story-text">
+                <p>When we invest in medical ventures, we're not chasing returns — we're building the infrastructure of care.</p>
+                <p>Every Health-Tech fund we back, every clinical space we help create, is a statement: that capital can serve people before profit. At DKF, we believe the strongest investment thesis is one rooted in community — because healthier communities build stronger economies, and stronger economies fund better healthcare. It's a cycle we're proud to fuel.</p>
+                <p>The traditional model of healthcare investment treats patients as consumers and clinics as revenue centers. We reject that premise. Our approach starts with a question: what does the community need? From there, we work backward — identifying the ventures, technologies, and infrastructure that will deliver the greatest collective benefit.</p>
+                <p>This isn't philanthropy dressed as investment. It's investment informed by philanthropy. We hold our portfolio companies to rigorous financial standards — but we also hold them to community standards. Access, equity, and measurable patient outcomes are non-negotiable metrics alongside growth and margins.</p>
+                <p>When capital flows toward community health, everyone benefits. That's not idealism — it's our investment thesis.</p>
+              </div>
+              <button class="story-toggle" aria-expanded="false" hidden>Read more ↓</button>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section bg-primary">
+  <section class="section bg-primary" style="padding-top: 0;">
     <div class="container">
       <p class="text-label reveal">Where we invest</p>
       <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">Three sectors we believe in</h2>
@@ -326,6 +415,32 @@
 
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
+  <script>
+  (function(){
+    document.querySelectorAll('.story-text').forEach(function(t){
+      var btn=t.parentNode.querySelector('.story-toggle');
+      if(t.scrollHeight>t.clientHeight+4){ t.classList.add('is-clamped'); btn.hidden=false; }
+      btn.addEventListener('click',function(){
+        var open=t.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded',open);
+        btn.textContent=open?'Read less ↑':'Read more ↓';
+      });
+    });
+    document.querySelectorAll('.stories').forEach(function(st){
+      var track=st.querySelector('.stories-track'), btns=st.querySelectorAll('.stories-arrow');
+      function update(){
+        var max=track.scrollWidth-track.clientWidth;
+        st.querySelector('.stories-nav').style.visibility=max>4?'visible':'hidden';
+        btns[0].disabled=track.scrollLeft<=4; btns[1].disabled=track.scrollLeft>=max-4;
+      }
+      btns.forEach(function(b){ b.addEventListener('click',function(){
+        var card=track.querySelector('.story'); var step=card?card.getBoundingClientRect().width+32:300;
+        track.scrollBy({left:step*Number(b.dataset.dir),behavior:'smooth'});
+      });});
+      track.addEventListener('scroll',update,{passive:true}); window.addEventListener('resize',update); window.addEventListener('load',update); update();
+    });
+  })();
+  </script>
   <script>window.addEventListener('load',function(){if(location.hash){var el=document.querySelector(location.hash);if(el)setTimeout(function(){el.scrollIntoView();},150);}});</script>
 
 
