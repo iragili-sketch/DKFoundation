@@ -33,16 +33,17 @@
     .story-meta { display: flex; align-items: center; gap: var(--sp-md); margin-bottom: var(--sp-sm); }
     .story-meta .text-label { font-size: 0.75rem; }
     .story-date { font-size: 0.8125rem; color: var(--text-muted); }
-    .story h3 { font-size: 1.25rem; line-height: 1.35; margin-bottom: var(--sp-md); }
-    .story-text { position: relative; max-height: 10.5em; overflow: hidden; transition: max-height .5s ease; }
+    .story h3 { font-size: 1.25rem; line-height: 1.35; margin-bottom: var(--sp-md); min-height: 2.7em; }
+    .story-text { position: relative; height: 10.5em; overflow: hidden; }
     .story-text p + p { margin-top: var(--sp-md); }
     .story-text.is-clamped::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3em; background: linear-gradient(to bottom, transparent, var(--secondary)); pointer-events: none; }
-    .story-text.is-open { max-height: none; }
+    .story-text.is-open { height: auto; }
     .story-text.is-open::after { display: none; }
     .story-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-sm); margin-top: var(--sp-lg); }
     .story-gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
     .story-toggle { margin-top: var(--sp-md); background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-size: 0.875rem; font-weight: 500; cursor: pointer; }
     .story-toggle:hover { color: var(--accent-hover); }
+    .story-toggle[hidden] { display: inline-block; visibility: hidden; }
   </style>
 </head>
 <body>
@@ -285,7 +286,7 @@
         </div>
         <div class="stories-track">
           <article class="story card card-accent-top">
-            <div class="story-media" style="aspect-ratio: 16 / 9;"><video src="assets/img/story-tenasors-medical.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Tenasors Medical — advancing safer endoscopy"></video></div>
+            <div class="story-media"><video src="assets/img/story-tenasors-medical.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Tenasors Medical — advancing safer endoscopy"></video></div>
             <div class="story-body">
               <p class="story-meta"><span class="text-label">Health-Tech</span></p>
               <h3>Tenasors Medical: Safer, Smarter Endoscopy</h3>
