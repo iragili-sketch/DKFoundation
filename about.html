@@ -29,16 +29,6 @@
     <div class="nav-links">
       <a href="index.html" class="nav-link">Home</a>
       <a href="about.html" class="nav-link active">The Fund</a>
-      <div class="nav-dropdown">
-        <a href="#" class="nav-link nav-dropdown-trigger">
-          <span>What We Do</span>
-          <span class="arrow">▾</span>
-        </a>
-        <div class="nav-dropdown-menu">
-          <a href="impact-donations.html" class="nav-dropdown-item">Impact — Donations</a>
-          <a href="impact-investments.html" class="nav-dropdown-item">Impact — Investments</a>
-        </div>
-      </div>
       <a href="contact.html" class="nav-link">Contact</a>
 </div>
     <div class="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"><span></span><span></span><span></span></div>
@@ -49,20 +39,20 @@
       <div class="menu-card-title">Home</div>
       <div class="menu-card-desc">Fund overview & impact</div>
     </a>
-    <a href="about.html" class="menu-card">
+    <a href="about.html" class="menu-card active">
       <div class="menu-card-title">The Fund</div>
       <div class="menu-card-desc">Story, approach & values</div>
     </a>
-    <a href="about.html" class="menu-card active">
+    <a href="about.html#founders" class="menu-card">
       <div class="menu-card-title">The Founders</div>
       <div class="menu-card-desc">Three women, one conviction</div>
     </a>
-    <a href="impact-donations.html" class="menu-card">
-      <div class="menu-card-title">Donations</div>
+    <a href="about.html#giving" class="menu-card">
+      <div class="menu-card-title">Giving</div>
       <div class="menu-card-desc">Where the giving goes</div>
     </a>
-    <a href="impact-investments.html" class="menu-card">
-      <div class="menu-card-title">Investments</div>
+    <a href="about.html#investing" class="menu-card">
+      <div class="menu-card-title">Investing</div>
       <div class="menu-card-desc">Giving that keeps working</div>
     </a>
     <a href="contact.html" class="menu-card">
@@ -115,21 +105,126 @@
       <p class="text-label reveal" style="text-align: center;">Our approach</p>
       <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl); text-align: center;">Two guiding principles</h2>
       <div class="grid-2 cards-stagger">
-        <div class="card card-accent-top">
+        <a href="#giving" class="card card-accent-top">
           <p class="text-label">01</p>
           <h3 style="margin-top: var(--sp-md);">Philanthropy-led</h3>
           <p>Giving is our core. Every decision starts with the question: where can this capital create the most meaningful change?</p>
-        </div>
-        <div class="card card-accent-top">
+          <span class="card-arrow">Giving ↓</span>
+        </a>
+        <a href="#investing" class="card card-accent-top">
           <p class="text-label">02</p>
           <h3 style="margin-top: var(--sp-md);">Investment-backed</h3>
           <p>Strategic investments in Health-Tech funds generate returns that fuel more giving. A sustainability engine for philanthropy.</p>
+          <span class="card-arrow">Investing ↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ GIVING ═══════════ -->
+  <section class="section-lg bg-secondary" id="giving" style="scroll-margin-top: 80px;">
+    <div class="container" style="max-width: 700px; text-align: center; margin: 0 auto;">
+      <p class="text-label reveal">Giving</p>
+      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-xl);">Where the <span class="text-accent">giving goes.</span></h2>
+      <div class="card card-accent-top reveal" style="padding: var(--sp-xl); text-align: left;">
+        <p class="text-label text-accent">Focus</p>
+        <h3 style="margin-top: var(--sp-md); margin-bottom: var(--sp-md);">Community Health</h3>
+        <p>
+          Funding hospitals, clinics, and health services in underserved communities. Making quality care accessible to those who need it most.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-lg bg-primary">
+    <div class="container">
+      <div class="founder-feature reveal">
+        <div class="founder-feature-img">
+          <img src="assets/img/sheba-friends.jpg" alt="DKF and Sheba Medical Center Friends Program" style="width: 100%; border-radius: 4px; object-fit: cover;">
+        </div>
+        <div class="founder-feature-text">
+          <p class="text-label text-accent">Partnership</p>
+          <h2 style="margin-top: var(--sp-sm); margin-bottom: var(--sp-lg);">DKF &amp; the Friends of Sheba</h2>
+          <p class="text-body-lg" style="margin-bottom: var(--sp-lg);">
+            Sheba Medical Center, one of the world's leading hospitals, operates a global Friends network that connects philanthropists with the medical center's mission. DKF is a proud partner within this network, contributing to Sheba's efforts in clinical care, medical research, and healthcare innovation.
+          </p>
+          <p class="text-body-lg">
+            Through this collaboration, DKF supports initiatives that bring together leaders in medicine, technology, and philanthropy — united by the belief that world-class healthcare should be accessible to all. From rehabilitation wings to pediatric care, the partnership channels resources where they matter most.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-lg bg-secondary">
+  <!-- ═══════════ INVESTING ═══════════ -->
+  <section class="section-lg bg-secondary" id="investing" style="scroll-margin-top: 80px;">
+    <div class="container" style="text-align: center;">
+      <p class="text-label reveal">Investing</p>
+      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">Giving that <span class="text-accent">keeps working.</span></h2>
+      <div class="process-steps grid-3 cards-stagger">
+        <div class="process-step reveal">
+          <div class="process-number">01</div>
+          <div class="process-line"></div>
+          <h3>Capital is allocated</h3>
+          <p class="text-muted">
+            Private capital from the fund is directed into two channels: direct giving and strategic Health-Tech investments.
+          </p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-number">02</div>
+          <div class="process-line"></div>
+          <h3>Investments generate returns</h3>
+          <p class="text-muted">
+            As LP in established Health-Tech VC funds, DKF's investments grow — creating returns that go back into the system.
+          </p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-number">03</div>
+          <div class="process-line"></div>
+          <h3>Returns fuel more giving</h3>
+          <p class="text-muted">
+            Investment returns are recycled back into philanthropy — more grants, more projects, more impact. The cycle repeats.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-primary">
+    <div class="container">
+      <p class="text-label reveal">Where we invest</p>
+      <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">Three sectors we believe in</h2>
+      <div class="grid-3 cards-stagger">
+        <div class="card card-accent-top">
+          <h3 style="margin-bottom: var(--sp-md);">Digital Health</h3>
+          <p>
+            Platforms and solutions that make healthcare smarter, more accessible, and more personalized — from telemedicine to AI diagnostics.
+          </p>
+        </div>
+        <div class="card card-accent-top">
+          <h3 style="margin-bottom: var(--sp-md);">Medical Devices</h3>
+          <p>
+            Innovative devices that improve patient outcomes — from minimally invasive surgery tools to monitoring wearables.
+          </p>
+        </div>
+        <div class="card card-accent-top">
+          <h3 style="margin-bottom: var(--sp-md);">Health Infrastructure</h3>
+          <p>
+            The backbone of care: hospital management systems, supply chain optimization, and health data platforms.
+          </p>
+        </div>
+      </div>
+      <div style="max-width: 700px; margin: var(--sp-3xl) auto 0; text-align: center;">
+        <h3 class="reveal">Why these choices</h3>
+        <p class="text-body-lg reveal" style="margin-top: var(--sp-lg);">
+          We don't chase trends. We invest in Health-Tech sectors with proven trajectories and clear alignment with our mission. Every fund we partner with as LP must demonstrate not only strong financial fundamentals, but a real commitment to improving healthcare outcomes. Our returns don't just sustain DKF — they validate a model where doing good and doing well are the same thing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOUNDERS ═══════════ -->
+  <section class="section-lg bg-secondary" id="founders" style="scroll-margin-top: 80px;">
     <div class="container" style="text-align: center;">
       <p class="text-label reveal">The founders</p>
       <h2 class="reveal" style="margin-top: var(--sp-md); margin-bottom: var(--sp-3xl);">Three women. One conviction.</h2>
@@ -178,11 +273,11 @@
 
   <section class="section bg-secondary" style="text-align: center;">
     <div class="container">
-      <h2 class="reveal">See what we do</h2>
-      <p class="text-body-lg text-muted reveal" style="max-width: 600px; margin: var(--sp-lg) auto var(--sp-xl);">See how we channel capital into healthcare through strategic giving and investment.</p>
+      <h2 class="reveal">Want to be part of it?</h2>
+      <p class="text-body-lg text-muted reveal" style="max-width: 600px; margin: var(--sp-lg) auto var(--sp-xl);">Join us in building a healthier future through strategic giving and investment.</p>
       <div style="display:flex; gap:var(--sp-lg); justify-content:center; flex-wrap:wrap;">
-        <a href="impact-donations.html" class="btn btn-outline">Donations →</a>
-        <a href="impact-investments.html" class="btn btn-outline">Investments →</a>
+        <a href="contact.html" class="btn btn-primary">Get in touch →</a>
+        <a href="contact.html?type=partner" class="btn btn-outline">Partner with us →</a>
       </div>
     </div>
   </section>
@@ -213,8 +308,8 @@
         <!-- Impact Column -->
         <div class="footer-col">
           <h4>Impact</h4>
-          <a href="impact-donations.html">Donations</a>
-          <a href="impact-investments.html">Investments</a>
+          <a href="about.html#giving">Giving</a>
+          <a href="about.html#investing">Investing</a>
         </div>
 
         <!-- Connect Column -->
