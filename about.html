@@ -52,6 +52,18 @@
     .story-gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
     .story-toggle { margin-top: var(--sp-md); background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-size: 0.875rem; font-weight: 500; cursor: pointer; }
     .story-toggle:hover { color: var(--accent-hover); }
+    .story-carousel { position: relative; }
+    .sc-track { display: flex; width: 100%; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+    .sc-track::-webkit-scrollbar { display: none; }
+    .story-media .sc-track img { flex: 0 0 100%; min-width: 100%; scroll-snap-align: start; }
+    .sc-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(0,0,0,.45); color: #fff; font-size: 1.1rem; line-height: 1; cursor: pointer; opacity: .85; transition: opacity .2s, background .2s; }
+    .sc-btn:hover { background: var(--accent); opacity: 1; }
+    .sc-btn:disabled { opacity: 0; pointer-events: none; }
+    .sc-prev { left: 10px; }
+    .sc-next { right: 10px; }
+    .sc-dots { position: absolute; left: 0; right: 0; bottom: 10px; display: flex; justify-content: center; gap: 6px; pointer-events: none; }
+    .sc-dots span { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); transition: background .2s; }
+    .sc-dots span.is-active { background: var(--accent); }
     .story-toggle[hidden] { display: inline-block; visibility: hidden; }
   </style>
 </head>
@@ -179,7 +191,16 @@
         </div>
         <div class="stories-track">
           <article class="story card card-accent-top">
-            <div class="story-media"><img src="assets/img/story-shekel-gala.webp" alt="DKF founders at the Friends of SHEKEL Israel gala evening" loading="lazy"></div>
+            <div class="story-media story-carousel" data-carousel>
+              <div class="sc-track">
+                <img src="assets/img/story-shekel-gala.webp" alt="DKF founders at the Friends of SHEKEL Israel gala evening" loading="lazy">
+                <img src="assets/img/story-shekel-gala-2.webp" alt="DKF founders at the gala, Friends of SHEKEL Israel" loading="lazy">
+                <img src="assets/img/story-shekel-gala-3.webp" alt="Gala evening booklet, Friends of SHEKEL Israel" loading="lazy">
+              </div>
+              <button class="sc-btn sc-prev" aria-label="Previous photo">‹</button>
+              <button class="sc-btn sc-next" aria-label="Next photo">›</button>
+              <div class="sc-dots" aria-hidden="true"></div>
+            </div>
             <div class="story-body">
               <p class="story-meta"><span class="text-label">Gala</span><span class="story-date">October 2026</span></p>
               <h3>An Evening of Giving and Inclusion</h3>
@@ -472,6 +493,14 @@
         btn.setAttribute('aria-expanded',open);
         btn.textContent=open?'Read less ↑':'Read more ↓';
       });
+    });
+    document.querySelectorAll('[data-carousel]').forEach(function(c){
+      var tr=c.querySelector('.sc-track'),imgs=tr.querySelectorAll('img'),dots=c.querySelector('.sc-dots'),pv=c.querySelector('.sc-prev'),nx=c.querySelector('.sc-next');
+      imgs.forEach(function(){dots.appendChild(document.createElement('span'));});
+      function upd(){var i=Math.round(tr.scrollLeft/tr.clientWidth);dots.querySelectorAll('span').forEach(function(d,k){d.classList.toggle('is-active',k===i);});pv.disabled=i<=0;nx.disabled=i>=imgs.length-1;}
+      pv.addEventListener('click',function(e){e.stopPropagation();tr.scrollBy({left:-tr.clientWidth,behavior:'smooth'});});
+      nx.addEventListener('click',function(e){e.stopPropagation();tr.scrollBy({left:tr.clientWidth,behavior:'smooth'});});
+      tr.addEventListener('scroll',upd,{passive:true});upd();
     });
     document.querySelectorAll('.stories').forEach(function(st){
       var track=st.querySelector('.stories-track'), btns=st.querySelectorAll('.stories-arrow');
